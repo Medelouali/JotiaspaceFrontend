@@ -1,7 +1,7 @@
 import React from "react";
 import Gallery from "./Gallery";
 import Under from "./Under";
-import Footer from "./Footer";
+//import Footer from "./Footer";
 
 function Main(){
     return(

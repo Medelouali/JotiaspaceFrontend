@@ -1,4 +1,3 @@
-
 import Browser from "./Browser";
 import "./store.css";
 import Fixed from "./Fixed";
