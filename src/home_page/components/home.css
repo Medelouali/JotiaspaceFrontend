@@ -1,0 +1,505 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home{
+    font-family: Poppins, sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    overflow-y: scroll;
+    background-color:  rgb(21, 21, 22);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 3em !important;
+    z-index: 20;
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+.header .left-half{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    background-color: black;
+    align-items: center;
+}
+
+.left-half img{
+    width: 60%;
+    height: auto;
+    justify-self: center;
+}
+
+.left-half form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 1fr;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20px;
+}
+
+.left-half form input{
+    width: 80%;
+    justify-self: end;
+    height: 2em;
+}
+.left-half form button{
+    width: 90%;
+    height: 2em;
+    justify-self: start;
+}
+
+
+.right-half-1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 6px;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+    letter-spacing: 2px;
+}
+
+.right-half-2{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.burger{
+    width: 3em;
+    height: 3px;
+    background-color: white;
+    margin-top: 3px;
+    transform: scale(0.6);
+}
+
+.links{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transform: translateY(-100%);
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.globe{
+    position: relative;
+    top: 20px;
+}
+.services{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.home-2, .about-us-2, .contact-us-2, .services-2{
+    color: white;
+    height: 2em;
+    width: 40%;
+    text-align: center;
+}
+
+.home-1, .about-us-1, .contact-us-1, .services-1,
+.home-2, .about-us-2, .contact-us-2, .services-2{
+    display: flex;
+    align-items: center;
+}
+
+.home-1:hover, .about-us-1:hover, .contact-us-1:hover, .services-1:hover,
+.home-2:hover, .about-us-2:hover, .contact-us-2:hover, .services-2:hover{
+    color: rgb(161, 161, 190);
+    cursor: pointer;
+}
+.show-burger{
+    animation: show-burg 1s ease-out forwards;
+}
+
+@keyframes show-burg{
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.move-burger{
+    animation: move-corner 0s ease-out forwards;
+    z-index: 4;
+}
+
+@keyframes move-corner{
+    100%{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+}
+.burger-1{
+    transform: rotate(-45deg) translateY(45%);
+    background-color: white;
+    width: 2em;
+    height: 3px;
+}
+
+.burger-2{
+    opacity: 0;
+}
+
+.burger-3{
+    transform: rotate(45deg) translateY(-45%);
+    background-color: white;
+    width: 2em;
+    height: 3px;
+}
+
+.gallery{
+    overflow-y: scroll;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.gallery img{
+    height: 40vh;
+    width: auto;
+}
+
+#main{
+    background-color: rgb(22, 21, 21);
+    width: 100%;
+    font-size: 1.5em;
+}
+.line{
+    width: max-content;
+    writing-mode: vertical-rl;
+    letter-spacing: 1px;
+    color: white;
+    transform: rotateX(-180deg) rotateY(-180deg);
+    z-index: 5;
+    position: relative;
+    bottom: 30px;
+
+}
+
+@media(max-width: 258px){
+    .left-half form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .left-half form input{
+        width: 90vw;
+        position: relative;
+        left: 8vw;
+    }
+    .left-half form button{
+        width: 25vw;
+    }
+}
+
+@media(max-width: 506px){
+    .sign{
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+}
+.under-gallery{
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    color: white;
+}
+
+.parts{
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 2em 1fr 6em;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+}
+
+
+
+.intro{
+    grid-area: 2/2/3/3;
+    line-height: 2em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: get-in 1s ease-out forwards;
+    color: white;
+}
+
+
+.sign{
+    grid-area: 3/2/4/4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 100%;
+    margin-bottom: 2.5em;
+    align-items: flex-end;
+}
+
+.sign-in, .sign-up{
+    width: 40%;
+    height: 2em;
+    margin-left: 20px;
+    margin: 5px;
+    font-weight: bold;
+    color: rgb(14, 13, 13);
+    border-radius: 4px;
+}
+
+.sign-in:hover, .sign-up:hover{
+    color: rgb(220, 220, 236);
+    background-color: black;
+    cursor: pointer;
+}
+
+.sign-up{
+    justify-self: end;
+}
+
+.arrow{
+    grid-area: 3/3/4/4;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: white;
+    justify-self: end;
+    align-self: flex-end;
+    margin-right: 10px;
+    border-radius: 0 100% 0 0;
+    animation: fade 5s linear forwards infinite;
+}
+
+@keyframes fade{
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.footer{
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(17, 17, 17);
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: max-content;
+    width: 100%;
+}
+
+.footer p{
+    text-align: center;
+    width: 100%;
+}
+
+.services{
+    color: #ffffff;
+    background-color: rgb(20, 20, 20);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 3em 1fr 4em;
+    overflow-y: scroll;
+}
+
+.globe{
+    width: 100%;
+    grid-area: 2/2/3/3;
+    padding-bottom: 3em;
+}
+.store{
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 2em max-content;
+    margin-top: 30px;
+    margin-left: 30px;
+    grid-gap: 10px;
+    animation: get-in 1s ease-out forwards;
+}
+
+@keyframes get-in{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.here{
+    width: 0.7em;
+    height: auto;
+}
+
+.store svg{
+    width: 2.3em;
+    height: auto;
+    grid-area: 1/1/2/2;
+    cursor: pointer;
+}
+
+.store svg:hover{
+    animation: rotating 4s linear infinite !important;
+    fill: blue;
+};
+
+@keyframes rotating{
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.store h5{
+    grid-area: 1/2/2/3;
+    width: 100%;
+    letter-spacing: 1px;
+    justify-self: start;
+}
+
+.store h5:hover{
+    color: rgb(122, 122, 179);
+    cursor: pointer;
+}
+.store .details{
+    grid-area: 2/1/3/3;
+    max-width: 100%;
+    width: 60%;
+    word-wrap: break-word;
+    padding-top: 1em;
+}
+
+@media(min-width: 400px){
+    .store{
+        position: relative;
+        left: 25%;
+    }
+}
+
+@media(max-width: 500px){
+    .gallery{
+        margin-top: 7em;
+    }
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: rgb(119, 119, 168);
+}
+
+.logo-intro{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(100%);
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+};
+
+.show-letter{
+    animation: swipping 6s ease-in forwards;
+}
+
+@keyframes swipping{
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+.moving-logo{
+    width: 85%;
+}
+
+.deco{
+    width: 8%;
+    height: auto;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-bottom: 3em;
+}
+
+.press{
+    position: relative;
+    top: 2em;
+    width: 6em;
+    height: 2.5em;
+    margin: 20px;
+    font-weight: 800;
+    font-size: 0.9em;
+    border-radius: 8px;
+}
+
+.press:hover{
+    color: blue;
+    background-color: rgb(149, 149, 163);
+}
+
+.signature{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+}
+
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}

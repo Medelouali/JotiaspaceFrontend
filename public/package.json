@@ -1,0 +1,22 @@
+{
+  "name": "jotia",
+  "version": "1.0.0",
+  "description": "busness",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "socket.io": "^3.1.1",
+    "socket.io-client": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon node server.js"
+  },
+  "keywords": [
+    "jotia"
+  ],
+  "author": "El Ouali",
+  "license": "MIT"
+}
