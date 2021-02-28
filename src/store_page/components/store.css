@@ -99,13 +99,25 @@ nav{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.left-half .back-icon{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transform: scale(0.8);
+    height: 1em;
+    margin: 0;
+    padding: 0;
+}
+
 #search, #store, .logo{
-    width: 2em;
+    width: 1.5em;
     height: auto;
 }
 
 #store{
     cursor: pointer;
+    position: relative;
+    right: 60px;
 }
 .social{
     display: grid;
@@ -113,6 +125,8 @@ nav{
     grid-gap: 20px !important;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 16px;
 }
 
 .logo-out{
@@ -293,6 +307,7 @@ nav{
     justify-items: center;
     grid-gap: 20px;
     background-color:  rgb(242, 241, 248);
+    margin-bottom: 30px;
 }
 
 .icon{

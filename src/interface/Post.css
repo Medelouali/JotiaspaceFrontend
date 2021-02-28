@@ -122,6 +122,8 @@
     width: 2em;
     height: auto;
     animation: working 1s ease-in infinite;
+    position: relative;
+    bottom: 22px;
 }
 
 @keyframes working{

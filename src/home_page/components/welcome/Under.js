@@ -7,8 +7,18 @@ import heart from "./shapes/heart.svg";
 import text from "./intro";
 import logo from "./shapes/logo.svg"
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import main_nav from "../../../redux/actions/main_nav";
 
 function Under(){
+    const dispatch = useDispatch();
+    const handleSignUp=()=>{
+        dispatch(main_nav(false));
+    };
+    const handleSignIn=()=>{
+        dispatch(main_nav(false));
+    };
+    
     return(
         <div className="under-gallery">
             <div className="line">JotiaSpace lets you get the most out of the things you no longer need<hr/></div>
@@ -17,8 +27,8 @@ function Under(){
                 <div className="body">
                     <p id="para" className="para">{text}</p>
                     <div className="buttons">
-                        <Link to="/sign-up"><button className="press">Sign Up</button></Link>                        
-                        <Link to="/sign-in"><button className="press">Sign In</button></Link>
+                        <Link to="/sign-up"><button onClick={handleSignUp} className="press">Sign Up</button></Link>                        
+                        <Link to="/sign-in"><button onClick={handleSignIn} className="press">Sign In</button></Link>
                     </div>
                 </div>
             
