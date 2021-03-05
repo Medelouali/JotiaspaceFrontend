@@ -1,11 +1,12 @@
 import React from 'react';
-import Home from "./home_page/components/Home";
-//import Store from "./store_page/components/Store";
-//import Post from "./interface/Post";
+import Manage from './Manage';
+import { useSelector } from "react-redux";
 
 function App(){
+  const page = useSelector(state => state.pager);
   return(
-    <Home/> 
+    <Manage page={page}/>   
   );
-}
+};
+
 export default App;

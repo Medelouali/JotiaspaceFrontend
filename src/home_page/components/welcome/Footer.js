@@ -9,7 +9,7 @@ function Footer(){
         return(
             <>
                 <div className="footer">
-                    <p>&copy; 2021 All Rights Are Reserved El Ouali Med</p>
+                    <p>&copy; 2021 All Rights Are Reserved El Ouali Mohammed</p>
                 </div>
                 <div className="logo-intro show-letter">
                     {slider}

@@ -3,14 +3,20 @@ import usersReducer from "./updateUser";
 import online from "./online";
 import updateAll from "./updateAll";
 import pager from "./pager";
-import main_nav from "./main_nav";
+import profile from "./profile";
+import collection from "./collection";
+import collectionCoord from "./collectionCoord";
+import view from "./view";
 
 const allReducers=combineReducers({
     usersData: usersReducer,
     online: online,
     updatedUser: updateAll,
     pager: pager,
-    main_nav
+    profile: profile,
+    collection: collection,
+    collectionCoord: collectionCoord,  
+    view: view
 });
 
 export default allReducers;

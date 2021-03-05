@@ -5,16 +5,12 @@ import pager from "../../redux/actions/pager";
 function NewPost() {
     const dispatch=useDispatch();
 
-    const goPost=()=>{
-        dispatch(pager(1));
-    };
-
     return (
         <div className="newPost">
-            <button onClick={goPost} className="post-b">Post</button>
-            <button className="profile-b">Profile</button>
+            <button onClick={()=>dispatch(pager("post"))} className="post-b">Post</button>
+            <button onClick={()=>dispatch(pager("profile"))} className="profile-b">Profile</button>
         </div>
-    )
+    );
 }
 
 export default NewPost

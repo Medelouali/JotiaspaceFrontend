@@ -2,32 +2,31 @@ import React from "react";
 import Nav from './Nav';
 import Main from "./Main";
 import { useSelector } from "react-redux";  
-import Post from "../../interface/Post";
-import SignIn from "../../home_page/components/Sign/SignIn";
+import { useDispatch } from "react-redux";
+import pager from "../../redux/actions/pager";
 
-function  Store(){
+function Store(){
   const value = useSelector(state => state.usersData);
   const page = useSelector(state => state.pager);
   const isOnline=useSelector(state=>state.online);
+  const dispatch = useDispatch();
+
   if(isOnline){
     switch(page){
-        case 0:
+        case "store":
           return(
             <div id="grid">
               <Nav fri={value.fri} inv={value.inv} mes={value.mes} not={value.not} name={value.username}/>
               <Main/>
             </div>
           );
-        case 1:
-          return(
-            <Post/>
-          );
         default:
           return(<>Loading...</>);
     };
   }else{
+    dispatch(pager("home"));
     return(
-      <SignIn/>  
+      <div className=""></div> 
     );
   };
 }

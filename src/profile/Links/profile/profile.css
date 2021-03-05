@@ -1,0 +1,110 @@
+
+.outer-account{
+    width: 100%;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+.account{
+    width: 98%;
+    height: 100vh;/*Remember to change this later on*/
+    background-color: rgb(236, 237, 245);
+    margin: auto;
+    overflow-y: scroll;
+    box-shadow: 0 1px 1px 1.5px rgb(122, 121, 122);
+};
+
+.picture{
+    width: 98%;
+    margin: auto;
+}
+
+.picture h3{
+    position: relative;
+    left: 10px;
+}
+.picture img{
+    width: 98%;
+    height: auto;
+}
+
+.account-header{
+    --header-height: min-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 8px;
+    margin: auto;
+    width: 100%;
+}
+
+.go-links{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 8px;
+    margin: auto;
+    width: 90%;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.go-links .button{
+    background-color: rgb(229, 236, 240);
+    box-shadow: 0 1px 1px 1px rgb(156, 153, 153);
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.go-links .button:hover{
+    color: rgb(24, 24, 238);
+}
+
+.outer-intro{
+    width: 100%;
+}
+
+.intro{
+    width: 60%;
+    margin: auto;
+}
+
+.intro p{
+    height: 6em;
+    overflow-y: scroll;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+@media(min-width: 772px){
+    .intro{
+        position: relative;
+        top: 30px;
+    }
+    .intro p{
+        height: 10em;
+    }
+}
+
+.posts{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 8px;
+}
+
+.manage{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-width: 100%;
+    width: 100%;
+    height: 80vh;
+}
+
+.more{
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+}

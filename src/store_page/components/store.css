@@ -450,6 +450,8 @@ h1, h2, h3, h4, h5, h6{
     white-space: nowrap;
     grid-area: 2/2/3/3;
     background-color: rgb(248, 241, 241);
+    display: block;
+    width: 100%;
 }
 
 .clip-item{
@@ -784,11 +786,11 @@ button{
     grid-template-rows: 1.5em 2em 1fr;
     margin: 5px;
     cursor: pointer;
-    background-color: rgb(240, 233, 233);
+    background-color: rgb(248, 244, 244);
     color: black;
 }
 
-.chat-holder:hover{
+.chat-holder{
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     border-radius: 10px;
 }
@@ -821,7 +823,7 @@ button{
 }
 
 .unread{
-    background-color:blue;
+    background-color:rgb(99, 99, 209);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -1067,3 +1069,10 @@ button{
     border-radius: 3px;
 }
 
+.item{
+    display: inline-block;
+}
+
+.post{
+    width: 100% !important;
+}

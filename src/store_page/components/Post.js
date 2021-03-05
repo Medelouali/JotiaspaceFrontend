@@ -95,7 +95,7 @@ function Post({post}){
         <div className="post">
             <div className="poster">
                 <div className="outter-poster-image">
-                    <img className="poster-image" src="https://yt3.ggpht.com/ytc/AAUvwnglaD-Nc_h-fMkHMAMPJhhMKoGM8C8SDZLi1m7Wig=s900-c-k-c0x00ffffff-no-rj" alt=""/>
+                    <img className="poster-image" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
                 </div>
                 <div className="poster-name">
                     <h3>{post.poster_name}</h3>
@@ -161,7 +161,7 @@ function Post({post}){
 
 Post.defaultProps={
     post: {
-        poster_name: "El Ouali",
+        poster_name: "Mark Zuckerberg",
         urls:["https://www.dogtime.com/assets/uploads/2011/03/puppy-development-1280x720.jpg"],
         description: `This was a present but know we afre lokking for selling this and ...`,
         comments:[

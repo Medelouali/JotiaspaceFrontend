@@ -8,8 +8,8 @@ export function ScrollerX({clips}){
     return(
         <div className="scroller-1">
             <div className="scroller-11">
-                {clips.map(clip=>(
-                    clip
+                {clips.map((clip, index)=>(
+                    <div key={`${index}`} className="item">{clip}</div>
                 ))}
             </div>
         </div>

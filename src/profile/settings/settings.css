@@ -1,0 +1,84 @@
+
+.choices{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+};
+
+.nothing{
+    width: 19%;
+}
+
+.options label{
+    width: 100%;
+    cursor: pointer;
+}
+
+.options{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(235, 233, 243);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 1px rgb(187, 180, 180);
+}
+
+.inner-privacy{
+    height: max-content;
+}
+
+.part{
+    font-weight: 600;
+}
+
+label input{
+    cursor: pointer;
+}
+
+.theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.theme .empty{
+    width: 20%;
+}
+
+.theme .choose{
+    width: 78%;
+}
+
+.choose{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: auto;
+}
+
+.light, .dark{
+    background-color: rgb(216, 220, 231);
+    border-radius: 3px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0 1px 1px 1px rgb(184, 181, 181);
+    font-weight: 600;
+    color: rgb(84, 84, 204);
+    cursor: pointer;
+    margin: 6px;
+}
+
+.mode{
+    background-color: rgb(247, 246, 250);
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 1px rgb(214, 214, 219);
+    padding: 10px;
+    width: 100% !important;
+}
+
+.mode .title{
+    font-weight: 600;
+}
+

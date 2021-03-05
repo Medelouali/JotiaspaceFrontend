@@ -11,8 +11,9 @@ import caret_up from "./svg/caret-up.svg";
 import {shorten} from "./algorithms";
 import profile_image from "./svg/profile.svg";
 import {Messanger} from "./Messanger";
+
 import logout from "../../redux/actions/logout";
-import main_nav from '../../redux/actions/main_nav';
+import pager from "../../redux/actions/pager";
 
 function Nav({fri, inv, not, mes, name}){
     const [open, setOpen]=useState(true);
@@ -52,7 +53,7 @@ function Nav({fri, inv, not, mes, name}){
 
     const handleLogOut=()=>{
         dispatch(logout());
-        dispatch(main_nav(true));
+        dispatch(pager("home"));
     };
 
     return (

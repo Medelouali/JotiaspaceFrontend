@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import {whoAmI, whoAmI_label, whoAmI_details, goal, goal_label, goal_details} from "./vars" 
-
+import "./services.css";
 
 function About(){
 

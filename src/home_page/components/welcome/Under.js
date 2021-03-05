@@ -1,22 +1,17 @@
 import React from "react";
-//import cercle from "./shapes/cercle.svg";
-//import square from "./shapes/square.svg";
-//import triangle from "./shapes/triangle.svg";
 import heart from "./shapes/heart.svg";
-//import cube from "./shapes/cube.svg";
 import text from "./intro";
 import logo from "./shapes/logo.svg"
-import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import main_nav from "../../../redux/actions/main_nav";
+import pager from "../../../redux/actions/pager";
 
 function Under(){
     const dispatch = useDispatch();
     const handleSignUp=()=>{
-        dispatch(main_nav(false));
+        dispatch(pager("home-up"));
     };
     const handleSignIn=()=>{
-        dispatch(main_nav(false));
+        dispatch(pager("home-in"));
     };
     
     return(
@@ -24,18 +19,16 @@ function Under(){
             <div className="line">JotiaSpace lets you get the most out of the things you no longer need<hr/></div>
             <div id="space">
                 <img className="moving-logo" src={logo} alt=""/>
-                <div className="body">
-                    <p id="para" className="para">{text}</p>
-                    <div className="buttons">
-                        <Link to="/sign-up"><button onClick={handleSignUp} className="press">Sign Up</button></Link>                        
-                        <Link to="/sign-in"><button onClick={handleSignIn} className="press">Sign In</button></Link>
-                    </div>
-                </div>
-            
-                
                 <div className="signature">
                     <div className="phrase">Made With Love
                         <img src={heart} alt="" className="heart deco"/>
+                    </div>
+                </div>
+                <div className="body">
+                    <p id="para" className="para">{text}</p>
+                    <div className="buttons">
+                        <button onClick={handleSignUp} className="press">Sign Up</button>                        
+                        <button onClick={handleSignIn} className="press">Sign In</button>
                     </div>
                 </div>
             </div>

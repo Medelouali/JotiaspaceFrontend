@@ -1,4 +1,4 @@
-const reducer=(state=0, action)=>{
+const reducer=(state="home", action)=>{
     switch(action.type){
         case "Page":
             state=action.payload;
