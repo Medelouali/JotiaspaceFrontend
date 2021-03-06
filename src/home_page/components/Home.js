@@ -8,61 +8,48 @@ import Service from "./services/Service";
 import About from "./services/About";
 import SignUp from "./Sign/SignUp";
 import SignIn from "./Sign/SignIn";
+
 import "./home.css";
 
+function Home({page}){
+    return(
+        <div className="whole">
+            <Header/>
+            <Base page={page}/>
+            <Footer/>
+        </div>
+    );
+}
 
-const Home=({page})=>{
+const Base=({page})=>{
     switch(page){
         case "home-up":
             return(
-                <div className="whole">
-                    <Header/>
-                    <SignUp/>
-                    <Footer/>
-                </div>
+                <SignUp/>
             );
         case "home-in":
             return(
-                <div className="whole">
-                    <Header/>
-                    <SignIn/>
-                    <Footer/>
-                </div>
+                <SignIn/>
             );
         case "home-ser":
             return(
-                <div className="whole">
-                    <Header/>
-                    <Service/>
-                    <Footer/>
-                </div>
+                <Service/>
             );
         case "home-abo":
             return(
-                <div className="whole">
-                    <Header/>
-                    <About/>
-                    <Footer/>
-                </div>
+                <About/>
             );
         case "home-con":
             return(
-                <div className="whole">
-                    <Header/>
-                    <Contact/>
-                    <Footer/>
-                </div>
+                <Contact/>
             );
         default:
             return(
-                <div className="whole">
-                    <Header/>
-                    <Main/>
-                    <Footer/>
-                </div>
+                <Main/>
             );
     }
 }
+
 
 Home.defaultProps={
     page: ""

@@ -27,16 +27,18 @@
 .name{
     height: max-content;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     align-content: flex-start;
+    width: 100%;
 }
 
 .name input{
     width: 80%;
     border: none;
     outline: none;
+    background: none;
     border-bottom: 1px solid rgb(211, 97, 207);
 }
 
@@ -69,6 +71,33 @@
 }
 
 #create:hover{
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: rgb(211, 228, 240);
+}
+
+.data{
+    border-bottom: 1px solid blue !important;
+    animation: grow 0.4s ease-in forwards;
+}
+
+@keyframes grow{
+    0%{
+        transform: scale(0);
+    };
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.new-account{
+    color: rgb(120, 35, 201);
+    cursor: pointer;
+}
+
+#warning{
+    color: red;
+}
+
+#profile-picture{
+    transform: scale(0.6);
 }

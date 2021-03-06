@@ -23,7 +23,7 @@ function Manage({page}) {
                 <Post/>
             );
         default:
-            const value=page==="home-con" || page==="home-abo" || page==="home-ser"
+            const value=page === "home-con" || page==="home-abo" || page==="home-ser"
                                 || page==="home-in" || page==="home-up";
             if(value) return(<Home page={page}/>);
             return(

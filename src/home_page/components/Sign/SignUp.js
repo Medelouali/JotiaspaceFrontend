@@ -8,7 +8,7 @@ import pager from "../../../redux/actions/pager";
 
 import "./sign.css";
 
-function SignUp(){
+function SignUp({args}){
     const [profile, setProfile]=useState("");
     const handleProfile=(e)=>{
         setProfile(e.target.value)
@@ -107,31 +107,44 @@ function SignUp(){
     }
 
     const [display, setDisplay]=useState(false);
+    const page = !args.length ? "home-in": "home-up";
+    const handleSign=()=>{
+        dispatch(pager(page));
+        console.log(page);
+        console.log(args);
+    };
+    console.log(args);
+    console.log(args.length);
+    console.log(args.length ? true: false);
     return(
         <div className="sign">
             <form onSubmit={handleForm} className="form" encType="multipart/form-data">
-                <div className="profile">
-                    <label htmlFor="profile"><img id="profile-picture" src={profile_pic} alt=""/><br/><i>Add Picture</i></label>
-                    <input type="file" onChange={handleProfile} value={profile} name="profile" id="pic" accept="image/*"/>
-                </div>
+                {!args.length ? (
+                    <>
+                        <div className="profile">
+                            <label htmlFor="profile"><img id="profile-picture" src={profile_pic} alt=""/><br/><i>Add Picture</i></label>
+                            <input type="file" onChange={handleProfile} value={profile} name="profile" id="pic" accept="image/*"/>
+                        </div>
 
-                <div className="profile">
-                    <div className="name">
-                        <input onChange={handleName} value={name.value} type="text" name="username" id="name" autoComplete="off" required placeholder="Userame"/>
-                        {handler(name.flag)}
-                    </div>
-                </div>
+                        <div className="profile">
+                            <div className="name">
+                                <input className={name.value ? "data": ""} onChange={handleName} value={name.value} type="text" name="username" id="name" autoComplete="off" required placeholder="Userame"/>
+                                {handler(name.flag)}
+                            </div>
+                        </div>
+                    </>
+                ): ""}
             
                 <div className="profile">
                     <div className="name">
-                        <input onChange={handleEmail} value={email.value} type="email" id="email" name="email" autoComplete="off" required placeholder="Email"/>
+                        <input className={email.value ? "data": ""} onChange={handleEmail} value={email.value} type="email" id="email" name="email" autoComplete="off" required placeholder="Email"/>
                         {handler(email.flag)}
                     </div>
                 </div>
 
                 <div className="profile-see">
                     <div className="name">
-                        <input onFocus={()=>setDisplay(true)} onChange={handlePassword} value={password.value} type={see ? "text": "password"} name="password" id="pass" autoComplete="off" required placeholder="Password"/>
+                        <input className={password.value ? "data": ""} onFocus={()=>setDisplay(true)} onChange={handlePassword} value={password.value} type={see ? "text": "password"} name="password" id="pass" autoComplete="off" required placeholder="Password"/>
                         {handler(password.flag)}
                     </div>
                     <div className="">
@@ -141,10 +154,12 @@ function SignUp(){
 
                 <div className="submit-group">
                     <div className="submit">
-                        <button onSubmit={handleForm} id="create" type="submit">Create</button>
+                        <button onSubmit={handleForm} id="create" type="submit">
+                            {!args.length ? "Create": args[0]}
+                        </button>
                     </div>
-                    <div className="new-account">
-                        <p onClick={()=>dispatch(pager("home-in"))}>Already have account!?</p>
+                    <div onClick={handleSign} className="new-account">
+                        { !args.length ? "Already have account !?": args[1]}
                     </div>
                     <div className="warning">
                         <Start start={process}/>
@@ -155,5 +170,9 @@ function SignUp(){
     </div>
     );
 }
+
+SignUp.defaultProps={
+    args: []
+};
 
 export default SignUp;
