@@ -14,7 +14,7 @@ export function valid_name(name){
 };
 
 export function valid_email(email){
-    let regex=/^[\w-\\.]+@([\w-]+\\.)+[\w-]{2,4}$/;
+    let regex=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return regex.test(email);
 }
 

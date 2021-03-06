@@ -1,17 +1,12 @@
 import React, { useState } from "react";
-//import axios from "axios";
-//import { Link } from "react-router-dom";
 import profile_pic from "./svg/profile.svg";
-//import authenticating from "./svg/authenticating.svg";
 import { handler, valid_name, valid_password, valid_email } from "./logic";
-import "./sign.css";
 import eye from "../../../store_page/components/svg/eye.svg";
 import { useDispatch } from "react-redux";
-//import update from "../../../redux/actions/updateUser";
-//import login from "../../../redux/actions/login";
-//import Store from "../../../store_page/components/Store";
 import Start from "../../../interface/Start";
 import pager from "../../../redux/actions/pager";
+
+import "./sign.css";
 
 function SignUp(){
     const [profile, setProfile]=useState("");
@@ -74,13 +69,13 @@ function SignUp(){
                     client: {}
                 });
 
-    
-    const [process, setProcess]=useState(false);
     */
+    const [process, setProcess]=useState(false);
     const dispatch=useDispatch();
     const handleForm=()=>{
         dispatch(pager("store"));
-    }
+        setProcess(true);
+    };
     
     /*
     const handleForm=async(e)=>{
@@ -113,48 +108,50 @@ function SignUp(){
 
     const [display, setDisplay]=useState(false);
     return(
-        <div id="sign_up">
-        <form onSubmit={handleForm} id="data" encType="multipart/form-data">
-            <div className="profile">
-                <label htmlFor="profile"><img id="profile-picture" src={profile_pic} alt=""/><br/><i>Add Picture</i></label>
-                <input type="file" onChange={handleProfile} value={profile} name="profile" id="profile" accept="image/*"/>
-            </div>
+        <div className="sign">
+            <form onSubmit={handleForm} className="form" encType="multipart/form-data">
+                <div className="profile">
+                    <label htmlFor="profile"><img id="profile-picture" src={profile_pic} alt=""/><br/><i>Add Picture</i></label>
+                    <input type="file" onChange={handleProfile} value={profile} name="profile" id="pic" accept="image/*"/>
+                </div>
 
-            <div>
-                <div className="name">
-                    <input onChange={handleName} value={name.value} type="text" name="username" id="name" autoComplete="off" required placeholder="Userame"/>
-                    <span id="nam">{handler(name.flag)}</span>
+                <div className="profile">
+                    <div className="name">
+                        <input onChange={handleName} value={name.value} type="text" name="username" id="name" autoComplete="off" required placeholder="Userame"/>
+                        {handler(name.flag)}
+                    </div>
                 </div>
-            </div>
-        
-            <div>
-                <div className="name">
-                    <input onChange={handleEmail} value={email.value} type="email" id="email" name="email" autoComplete="off" required placeholder="Email"/>
-                    <span id="ema">{handler(email.flag)}</span>
+            
+                <div className="profile">
+                    <div className="name">
+                        <input onChange={handleEmail} value={email.value} type="email" id="email" name="email" autoComplete="off" required placeholder="Email"/>
+                        {handler(email.flag)}
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <div className="name">
-                    <input onFocus={()=>setDisplay(true)} onChange={handlePassword} value={password.value} type={see ? "text": "password"} name="password" id="password" autoComplete="off" required placeholder="Password"/>
-                    <span id="pas">{handler(password.flag)}</span>
+                <div className="profile-see">
+                    <div className="name">
+                        <input onFocus={()=>setDisplay(true)} onChange={handlePassword} value={password.value} type={see ? "text": "password"} name="password" id="pass" autoComplete="off" required placeholder="Password"/>
+                        {handler(password.flag)}
+                    </div>
+                    <div className="">
+                        {display ? <img onClick={handleSee} className="see-me" src={eye} alt=""/>: ""}
+                    </div>
                 </div>
-                {display ? <img onClick={handleSee} className="see-me" src={eye} alt=""/>: ""}
-            </div>
 
-            <div className="submit-group">
-                <div className="submit">
-                    <button onSubmit={handleForm} id="validate" type="submit">Create</button>
+                <div className="submit-group">
+                    <div className="submit">
+                        <button onSubmit={handleForm} id="create" type="submit">Create</button>
+                    </div>
+                    <div className="new-account">
+                        <p onClick={()=>dispatch(pager("home-in"))}>Already have account!?</p>
+                    </div>
+                    <div className="warning">
+                        <Start start={process}/>
+                        <p id="warning">{"Warnning goes here"/*serverResponse.error*/}</p>
+                    </div>
                 </div>
-                <div className="new-account">
-                    <p onClick={()=>dispatch(pager("home-in"))}>Already have account!?</p>
-                </div>
-                <div className="warning">
-                    <Start start={process}/>
-                    <p id="warning">{"Warnning goes here"/*serverResponse.error*/}</p>
-                </div>
-            </div>
-        </form>
+            </form>
     </div>
     );
 }
