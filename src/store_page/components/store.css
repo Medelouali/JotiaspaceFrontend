@@ -1075,4 +1075,26 @@ button{
 
 .post{
     width: 100% !important;
+    overflow-x: hidden;
+}
+
+.back-i{
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    transform: scale(0.8);
+    height: 1em;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+}
+
+.left-half .store{
+    padding: 0;
+}
+
+.header nav{
+    padding: 0;
+    position: relative;
+    bottom: 20px;
 }
