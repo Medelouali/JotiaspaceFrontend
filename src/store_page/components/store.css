@@ -214,13 +214,14 @@ nav{
 }
 
 .gap-1, .gap-2, .gap-3{
-    width: 2.5em;
-    height: 5px;
+    width: 6em;
+    height: 10px;
     border-radius: 2px;
     background-color: black;
-    margin-top: 4px;
+    margin: 5px;
     position: relative;
-    right: 10px;
+    right: 20px;
+    bottom: 10px;
 }
 
 #root{
@@ -276,6 +277,7 @@ nav{
     flex-direction: column;
     width: 40%;
     transform: translateX(120%);
+    padding: 10px;
 }
 
 .list-option{
@@ -283,6 +285,9 @@ nav{
     text-align: center;
     width: 80%;
     border-radius: 3px;
+    height: 96%;
+    display: grid;
+    place-items: center;
 }
 
 .list-option:hover{
@@ -338,11 +343,10 @@ nav{
 }
 
 .burger{
-    align-self: flex-end;
+    justify-self: center;
     align-self: center;
     cursor: pointer;
     position: relative;
-    bottom: 10px;
 }
 
 .store{
@@ -1097,4 +1101,11 @@ button{
     padding: 0;
     position: relative;
     bottom: 20px;
+}
+
+.rect{
+    width: 3em;
+    height: 8px;
+    margin: 6px;
+    background:black;
 }

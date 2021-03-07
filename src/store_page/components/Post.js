@@ -101,9 +101,9 @@ function Post({post}){
                     <h3>{post.poster_name}</h3>
                 </div>
                 <div onClick={closer} className="burger">
-                    <div className={`${open ? "gap-11 ":""}gap-1`}></div>
-                    <div className={`${open ? "gap-22 ":""}gap-2`}></div>
-                    <div className={`${open ? "gap-33 ":""}gap-3`}></div>
+                    <div className={`${open ? "gap-11 ":""}rect`}></div>
+                    <div className={`${open ? "gap-22 ":""}rect`}></div>
+                    <div className={`${open ? "gap-33 ":""}rect`}></div>
                 </div>
             </div>
 
@@ -113,7 +113,7 @@ function Post({post}){
                    <div className="list-option">Interested in</div>
                    <div className="list-option">Delete it</div>
                    <div className="list-option">Inappropriate</div>
-                   <div className="list-option">Settings</div>
+                   
                 </div>
             </div>
             <div className="post-intro">

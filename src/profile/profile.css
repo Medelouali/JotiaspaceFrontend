@@ -43,6 +43,8 @@
 .nav, .feed{
     margin-top: 10px;
     width: 98%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .feed{
@@ -62,15 +64,20 @@
         width: 98vw;
         height: 100%;
     }
+    .outer-privacy{
+        width: 100% !important;
+        overflow-x: hidden;
+    }
 
+    .browser{
+        width: 100% !important;
+    }
     .feed{
         display: block;
         width: 100%;
     }
 
-    .browser, .outer-privacy{
-        width: 100% !important;
-    }
+    
 };
 
 
@@ -295,3 +302,7 @@
     height: max-content;
 }
 
+.feed .outer-privacy{
+    overflow-x: hidden;
+    max-width: 100%;
+}
