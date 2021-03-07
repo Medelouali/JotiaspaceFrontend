@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from "../../../store_page/components/Post";
+import Activity from '../../Charts/Activity';
 
 function Manage({go}) {
     switch(go){
@@ -31,7 +32,7 @@ function Manage({go}) {
             );
         case "Analytics":
             return(
-                <div className="">{go}</div>
+                <Activity/>
             );
         default:
             return(

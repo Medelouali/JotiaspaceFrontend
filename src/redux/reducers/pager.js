@@ -1,4 +1,4 @@
-const reducer=(state="home", action)=>{
+const reducer=(state="profile", action)=>{
     switch(action.type){
         case "Page":
             state=action.payload;
