@@ -7,5 +7,31 @@
 }
 
 .globe{
-    width: 80%;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-content: center;
+    grid-gap: 20px;
 }
+
+.store{
+    max-width: 100%;
+    background-image: url("../Sign/svg/Pins/background-1.jpg");
+    background-size: cover;
+    box-shadow: 0 1px 2px 1px rgb(180, 178, 178);
+    padding: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+@keyframes zomming{
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.store:hover{
+    animation: zooming 0.2s ease-out forwards;
+}
+
+
