@@ -9,7 +9,7 @@
 .globe{
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     grid-gap: 20px;
     height: 100%;
     background-color: white;
@@ -25,6 +25,8 @@
     padding: 10px;
     margin-right: 10px;
     margin-left: 10px;
+    display: grid;
+    place-items: center;
 }
 
 @keyframes zooming{
@@ -37,7 +39,20 @@
     animation: zooming 0.5s ease-out forwards;
 }
 
-.store svg{
-    width: 60%;
+.store svg, .inline-card svg{
+    width: 2.5em;
     height: auto;
+    cursor: pointer;
+}
+.inline-globe{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 60vh;
+}
+
+@media(max-width: 644px){
+    .store{
+        width: 90vw;
+    }
 }

@@ -3,14 +3,15 @@ import "./services.css";
 
 function Card({icon, label, details}){
     const [open, setOpen]=useState(false);
+
     const ref=useRef(null);
 
     const handleOpen=()=>{
         setOpen(!open);
     };
-
+    
     useEffect(() => {
-        if(ref.current) ref.current.scrollIntoView({behavior: "smooth", block: "center"});
+        if(ref.current) ref.current.scrollIntoView({behavior: "smooth"});
     }, [open]);
 
     return(

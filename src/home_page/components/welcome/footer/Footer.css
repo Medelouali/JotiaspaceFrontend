@@ -11,3 +11,31 @@
     font-weight: 600;
     color: rgb(11, 11, 212);
 }
+
+.navigator{
+    width: max-content;
+    height: max-content;
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    bottom: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dot{
+    border-radius: 50%;
+    width: 1.7em;
+    height: 1.7em;
+    cursor: pointer;
+    border: 5px solid black;
+    opacity: 0.8;
+    margin: 2px;
+}
+
+.selected{
+    border: 5px solid rgb(111, 111, 236);
+}
