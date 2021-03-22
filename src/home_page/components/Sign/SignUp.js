@@ -128,7 +128,7 @@ function SignUp({args}){
 
                         <div className="profile">
                             <div className="name">
-                                <input className={name.value ? "data": ""} onChange={handleName} value={name.value} type="text" name="username" id="name" autoComplete="off" required placeholder="Userame"/>
+                                <input className={name.value ? "data": ""} onChange={handleName} value={name.value} type="text" name="username" id="name" autoComplete="off" required placeholder="Username"/>
                                 {handler(name.flag)}
                             </div>
                         </div>
