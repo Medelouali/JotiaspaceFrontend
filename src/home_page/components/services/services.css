@@ -16,7 +16,7 @@
     padding: 20px;
 }
 
-.store{
+.store-section{
     max-width: 100%;
     background-image: url("../Sign/svg/Pins/background-1.jpg");
     background-size: cover;
@@ -35,11 +35,11 @@
     }
 }
 
-.globe .store:hover{
+.globe .store-section:hover{
     animation: zooming 0.5s ease-out forwards;
 }
 
-.store svg, .inline-card svg{
+.store-section svg, .inline-card svg{
     width: 2.5em;
     height: auto;
     cursor: pointer;
@@ -52,7 +52,7 @@
 }
 
 @media(max-width: 644px){
-    .store{
+    .store-section{
         width: 90vw;
     }
 }

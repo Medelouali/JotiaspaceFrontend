@@ -12,10 +12,10 @@ function Store({logo, title, jsx_details}) {
     };
 
     return (
-        <div className="store">
+        <div ref={divRef} className="store">
             <img onClick={handleShow} src={logo} alt=""/>
             <h4 onClick={handleShow} className={show ? "selected": ""}>{title}</h4>
-            <div ref={divRef} className="details">
+            <div className="details">
                 { show ? jsx_details: null}
             </div>
         </div>

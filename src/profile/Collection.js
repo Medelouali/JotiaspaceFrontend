@@ -9,11 +9,11 @@ function Collection({coordinates}){
 
     useEffect(() => {
         if(ref.current){
-            ref.current.scrollIntoView({behavior: "smooth"});
+            ref.current.scrollIntoView({behavior: "smooth", block: "center"});
         };    
     }, [coords])
     return (
-        <div className="collection">
+        <div ref={ref} className="collection">
             <div className="collections">
                 {coordinates.list.map((item, index)=>(
                     <Collect key={`${item.name}#${index}`} name={item.name.toLowerCase()} 
@@ -21,7 +21,7 @@ function Collection({coordinates}){
                     />
                 ))}
             </div>
-            <div ref={ref} className=""><Expaind origin={coordinates} what={coords}/></div>
+            <div className=""><Expaind origin={coordinates} what={coords}/></div>
         </div>
     )
 }
