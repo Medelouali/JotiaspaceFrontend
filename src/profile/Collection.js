@@ -9,7 +9,7 @@ function Collection({coordinates}){
 
     useEffect(() => {
         if(ref.current){
-            ref.current.scrollIntoView({behavior: "smooth", block: "end"});
+            ref.current.scrollIntoView({behavior: "smooth"});
         };    
     }, [coords])
     return (

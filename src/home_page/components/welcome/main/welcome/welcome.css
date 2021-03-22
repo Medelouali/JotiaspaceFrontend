@@ -1,0 +1,89 @@
+
+.welcome-wrapper{
+    display: grid;
+    place-items: center;
+    background-image: url("../../../Sign/svg/Pins/background-1.jpg");
+    background-size: cover;
+}
+
+.products-list{
+    width: 95%;
+    margin: auto;
+    margin-top: 4%;
+    overflow-x: scroll;
+    height: max-content;
+    white-space: nowrap;
+}
+
+.products-list img{
+    height: 30vh;
+    width: auto;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.products-list img:hover{
+    animation: zoom 0.5s ease-out forwards;
+}
+
+@keyframes zoom{
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.intro-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100vw;
+    padding: 10%;
+}
+
+.intro-section .intro{
+    width: 50vw;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+}
+
+.intro-section .buttons{
+    width: 10%;
+    display: grid;
+    place-items: center;
+}
+
+.intro-section .buttons button{
+    width: 90%;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    box-shadow: 0 2px 3px 1px rgba(26, 26, 31, 0.1);
+    background-color: rgb(253, 253, 253);
+}
+.intro-section .buttons button:hover{
+    box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 680px){
+    .intro-section{
+        flex-direction: column;
+    }
+    .intro-section .buttons{
+        width: 100vw;
+        display: grid;
+        place-items: center;
+    }
+    .intro-section .buttons button{
+        width: 20vw;
+    }
+}

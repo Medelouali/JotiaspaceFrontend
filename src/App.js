@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 function App(){
   const page = useSelector(state => state.pager);
   return(
-    <Manage page={page}/>   
+    <Manage page={page}/>
   );
 };
 

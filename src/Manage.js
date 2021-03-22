@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from "./home_page/components/Home";
+import Home from "./home_page/components/welcome/Home";
 import Post from './interface/Post';
 import Profile from './profile/Profile';
 import Store from './store_page/components/Store';
@@ -23,11 +23,11 @@ function Manage({page}) {
                 <Post/>
             );
         default:
-            const value=page === "home-con" || page==="home-abo" || page==="home-ser"
+            const value=page === "home" || "home-con" || page==="home-abo" || page==="home-ser"
                                 || page==="home-in" || page==="home-up";
             if(value) return(<Home page={page}/>);
             return(
-                <div className="">Invalid Route</div>
+                <div className="">Invalid Route...</div>
             )
     };
 }

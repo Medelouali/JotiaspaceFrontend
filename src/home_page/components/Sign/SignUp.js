@@ -122,7 +122,7 @@ function SignUp({args}){
                 {!args.length ? (
                     <>
                         <div className="profile">
-                            <label htmlFor="profile"><img id="profile-picture" src={profile_pic} alt=""/><br/><i>Add Picture</i></label>
+                            <label htmlFor="profile"><img id="profile-picture" src={profile_pic} alt=""/><br/>Picture?</label>
                             <input type="file" onChange={handleProfile} value={profile} name="profile" id="pic" accept="image/*"/>
                         </div>
 
