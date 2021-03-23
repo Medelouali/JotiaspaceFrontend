@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from "../../../store_page/components/Post";
+import Post from "../../../store_page/components/post/Post";
 import Activity from '../../Charts/Activity';
 
 function Manage({go}) {

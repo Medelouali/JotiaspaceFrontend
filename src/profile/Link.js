@@ -18,7 +18,6 @@ function Link({logo, name}) {
                 dispatch(profile("photos"));
                 break;
             default:
-                console.log("can't happen");
         };
     };
 

@@ -1,4 +1,4 @@
-import user from "../../store_page/components/model";
+import user from "../../store_page/components/models/model.js";
 
 const reducer=(state=user, action)=>{
     switch(action.type){

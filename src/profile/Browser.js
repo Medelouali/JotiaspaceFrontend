@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollerX } from "../store_page/components/Scroller";
+import  ScrollerX  from "../store_page/components/scrollers/ScrollerX";
 import Latest from './Latest';
 import Slider from './Links/Slider';
 //import Output from './Output';

@@ -1,6 +1,7 @@
 import React from 'react';
+import Messages from "../../../store_page/components/messanger/message/Messages";
 import "./message.css";
-import { Messages } from "../../../store_page/components/Messanger";
+
 function Message(){
     return(
         <div className="message">

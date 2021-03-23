@@ -1,5 +1,4 @@
 import React from 'react';
-//import Product from "./Product";
 import data from "./data.js";
 import Mapper from "./Mapper";
 

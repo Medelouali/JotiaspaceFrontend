@@ -1,5 +1,6 @@
 import React from 'react';
-import Post from '../store_page/components/Post';
+import Post from '../store_page/components/post/Post';
+
 function Latest() {
     return (
         <div className="latest">
