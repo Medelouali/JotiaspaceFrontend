@@ -1,0 +1,17 @@
+
+#grid{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.main-core{
+    width: 96%;
+    height: 96%;
+    background-color: rgb(196, 196, 250);
+}

@@ -1,0 +1,83 @@
+
+
+.nav-bar{
+    padding: 4px;
+    display: grid;
+    grid-template-columns: 10% 20% 10% 1fr;
+    width: 100vw;
+    align-items: center;
+    background-color: rgb(226, 225, 238);
+}
+
+
+.search{
+    display: grid;
+    grid-template-columns: 1.3em 1fr;
+    justify-self: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 40%;
+    padding: 2px;
+}
+
+.search label{
+    display: grid;
+}
+
+.search label img{
+    width: 95%;
+    height: auto;
+    justify-self: end;
+    align-self: center;
+    opacity: 0.3;
+}
+
+.search input{
+    border-radius: 4px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.my-image{
+    width: 2em;
+    height: auto;
+    justify-self: center;
+}
+
+.store-logo{
+    width: 1.5em;
+    height: auto;
+}
+
+.social{
+    position: fixed;
+    right: 10px;
+    background-color: rgb(0, 0, 0, 0.9);
+    border-radius: 20px;
+    top: 40vh;
+    width: 4em;
+    height: 30vh;
+    padding: 6px;
+    display: grid;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.social .social-logo{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 80% max-content;
+}
+
+.social-logo .logo{
+    width: 80%;
+    height: auto;
+    margin-top: 6px;
+    padding: 1px;
+}
+
+.social-logo i{
+    color: white;
+}
