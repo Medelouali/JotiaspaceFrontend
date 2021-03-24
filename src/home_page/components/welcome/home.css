@@ -1,4 +1,8 @@
+.home {
+  width: 100%;
+}
 
-.home{
-    width: 100%;
+#welcome {
+  width: 100%;
+  overflow-x: hidden;
 }

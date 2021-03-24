@@ -6,7 +6,7 @@ import "./home.css";
 
 function Home({page}){
     return(
-        <div className="welcome">
+        <div id="welcome">
             <Header/>
             <div className="main-section">
                 <Main page={page}/>
