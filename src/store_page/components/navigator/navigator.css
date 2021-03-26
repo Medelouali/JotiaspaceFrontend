@@ -13,9 +13,15 @@
 
 @media (max-width: 800px) {
   .navigator-core {
+    display: block;
     width: 100vw;
-    flex-direction: row;
-    height: max-content;
+    height: min-content;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  .navigator-core h3 {
+    display: inline-block;
+    width: max-content;
   }
 }
 
