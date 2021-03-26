@@ -72,3 +72,81 @@
   height: auto;
   grid-area: 2/2/3/3;
 }
+
+.reactions {
+  width: 100%;
+  max-width: 100%;
+}
+
+.reaction {
+  width: 100%;
+}
+.reacter {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reacter .reacter-image {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.reacter h5 {
+  width: 38%;
+}
+
+.reacter .reacter-logo {
+  width: 10%;
+  height: auto;
+}
+
+.reaction p {
+  padding: 5%;
+  padding-top: 0;
+}
+
+.get-comment {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(3, max-content);
+}
+
+.get-comment h6 {
+  grid-area: 1/1/2/2;
+  width: max-content;
+}
+
+.get-comment img {
+  width: 10%;
+  height: auto;
+  justify-self: start;
+  cursor: pointer;
+}
+
+.get-comment .post-comment {
+  grid-area: 2/1/3/3;
+  width: 98%;
+  margin: auto;
+  height: 3em;
+  justify-self: center;
+  border-radius: 4px;
+  border-color: rgb(138, 138, 248);
+}
+
+.get-comment button {
+  grid-area: 3/2/4/3;
+  width: 30%;
+  border-radius: 3px;
+  justify-self: end;
+  margin: 6px;
+  background-color: rgb(92, 92, 243);
+  color: rgb(239, 239, 247);
+  cursor: pointer;
+}
+
+.inverse {
+  transform: rotate(90deg);
+}

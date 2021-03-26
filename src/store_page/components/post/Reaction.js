@@ -14,9 +14,11 @@ export function Reaction({reacters, is_comment_reaction}){
                 {reacters.map((reacter, index_1)=>(
                     reacter.re_words.map((word, index_2)=>(
                         <div className="reaction" key={`${index_1}${word}#${index_2}`}>
-                            <img className="reacter-image" src={reacter.re_image} alt="Reacter"/>
-                            <h5>{reacter.re_name}</h5>
-                            <img className="reacter-logo" src={reacter.re_logo} alt="Logo"/>
+                            <div className="reacter">
+                                <img className="reacter-image" src={reacter.re_image} alt="Reacter"/>
+                                <h5>{reacter.re_name}</h5>
+                                <img className="reacter-logo" src={reacter.re_logo} alt="Logo"/>
+                            </div>
                             <p>{word}</p>
                         </div>
                     ))
@@ -95,7 +97,7 @@ export function Comment({is_ready}){
     if(is_ready){
         return(
             <>
-                <textarea name="comment" id="post-comment"></textarea>
+                <textarea name="comment" className="post-comment"></textarea>
                 <button type="submit">Comment</button>
             </>
         );

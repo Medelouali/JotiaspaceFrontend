@@ -3,6 +3,7 @@
   background-color: rgb(201, 206, 224);
   margin: auto;
   overflow-y: scroll;
+  height: 100vh;
 }
 
 /* @media (max-width: 800px) {
