@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import eye from "../svg/eye.svg";
 import { shorten } from "../algorithms/algorithms";
+import "./post.css";
 
 import { Dialogue } from "./Reaction";
 
@@ -75,47 +76,25 @@ function Post({post}){
         setIscomment(false);
     };
 
-    const [open, setOpen]=useState(false);
-    const closer=()=>{
-        setOpen(!open);
-    };
+    // const [open, setOpen]=useState(false);
+    // const closer=()=>{
+    //     setOpen(!open);
+    // };
 
     const [dialogue, setDialogue]=useState(-1);
-    
     return(
         <div className="post">
-            <div className="poster">
-                <div className="outter-poster-image">
-                    <img className="poster-image" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
-                </div>
-                <div className="poster-name">
-                    <h3>{post.poster_name}</h3>
-                </div>
-                <div onClick={closer} className="burger">
-                    <div className={`${open ? "gap-11 ":""}rect`}></div>
-                    <div className={`${open ? "gap-22 ":""}rect`}></div>
-                    <div className={`${open ? "gap-33 ":""}rect`}></div>
-                </div>
+            <div className="card-header">
+                <img className="poster-image" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
+                <h3>{post.poster_name}</h3>
             </div>
 
-            <div className="outter-product-image">
+            <div className="card-data">
                 <img className="product-image" src="https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG" alt="Products"/>
-                <div className={`${open ? "move-left ":""}list`}>
-                   <div className="list-option">Interested in</div>
-                   <div className="list-option">Delete it</div>
-                   <div className="list-option">Inappropriate</div>
-                   
-                </div>
+                <p>{post.description}</p>
             </div>
-            <div className="post-intro">
-                <p>
-                    The places where Edmonia’s bones were fractured still hold violent reverberations. 
-                    When it rains I massage the static hum out of each point of impact. There is nothing heavier 
-                    than flesh that wishes to be on another axis, except perhaps stone she shaped. Tonight she tells me, 
-                    it’s impossible to bring a lover to the small death she deserves.
-                </p>
-            </div>
-            <div className="post-reaction">
+
+            <div className="cells">
                 <div className="cell">
                     <svg onClick={commentsCounter} aria-hidden="true" focusable="false" data-prefix="far" data-icon="comment" className="icon svg-inline--fa fa-comment fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill={commentsBlue ? "blue": "currentColor"} d="M256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 368c-26.7 0-53.1-4.1-78.4-12.1l-22.7-7.2-19.5 13.8c-14.3 10.1-33.9 21.4-57.5 29 7.3-12.1 14.4-25.7 19.9-40.2l10.6-28.1-20.6-21.8C69.7 314.1 48 282.2 48 240c0-88.2 93.3-160 208-160s208 71.8 208 160-93.3 160-208 160z"></path></svg>
                     <i>{shorten(comments)}</i>
@@ -153,8 +132,20 @@ function Post({post}){
 Post.defaultProps={
     post: {
         poster_name: "Mark Zuckerberg",
-        urls:["https://www.dogtime.com/assets/uploads/2011/03/puppy-development-1280x720.jpg"],
-        description: `This was a present but know we afre lokking for selling this and ...`,
+        urls:[
+            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
+            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
+            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
+            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
+            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
+            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG"
+        ],
+        description: `
+            The places where Edmonia’s bones were fractured still hold violent reverberations. 
+            When it rains I massage the static hum out of each point of impact. There is nothing heavier 
+            than flesh that wishes to be on another axis, except perhaps stone she shaped. Tonight she tells me, 
+            it’s impossible to bring a lover to the small death she deserves.
+        `,
         comments:[
             {
                 commenter_id: 1,

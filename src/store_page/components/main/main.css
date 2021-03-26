@@ -1,17 +1,24 @@
-
-#grid{
-    width: 100%;
-    overflow-x: hidden;
+#grid {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-.main{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+.main {
+  display: grid;
+  place-items: center;
 }
 
-.main-core{
-    width: 96%;
-    height: 96%;
-    background-color: rgb(196, 196, 250);
+.main-core {
+  display: flex;
+  justify-content: space-evenly;
+  width: 99%;
+  height: max-content;
+  background-color: rgb(196, 196, 250);
+  margin-top: 1vh;
+}
+
+@media (max-width: 800px) {
+  .main-core {
+    display: block;
+  }
 }

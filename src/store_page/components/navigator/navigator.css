@@ -1,5 +1,33 @@
+.navigator-core {
+  width: 48vw;
+  background-color: rgb(244, 244, 248);
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
 
-.navigator{
-    width: 48%;
-    background-color: rgb(146, 146, 245);
+@media (max-width: 800px) {
+  .navigator-core {
+    width: 100vw;
+    flex-direction: row;
+  }
+}
+
+.navigator-core h3 {
+  margin: 10px;
+  background-color: rgb(84, 114, 231);
+  border-radius: 9px;
+  padding: 1px;
+  color: white;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

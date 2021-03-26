@@ -6,6 +6,8 @@ import pager from "./pager";
 import profile from "./profile";
 import collection from "./collection";
 import collectionCoord from "./collectionCoord";
+import scroller from "./scroller";
+
 import view from "./view";
 
 const allReducers=combineReducers({
@@ -16,7 +18,8 @@ const allReducers=combineReducers({
     profile: profile,
     collection: collection,
     collectionCoord: collectionCoord,  
-    view: view
+    view: view,
+    scroller: scroller
 });
 
 export default allReducers;
