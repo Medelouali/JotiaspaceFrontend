@@ -30,7 +30,7 @@
 
 .card-data .urls {
   grid-area: 2/2/3/3;
-  width: 100%;
+  width: max-content;
   height: auto;
   white-space: nowrap;
   overflow-x: scroll;
@@ -39,7 +39,7 @@
 .urls img {
   display: inline-block;
   margin: 2px;
-  height: 100%;
+  height: 40vh;
   width: auto;
 }
 .card-data p {
