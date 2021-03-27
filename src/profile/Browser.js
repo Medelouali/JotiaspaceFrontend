@@ -19,7 +19,7 @@ function Browser({name}) {
         <div className="browser">
             <h3>{name}</h3>
             <p>I am the CEO of Facebook Inc</p>
-            <ScrollerX clips={images}/>
+            {/* <ScrollerX clips={images}/> */}
             <hr/>
             <Latest/>
             <Slider/>
