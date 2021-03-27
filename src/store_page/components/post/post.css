@@ -49,6 +49,7 @@
 .card-data p {
   grid-area: 3/2/4/3;
   width: 100%;
+  margin-top: 1%;
 }
 
 .cells {
@@ -59,8 +60,10 @@
   align-content: center;
   background-color: rgb(246, 245, 250);
   border-radius: 6px;
-  margin: 2%;
+  margin: 2.5%;
   padding: 4px;
+  margin-bottom: 6px;
+  box-shadow: 0 0.8px 0.8px 0.6px rgb(194, 194, 199);
 }
 
 .cell {

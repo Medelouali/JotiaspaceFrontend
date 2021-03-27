@@ -13,7 +13,7 @@
   justify-self: center;
   border: 1px solid black;
   border-radius: 4px;
-  width: 40%;
+  width: 45%;
   padding: 2px;
 }
 
@@ -78,4 +78,8 @@
 
 .social-logo i {
   color: white;
+}
+
+.header {
+  box-shadow: 0 1px 1px 2px rgb(133, 123, 148);
 }
