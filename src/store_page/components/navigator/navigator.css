@@ -1,6 +1,6 @@
 .navigator-core {
   width: 48vw;
-  background-color: rgb(244, 244, 248);
+  background-color: white;
   margin: auto;
   display: flex;
   justify-content: space-around;
@@ -27,11 +27,12 @@
 
 .navigator-core h3 {
   margin: 10px;
-  background-color: rgb(84, 114, 231);
+  background-color: rgb(52, 86, 221);
   border-radius: 9px;
   padding: 1px;
   color: white;
   cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgb(28, 28, 29);
 }
 
 .bottom {

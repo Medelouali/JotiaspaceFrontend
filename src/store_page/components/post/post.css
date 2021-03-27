@@ -2,6 +2,7 @@
   margin: 5px;
   background-color: white;
   box-shadow: 0 1px 2px 1px rgb(194, 191, 191);
+  margin: 6px;
 }
 .card-header {
   width: 100%;
@@ -35,6 +36,8 @@
   height: auto;
   white-space: nowrap;
   overflow-x: scroll;
+  border: 1px solid rgb(150, 150, 248);
+  box-shadow: 0 1px 1px 2px rgb(136, 132, 132);
 }
 
 .urls img {
@@ -54,6 +57,10 @@
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+  background-color: rgb(246, 245, 250);
+  border-radius: 6px;
+  margin: 2%;
+  padding: 4px;
 }
 
 .cell {
