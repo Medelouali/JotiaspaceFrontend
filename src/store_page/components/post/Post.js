@@ -4,6 +4,7 @@ import { shorten } from "../algorithms/algorithms";
 import "./post.css";
 
 import { Dialogue } from "./Reaction";
+import Images from './Images';
 
 function Post({post}){
     const [comments, setComments]=useState(0);
@@ -90,7 +91,7 @@ function Post({post}){
             </div>
 
             <div className="card-data">
-                <img className="product-image" src="https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG" alt="Products"/>
+                <Images urls={post.urls}/>
                 <p>{post.description}</p>
             </div>
 
@@ -133,12 +134,15 @@ Post.defaultProps={
     post: {
         poster_name: "Mark Zuckerberg",
         urls:[
-            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
-            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
-            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
-            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
-            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG",
-            "https://www.ikea.com/ma/en/images/products/duktig-24-piece-pizza-set-pizza-multicolour__0663854_PE712532_S5.JPG"
+            "https://i.pinimg.com/236x/d3/dd/09/d3dd096e6b94620c6de7091541b80d3b.jpg",
+            "https://i.pinimg.com/236x/2d/2d/39/2d2d396843a0a1d62589988fd16a815f.jpg",
+            "https://i.pinimg.com/236x/10/ef/46/10ef466d5c6a9239c279b883e6c5d88d.jpg",
+            "https://i.pinimg.com/236x/4b/37/c7/4b37c72691a2b412a92b037b625c7bc8.jpg",
+            "https://i.pinimg.com/236x/d2/ba/46/d2ba460d85add026bad85e79c6d89484.jpg",
+            "https://i.pinimg.com/236x/f8/d6/8e/f8d68e3f103d9a24dcdb4570ff6f7146.jpg",
+            "https://i.pinimg.com/236x/be/66/ac/be66ac085c6f085734b4741406d05132.jpg",
+            "https://i.pinimg.com/236x/c0/db/9e/c0db9ed759e0be4d8f3aa6cee8baaca6.jpg",
+            "https://i.pinimg.com/236x/eb/58/af/eb58af292e621886d551c1e8dc506a27.jpg"
         ],
         description: `
             The places where Edmonia’s bones were fractured still hold violent reverberations. 

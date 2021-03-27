@@ -23,6 +23,7 @@ export function Reaction({reacters, is_comment_reaction}){
                         </div>
                     ))
                 ))}
+                <hr/>
             </div>
             <CommentOnly comment_flag={is_comment_reaction}/>
         </div>
@@ -96,10 +97,10 @@ Dialogue.defaultProps={
 export function Comment({is_ready}){
     if(is_ready){
         return(
-            <>
+            <form className="message-form" method="post">
                 <textarea name="comment" className="post-comment"></textarea>
                 <button type="submit">Comment</button>
-            </>
+            </form>
         );
     }else
         return(
@@ -114,9 +115,14 @@ Comment.defaultProps={
 
 export function CommentOnly({comment_flag}){
     const [ready, setReady]=useState(false);
+    // const divRef=useRef(null);
+
     const manage=()=>{
         setReady(!ready);
+        // if(divRef.current) divRef.current.scrollIntoView({behavior: "smooth", block: "center"});
+        // console.log(divRef.current);
     };
+
     if(comment_flag){
         return(
             <div className="get-comment">

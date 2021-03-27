@@ -9,6 +9,10 @@ function Browser(){
     return(
         <div className="store-browser">
             <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
         </div>
     );
 };

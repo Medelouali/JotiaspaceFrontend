@@ -28,12 +28,20 @@
   grid-gap: 0 5px;
 }
 
-.card-data img {
+.card-data .urls {
   grid-area: 2/2/3/3;
   width: 100%;
   height: auto;
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 
+.urls img {
+  display: inline-block;
+  margin: 2px;
+  height: 100%;
+  width: auto;
+}
 .card-data p {
   grid-area: 3/2/4/3;
   width: 100%;
@@ -89,7 +97,7 @@
 }
 
 .reacter .reacter-image {
-  width: 20%;
+  width: 10%;
   height: auto;
   border-radius: 10px;
 }
@@ -99,7 +107,7 @@
 }
 
 .reacter .reacter-logo {
-  width: 10%;
+  width: 5%;
   height: auto;
 }
 
@@ -111,37 +119,39 @@
 .get-comment {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(3, max-content);
 }
 
 .get-comment h6 {
   grid-area: 1/1/2/2;
   width: max-content;
+  margin: 10px;
 }
 
 .get-comment img {
-  width: 10%;
+  width: 5%;
   height: auto;
   justify-self: start;
   cursor: pointer;
 }
 
-.get-comment .post-comment {
+.get-comment .message-form {
   grid-area: 2/1/3/3;
-  width: 98%;
-  margin: auto;
-  height: 3em;
-  justify-self: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.message-form .post-comment {
+  width: 70%;
+  height: 4em;
   border-radius: 4px;
-  border-color: rgb(138, 138, 248);
 }
 
-.get-comment button {
-  grid-area: 3/2/4/3;
-  width: 30%;
+.message-form button {
+  width: max-content;
   border-radius: 3px;
-  justify-self: end;
   margin: 6px;
+  padding: 2px;
   background-color: rgb(92, 92, 243);
   color: rgb(239, 239, 247);
   cursor: pointer;
