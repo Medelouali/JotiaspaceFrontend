@@ -50,10 +50,10 @@
 .social {
   position: fixed;
   left: 10px;
-  background-color: rgb(0, 0, 0, 0.9);
+  background-color: rgba(213, 204, 221, 0.9);
   border-radius: 20px;
   top: 40vh;
-  width: 4em;
+  width: 5em;
   height: 30vh;
   padding: 6px;
   display: grid;
@@ -64,13 +64,13 @@
 
 .social .social-logo {
   width: 100%;
-  height: max-content;
+  height: auto;
   display: grid;
   grid-template-columns: 80% max-content;
 }
 
 .social-logo .logo {
-  width: 80%;
+  width: 2.5em;
   height: auto;
   margin-top: 6px;
   padding: 1px;
