@@ -44,7 +44,7 @@ function Nav({fri, inv, not, mes, name, image}){
                     </div>
                 </div>
                 <div className="social">
-                    <div className="social-logo"><img onClick={fri_app} className="logo" src={friends} alt="Friends"/><i>10000</i></div>
+                    <div className="social-logo"><img onClick={fri_app} className="logo" src={friends} alt="Friends"/><i>{shorten(fri)}</i></div>
                     <div className="social-logo"><img onClick={inv_app} className="logo" src={invitations} alt="Invitations"/><i>{shorten(inv)}</i></div>
                     <div className="social-logo"><img onClick={not_app} className="logo" id="bell" src={notifications} alt="Notifications"/><i>{shorten(not)}</i></div>
                     <div className="social-logo"><img onClick={mes_app} className="logo" src={messages} alt="Messages"/><i>{shorten(mes)}</i></div>
