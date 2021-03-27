@@ -30,7 +30,8 @@
 
 .card-data .urls {
   grid-area: 2/2/3/3;
-  width: max-content;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   white-space: nowrap;
   overflow-x: scroll;
