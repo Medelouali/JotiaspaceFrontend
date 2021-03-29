@@ -4,7 +4,7 @@
   grid-template-columns: 10% 20% 10% 1fr;
   width: 100vw;
   align-items: center;
-  background-color: rgb(226, 225, 238);
+  background-color: lightblue;
 }
 
 .search {
@@ -67,6 +67,7 @@
   height: auto;
   display: grid;
   grid-template-columns: 80% max-content;
+  cursor: pointer;
 }
 
 .social-logo .logo {

@@ -2,23 +2,28 @@ import React from "react";
 import Friends from "./friends/Friends";
 import AddFriends from "./addFriends/AddFriends";
 import Notifications from "./notification/Notifications";
-import Messages from "./message/Messages";
 import Invitation from "./invitation/Invitation";
+import Message from './messages/Message';
 
-export default function Messanger({app}){
+import "./messanger.css";
+import Wrapper from "./Wrapper";
+
+function Messanger({app}){
     switch(app){
         case 0:
-            return(<Friends/>);
+            return(<Wrapper jsx={<Friends/>}/>);
         case 1:
-            return(<AddFriends/>);
+            return(<Wrapper jsx={<AddFriends/>}/>);
         case 2:
-            return(<Notifications/>);
+            return(<Wrapper jsx={<Notifications/>}/>);
         case 3:
-            return(<Messages/>);
+            return(<Wrapper jsx={<Message/>}/>);
         case 4:
-            return(<Invitation/>);
+            return(<Wrapper jsx={<Invitation/>}/>);
         default:
-            return(<></>);
+            return(
+                <></>
+            );
     };
 }
 
@@ -26,3 +31,4 @@ Messanger.defaultProps={
     app: -1
 }
 
+export default Messanger;

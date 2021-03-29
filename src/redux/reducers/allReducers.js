@@ -8,6 +8,7 @@ import collection from "./collection";
 import collectionCoord from "./collectionCoord";
 import view from "./view";
 import scroller from "./scroller";
+import messanger from "./messanger";
 
 const allReducers=combineReducers({
     usersData: usersReducer,
@@ -18,7 +19,8 @@ const allReducers=combineReducers({
     collection: collection,
     collectionCoord: collectionCoord,  
     view: view,
-    scroller: scroller
+    scroller: scroller,
+    messanger: messanger
 });
 
 export default allReducers;
