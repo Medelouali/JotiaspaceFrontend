@@ -1,12 +1,11 @@
-//the default is home not store 
-const reducer=(state="store", action)=>{
+const reducer=(state=[], action)=>{
     switch(action.type){
-        case "Page":
+        case "Chats":
             state=action.payload;
             return state;
-        default:
+        default: 
             return state;
     }
-};
+}
 
 export default reducer;

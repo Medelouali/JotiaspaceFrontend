@@ -87,6 +87,7 @@
   align-items: center;
   margin: 4px;
   border: 3px solid rgb(167, 167, 228);
+  cursor: pointer;
 }
 
 .chat-image img {
@@ -96,6 +97,7 @@
 
 .chat h4 {
   width: 35%;
+  cursor: pointer;
 }
 
 .chat .controller {
@@ -110,4 +112,33 @@
   position: absolute;
   right: 0;
   bottom: 40%;
+}
+
+.message-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.timeStamp {
+  font-size: xx-small;
+  font-weight: 600;
+  width: 30%;
+  color: blue;
+}
+
+.message-text {
+  background-color: rgb(246, 244, 248);
+  color: black;
+  width: 60%;
+  margin: 10px;
+}
+
+.him-border {
+  border-radius: 0 10px 10px 10px;
+}
+
+.me-border {
+  border-radius: 10px 0px 10px 10px;
 }

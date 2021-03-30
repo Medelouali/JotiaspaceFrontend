@@ -10,6 +10,7 @@ import view from "./view";
 import scroller from "./scroller";
 import messanger from "./messanger";
 import deleteMessage from './deleteMessage';
+import chat from "./messages";
 
 
 const allReducers=combineReducers({
@@ -23,7 +24,8 @@ const allReducers=combineReducers({
     view: view,
     scroller: scroller,
     messanger: messanger,
-    deleteMessage: deleteMessage
+    deleteMessage: deleteMessage,
+    chat: chat
 });
 
 export default allReducers;

@@ -1,36 +1,20 @@
 import React from 'react'
+import Msg from "./Msg";
 
-function Conversation({chats}) {
+function Conversation({chatText}) {
     return (
         <div className="inner-conversation">
-            Inner Conv...
+            {chatText.map((item, index)=>{
+                const flag=item["Him"]===undefined ? "Me": "Him";
+                return <Msg flag={flag} textMsg={item[flag]} key={`#${index}`}/>
+            })}
         </div>
     )
 }
 
 Conversation.defaultProps={
-    chats: [
-        {
-            sender_id: 1,
-            msg: "Hello",
-            timeStamp: Date.now()
-        },
-        {
-            sender_id: 2,
-            msg: "Hey how are u?",
-            timeStamp: Date.now()
-        },
-        {
-            sender_id: 1,
-            msg: "I am good wbu?",
-            timeStamp: Date.now()
-        },
-        {
-            sender_id: 2,
-            msg: "Just fine and dandy",
-            timeStamp: Date.now()
-        }
-    ]
+    chatText: []
+        
 };
 
 export default Conversation;

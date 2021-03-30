@@ -50,8 +50,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Heyy"},
-                {"Him": "Heyy I was waiting for you...."}
+                {"Me": "Hiii", timeStamp: Date.now()},
+                {"Him": "Heyy I was waiting for you....", timeStamp: Date.now()},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: Date.now()},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: Date.now()},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: Date.now()},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: Date.now()}
             ]
         },
         {
@@ -60,8 +64,12 @@ const user={
             chater_name: "Fluffy",
             chater_image: fluffy, 
             chats:[
-                {"Me": "Hello"},
-                {"Him": "Heyy I was waiting for you...."}
+                {"Me": "Hello", timeStamp: Date.now()},
+                {"Him": "Heyy I was waiting for you....", timeStamp: Date.now()},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: Date.now()},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: Date.now()},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: Date.now()},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: Date.now()}
             ]
         },
         {
@@ -70,8 +78,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Heyy"},
-                {"Him": "Heyy I was waiting for you...."}
+                {"Me": "heyy", timeStamp: Date.now()},
+                {"Him": "Heyy I was waiting for you....", timeStamp: Date.now()},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: Date.now()},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: Date.now()},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: Date.now()},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: Date.now()}
             ]
         },
         {
@@ -80,8 +92,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Heyy"},
-                {"Him": "Heyy I was waiting for you...."}
+                {"Me": "Holllla", timeStamp: Date.now()},
+                {"Him": "Heyy I was waiting for you....", timeStamp: Date.now()},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: Date.now()},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: Date.now()},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: Date.now()},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: Date.now()}
             ]
         },
         {
@@ -90,8 +106,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Heyy"},
-                {"Him": "Heyy I was waiting for you...."}
+                {"Me": "Bonjouuur", timeStamp: Date.now()},
+                {"Him": "Heyy I was waiting for you....", timeStamp: Date.now()},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: Date.now()},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: Date.now()},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: Date.now()},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: Date.now()}
             ]
         },
         {
@@ -100,8 +120,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Heyy"},
-                {"Him": "Heyy I was waiting for you...."}
+                {"Me": "Salut", timeStamp: Date.now()},
+                {"Him": "Heyy I was waiting for you....", timeStamp: Date.now()},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: Date.now()},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: Date.now()},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: Date.now()},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: Date.now()}
             ]
         },
     ],
