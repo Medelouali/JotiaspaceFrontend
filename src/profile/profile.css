@@ -91,10 +91,23 @@
   cursor: pointer;
 }
 
-.my-picture img {
+.my-picture .mee {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  border: 2px solid rgb(129, 129, 219);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.mee img {
   width: 100%;
   height: auto;
-  grid-gap: 5px;
+  transform: scale(1.5);
 }
 
 .my-picture {
@@ -315,4 +328,9 @@
 .product-image-2 img {
   height: 40vh;
   width: auto;
+}
+
+.go-small {
+  width: 10vw !important;
+  height: 10vw !important;
 }
