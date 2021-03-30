@@ -9,6 +9,8 @@ import collectionCoord from "./collectionCoord";
 import view from "./view";
 import scroller from "./scroller";
 import messanger from "./messanger";
+import deleteMessage from './deleteMessage';
+
 
 const allReducers=combineReducers({
     usersData: usersReducer,
@@ -20,7 +22,8 @@ const allReducers=combineReducers({
     collectionCoord: collectionCoord,  
     view: view,
     scroller: scroller,
-    messanger: messanger
+    messanger: messanger,
+    deleteMessage: deleteMessage
 });
 
 export default allReducers;

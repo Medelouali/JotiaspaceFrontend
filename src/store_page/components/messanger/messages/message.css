@@ -1,5 +1,5 @@
 .chats {
-  height: max-content;
+  height: 80vh;
   display: grid;
   place-items: center;
 }
@@ -67,4 +67,47 @@
 
 .current {
   border-bottom: 4px solid rgb(29, 29, 177);
+}
+
+.chat {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+}
+
+.chat .chat-image {
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  border: 3px solid rgb(167, 167, 228);
+}
+
+.chat-image img {
+  width: auto;
+  height: 100%;
+}
+
+.chat h4 {
+  width: 35%;
+}
+
+.chat .controller {
+  width: 25%;
+  position: relative;
+}
+
+.controller .MuiSvgIcon-root {
+  width: 25%;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 40%;
 }

@@ -1,4 +1,5 @@
-
+import lissa from "../svg/girlSmiling.jpg";
+import fluffy from "../svg/fluffy.jpg";
 
 const user={
     _id: 0,
@@ -45,7 +46,9 @@ const user={
     messages:[
         {
             sender_id: 1,
-            receiver_id: 2, 
+            receiver_id: 2,
+            chater_name: "Lissa",
+            chater_image: lissa, 
             chats:[
                 {"Me": "Heyy"},
                 {"Him": "Heyy I was waiting for you...."}
@@ -54,6 +57,8 @@ const user={
         {
             sender_id: 1,
             receiver_id: 5, 
+            chater_name: "Fluffy",
+            chater_image: fluffy, 
             chats:[
                 {"Me": "Hello"},
                 {"Him": "Heyy I was waiting for you...."}
@@ -65,7 +70,6 @@ const user={
     fri: 0,
     mes: 0,
     inv: 0
-    //We'll add fields as we need to.
 }
 
 export default user;
