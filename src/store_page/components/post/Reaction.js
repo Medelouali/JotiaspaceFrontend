@@ -15,7 +15,9 @@ export function Reaction({reacters, is_comment_reaction}){
                     reacter.re_words.map((word, index_2)=>(
                         <div className="reaction" key={`${index_1}${word}#${index_2}`}>
                             <div className="reacter">
-                                <img className="reacter-image" src={reacter.re_image} alt="Reacter"/>
+                                <div className="reacter-image">
+                                    <img src={reacter.re_image} alt="Reacter"/>
+                                </div>
                                 <h5>{reacter.re_name}</h5>
                                 <img className="reacter-logo" src={reacter.re_logo} alt="Logo"/>
                             </div>

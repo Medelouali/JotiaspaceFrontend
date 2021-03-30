@@ -86,7 +86,9 @@ function Post({post}){
     return(
         <div className="post">
             <div className="card-header">
-                <img className="poster-image" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
+                <div className="poster-image">
+                    <img className="" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
+                </div>
                 <h3>{post.poster_name}</h3>
             </div>
 

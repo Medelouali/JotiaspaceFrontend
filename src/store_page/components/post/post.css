@@ -11,12 +11,22 @@
   align-items: center;
 }
 
-.card-header img {
-  width: 10%;
-  height: auto;
+.card-header .poster-image {
+  width: 4em;
+  height: 4em;
   border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(163, 163, 243);
+  margin: 2px;
 }
 
+.poster-image img {
+  width: 100%;
+  height: auto;
+}
 .card-header h3 {
   width: 60%;
   background-color: white;
@@ -108,11 +118,20 @@
 }
 
 .reacter .reacter-image {
-  width: 10%;
-  height: auto;
-  border-radius: 10px;
+  width: 3em;
+  height: 3em;
+  border: 2px solid rgb(201, 201, 245);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
+.reacter-image img {
+  width: auto;
+  height: 100%;
+}
 .reacter h5 {
   width: 38%;
 }

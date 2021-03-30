@@ -63,7 +63,47 @@ const user={
                 {"Me": "Hello"},
                 {"Him": "Heyy I was waiting for you...."}
             ]
-        }
+        },
+        {
+            sender_id: 1,
+            receiver_id: 3,
+            chater_name: "Lissa",
+            chater_image: lissa, 
+            chats:[
+                {"Me": "Heyy"},
+                {"Him": "Heyy I was waiting for you...."}
+            ]
+        },
+        {
+            sender_id: 23,
+            receiver_id: 1,
+            chater_name: "Lissa",
+            chater_image: lissa, 
+            chats:[
+                {"Me": "Heyy"},
+                {"Him": "Heyy I was waiting for you...."}
+            ]
+        },
+        {
+            sender_id: 1,
+            receiver_id: 2903,
+            chater_name: "Lissa",
+            chater_image: lissa, 
+            chats:[
+                {"Me": "Heyy"},
+                {"Him": "Heyy I was waiting for you...."}
+            ]
+        },
+        {
+            sender_id: 1211,
+            receiver_id: 1,
+            chater_name: "Lissa",
+            chater_image: lissa, 
+            chats:[
+                {"Me": "Heyy"},
+                {"Him": "Heyy I was waiting for you...."}
+            ]
+        },
     ],
     unread: 0,
     not: 0,

@@ -11,7 +11,9 @@ function Friend({picture, name, jsx}) {
     return (
         <>
             <div className="friends">
-                <img onClick={handleOutput} src={picture} alt=""/>
+                <div className="friend-image">
+                    <img onClick={handleOutput} src={picture} alt=""/>
+                </div>
                 <h6 onClick={handleOutput} >{name}</h6>
                 <div className="jsx">{jsx}</div>
             </div>
