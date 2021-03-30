@@ -1,34 +1,37 @@
 .chats {
-  height: 100vh;
+  height: max-content;
   display: grid;
   place-items: center;
 }
 
 .conversation {
-  height: 100vh;
+  height: 80vh;
   display: grid;
   place-items: center;
 }
 
 .inner-chats,
-.inner-conversation {
+.inner-conversation,
+.notifications,
+.invitations {
   width: 96%;
   height: 96%;
-  max-height: 90vh;
   overflow-y: scroll;
   box-shadow: 0 1px 0.5px 1px rgb(165, 165, 167);
   border-radius: 2px;
+  margin: auto;
 }
 
 .inner-conversation {
   background-image: url("../../svg//whatsup.jpg");
   background-size: cover;
   color: white;
+  height: 90vh;
 }
 .messages {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background-color: rgb(245, 245, 250);
   position: relative;
@@ -39,15 +42,16 @@
 }
 /* position: absolute;
   top: 4px; */
+
 .links {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   max-width: 100%;
+  height: max-content;
   color: rgb(130, 130, 238);
 }
-
 .links h4 {
   width: max-content;
   margin: 3px;
@@ -62,5 +66,5 @@
 }
 
 .current {
-  border-bottom: 2px solid rgb(29, 29, 177);
+  border-bottom: 4px solid rgb(29, 29, 177);
 }

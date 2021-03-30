@@ -6,14 +6,14 @@ import "./message.css";
 
 function Message() {    
     return (
-        <>
+        <div className="messages">
             <div className="chats">
                 <Chats/>
             </div>
             <div className="conversation">
                 <Conversation/>
             </div>
-        </>
+        </div>
     )
 }
 

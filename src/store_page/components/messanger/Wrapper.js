@@ -8,7 +8,7 @@ function Wrapper({jsx}) {
     return (
         <div className="mess-container">
             <div className="mess">
-                <div className={"messages" + (smallScreen ? " scroller-y" : "")}>
+                <div className={smallScreen ? " scroller-y" : ""}>
                     <Links/>
                     {jsx}
                 </div>
