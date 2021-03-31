@@ -27,6 +27,22 @@
   background-size: cover;
   color: white;
   height: 90vh;
+  position: relative;
+}
+
+.inner-conversation .MuiSvgIcon-root {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  width: 2em;
+  height: auto;
+  cursor: pointer;
+  z-index: 11;
+  fill: rgb(220, 218, 231);
+  transform: scale(1.1);
+  border-radius: 50%;
+  border: 5px solid rgb(47, 47, 219);
+  margin: 6px;
 }
 .messages {
   display: grid;
@@ -141,4 +157,9 @@
 
 .me-border {
   border-radius: 10px 0px 10px 10px;
+}
+
+.empty-view {
+  position: fixed !important;
+  top: 0 !important;
 }

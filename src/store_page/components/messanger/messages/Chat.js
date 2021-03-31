@@ -1,12 +1,15 @@
 import React from 'react';
 import Controller from "./Controller";
 import messages from '../../../../redux/actions/messages';
+import zoomMessage from "../../../../redux/actions/intoView/zoomMessage";
+
 import { useDispatch } from "react-redux";
 
 function Chat({chat, index}) {
     const dispatch=useDispatch();
     const handleChat=()=>{
         dispatch(messages(chat.chats));
+        dispatch(zoomMessage(false));
         //console.log(chat.chats[0]);
     };
     return (

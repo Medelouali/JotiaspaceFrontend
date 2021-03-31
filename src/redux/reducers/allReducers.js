@@ -11,7 +11,7 @@ import scroller from "./scroller";
 import messanger from "./messanger";
 import deleteMessage from './deleteMessage';
 import chat from "./messages";
-
+import zoomMessage from "./intoView/zoomMessage";
 
 const allReducers=combineReducers({
     usersData: usersReducer,
@@ -25,7 +25,8 @@ const allReducers=combineReducers({
     scroller: scroller,
     messanger: messanger,
     deleteMessage: deleteMessage,
-    chat: chat
+    chat: chat,
+    zoomMessage: zoomMessage
 });
 
 export default allReducers;
