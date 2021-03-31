@@ -168,14 +168,16 @@
 }
 
 .inner-mobile {
-  height: max-content;
-  padding-top: 10px;
+  height: max-content !important;
+  display: grid;
+  grid-gap: 10px;
 }
 
 .chat {
   display: grid;
   grid-template-columns: 40% 20% 1fr;
   grid-template-rows: max-content max-content;
+  height: max-content;
 }
 
 .chat .conversation {

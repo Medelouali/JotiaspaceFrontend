@@ -16,21 +16,19 @@ function Chat({chat, index}) {
         setShowMe(!showMe);
     };
 
-    
-
     return (
         <div className="">
-            <div className={"chat" + (smallScreen ? " inner-mobile": "")}>
+            <div className="chat">
                 <div onClick={handleChat} className="chat-image">
                     <img src={chat.chater_image} alt=""/>
                 </div>
                 <h4 onClick={handleChat} >{chat.chater_name}</h4>
                 <Controller index={index}/>
-                {smallScreen && showMe ? 
-                (<div className="conversation">
-                    <Conversation chatText={chat.chats} ux={smallScreen}/>
-                </div>): <></>
-            }
+                {smallScreen && showMe ?
+                    <div className="conversation">
+                        <Conversation chatText={chat.chats} ux={smallScreen}/>
+                    </div>:<></>
+                }
             </div>
             
         </div>
