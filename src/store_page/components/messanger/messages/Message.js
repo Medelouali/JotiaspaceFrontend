@@ -21,9 +21,11 @@ function Message() {
             <div className="chats">
                 <Chats chats_list={messages}/>
             </div>
-            <div ref={convRef} className="conversation">
-                <Conversation chatText={chat} ux={smallScreen}/>
-            </div>
+            {!smallScreen ? (
+                <div ref={convRef} className="conversation">
+                    <Conversation chatText={chat} ux={smallScreen}/>
+                </div>
+            ): <></>}
         </div>
     )
 }
