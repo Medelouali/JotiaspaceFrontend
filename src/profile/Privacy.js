@@ -4,7 +4,7 @@ import local from "../home_page/components/svg/local.svg";
 import global from "./svg/world.svg";
 import Settings from './Settings';
 
-function Privacy() {
+function Privacy({settings}) {
     return (
         <div className="outer-privacy">
             <div className="privacy">
@@ -14,10 +14,14 @@ function Privacy() {
                 <Near title="Global" logo={global}/>
                 <hr/>
                 <hr/>
-                <Settings/>
+                { settings ? <Settings/>: <></>}
             </div>
         </div>
     )
+}
+
+Privacy.defaultProps={
+    settings: true
 }
 
 export default Privacy;

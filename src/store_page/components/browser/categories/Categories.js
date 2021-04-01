@@ -5,7 +5,7 @@ import "./categories.css";
 function Categories() {
     return (
         <div className="categories-style">
-            <Privacy/>
+            <Privacy settings={false}/>
         </div>
     )
 }
