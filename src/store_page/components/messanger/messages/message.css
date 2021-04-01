@@ -197,6 +197,7 @@
   padding: 10px;
   color: rgb(59, 59, 199);
   animation: rotating 1s ease-out forwards;
+  font-weight: 600;
 }
 
 @keyframes rotating {
