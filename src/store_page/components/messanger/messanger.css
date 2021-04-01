@@ -30,3 +30,52 @@
   box-shadow: 0 1px 6px 1px rgb(167, 163, 163);
   border-radius: 4px;
 }
+
+.template .sup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sup .chat-image {
+  width: 3em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid rgb(161, 161, 219);
+}
+
+.chat-image img {
+  height: 100%;
+  width: auto;
+}
+.sup h6 {
+  width: 20%;
+  height: max-content;
+}
+
+.sup .control {
+  width: 30%;
+  height: max-content;
+  display: grid;
+  place-items: center;
+}
+
+.template .details-section {
+  width: 100%;
+  height: max-content;
+  display: grid;
+  place-items: center;
+}
+
+.template {
+  width: 100%;
+  margin: auto;
+}
+
+.big-size {
+  width: 60%;
+}
