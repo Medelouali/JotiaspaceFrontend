@@ -4,7 +4,9 @@ import "./vidoes.css";
 function Videos() {
     return (
         <div className="videos-style">
-            Vidoes goes here...
+            <video autoPlay loop muted>
+                <source src="./clips/walker.webm" type="video/webm"/>
+            </video>
         </div>
     )
 }

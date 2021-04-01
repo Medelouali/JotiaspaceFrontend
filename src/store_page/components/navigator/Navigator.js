@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import pager from "../../../redux/actions/pager";
 import storeHome from "../../../redux/actions/storeHome";
 import { useSelector } from "react-redux";
+
 function Navigator(){
     const page=useSelector(state=>state.storeHome);
 
@@ -31,7 +32,6 @@ function Navigator(){
                 <h3 onClick={handleStore("categories")} className={selected("categories")}>Categories</h3>
                 <h3 onClick={handleStore("trending")} className={selected("trending")}>Trending</h3>
                 <h3 onClick={handleStore("vidoes")} className={selected("vidoes")}>Videos</h3>
-                <h3 onClick={handleStore("photos")} className={selected("photos")}>Photos</h3>
                 <h3 onClick={handlePage("profile")}>Profile</h3>
                 <h3 onClick={handlePage("post")}>Post</h3>
             </div>
