@@ -26,13 +26,13 @@ function Chat({chat, index}) {
                 </div>
                 <h4 onClick={handleChat} >{chat.chater_name}</h4>
                 <Controller index={index}/>
-                <div ref={divRef} className=""></div>
                 {smallScreen && showMe ?
                     <div className="conversation">
                         <Conversation chatText={chat.chats}/>
                     </div>:<></>
+                    
                 }
-
+                <div ref={divRef} className=""></div>
             </div>
             
         </div>

@@ -1,18 +1,13 @@
 import React from "react";
-import Post from "../post/Post";
-
 
 import "./browser.css";
+import Manage from "./Manage";
 
 function Browser(){
 
     return(
         <div className="store-browser">
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
+            <Manage/>
         </div>
     );
 };
