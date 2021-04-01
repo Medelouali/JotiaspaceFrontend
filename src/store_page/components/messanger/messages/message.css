@@ -189,3 +189,21 @@
   width: 100%;
   height: max-content;
 }
+
+.plus {
+  float: right;
+  font-size: xx-large;
+  transform: rotate(45deg) scale(1.2);
+  padding: 10px;
+  color: rgb(59, 59, 199);
+  animation: rotating 1s ease-out forwards;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(410deg);
+  }
+}
