@@ -2,20 +2,18 @@ import React, { useRef } from 'react';
 import { useSelector } from "react-redux";
 import girl from "../../svg/girlSmiling.jpg";
 import Chat from './Chat';
-import { useMedia } from "use-media";
 
-//import Links from './Links'
 
 function Chats({chats_list}) {
     const chatsRef=useRef(null);
     const viewIt=useSelector(state=>state.zoomMessage);
-    const smallScreen=useMedia({maxWidth: "833px"});
 
     if(viewIt && chatsRef.current)
         chatsRef.current.scrollIntoView({behavior: "smooth", block: "start"});
-
+    if(!chats_list)
+        return <div className="inner-chats">No Conversations</div>;
     return (
-        <div ref={chatsRef} className={"inner-chats"+ (smallScreen? " inner-mobile": "")}>
+        <div ref={chatsRef} className="inner-chats">
             {chats_list.map(((item, index)=><Chat chat={item} key={`#${index}`} index={index}/>))}
         </div>
     );

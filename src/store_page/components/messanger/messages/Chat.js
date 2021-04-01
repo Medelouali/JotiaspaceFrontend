@@ -26,7 +26,7 @@ function Chat({chat, index}) {
                 <Controller index={index}/>
                 {smallScreen && showMe ?
                     <div className="conversation">
-                        <Conversation chatText={chat.chats} ux={smallScreen}/>
+                        <Conversation chatText={chat.chats}/>
                     </div>:<></>
                 }
             </div>

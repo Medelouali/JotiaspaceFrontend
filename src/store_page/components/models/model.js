@@ -2,7 +2,7 @@ import lissa from "../svg/girlSmiling.jpg";
 import fluffy from "../svg/fluffy.jpg";
 
 const now=new Date();
-const time=`${now.getHours()}:${now.getMinutes}:${now.getSeconds}`;
+const time=`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 
 const user={
     _id: 0,

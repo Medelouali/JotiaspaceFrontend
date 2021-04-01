@@ -131,6 +131,7 @@
   position: absolute;
   right: 0;
   bottom: 40%;
+  border-bottom: 0.2px solid blue;
 }
 
 .message-section {
@@ -141,7 +142,7 @@
 }
 
 .timeStamp {
-  font-size: xx-small;
+  font-size: small;
   font-weight: 600;
   width: 30%;
   color: blue;
@@ -182,4 +183,9 @@
 
 .chat .conversation {
   grid-area: 2/1/3/4;
+}
+
+.inner-chats div {
+  width: 100%;
+  height: max-content;
 }
