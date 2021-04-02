@@ -4,7 +4,7 @@ import "./trending.css";
 function Trending() {
     return (
         <div className="trending-style">
-            Trending goes here... 
+            Trending details goes here... 
         </div>
     )
 }

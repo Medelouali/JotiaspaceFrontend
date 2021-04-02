@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from "react-redux";
 import pager from '../../redux/actions/pager';
 import "./links.css";
