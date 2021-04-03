@@ -13,7 +13,8 @@ import deleteMessage from './deleteMessage';
 import chat from "./messages";
 import zoomMessage from "./intoView/zoomMessage";
 import storeHome from "./storeHome";
-
+import sendMessage from "./sendMessage";
+import chatIndexer from "./chatIndexer";
 
 const allReducers=combineReducers({
     usersData: usersReducer,
@@ -29,7 +30,9 @@ const allReducers=combineReducers({
     deleteMessage: deleteMessage,
     chat: chat,
     zoomMessage: zoomMessage,
-    storeHome: storeHome
+    storeHome: storeHome,
+    sendMessage: sendMessage,
+    chatIndexer: chatIndexer
 });
 
 export default allReducers;

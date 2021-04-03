@@ -3,6 +3,7 @@ import Controller from "./Controller";
 import Conversation from "./Conversation";
 
 import messages from '../../../../redux/actions/messages';
+import chatIndexer from '../../../../redux/actions/chatIndexer';
 import { useMedia } from "use-media";
 import { useDispatch } from "react-redux";
 
@@ -14,6 +15,7 @@ function Chat({chat, index}) {
     const dispatch=useDispatch();
     const handleChat=()=>{
         dispatch(messages(chat.chats));
+        dispatch(chatIndexer(index));
         setShowMe(!showMe);
         if(divRef.current) divRef.current.scrollIntoView({behavior: "smooth", block: "start"});
     };
@@ -34,7 +36,6 @@ function Chat({chat, index}) {
                 }
                 <div ref={divRef} className=""></div>
             </div>
-            
         </div>
     )
 }

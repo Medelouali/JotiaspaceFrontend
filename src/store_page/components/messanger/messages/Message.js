@@ -6,15 +6,19 @@ import { useMedia } from "use-media";
 import "./message.css";
 
 function Message() {
+    
     const messages=useSelector(state=>state.deleteMessage);
-    const chat=useSelector(state=>state.chat);
+    const user=useSelector(state=>state.sendMessage);
+    const index=useSelector(state=>state.chatIndexer);
+
+    console.log({user});
     const convRef=useRef(null);
     const smallScreen=useMedia({maxWidth: "833px"});
 
     useEffect(() => {
         if(convRef.current)
             convRef.current.scrollIntoView({behavior: "smooth", block: "start"});
-    }, [chat]);
+    }, [index]);
 
     return (
         <div className="messages">
@@ -24,7 +28,7 @@ function Message() {
             {
             !smallScreen ? (
                 <div ref={convRef} className="conversation">
-                    <Conversation chatText={chat} ux={smallScreen}/>
+                    <Conversation chatText={user.messages[index].chats} ux={smallScreen} index={index}/>
                 </div>
             ): <></>
             }

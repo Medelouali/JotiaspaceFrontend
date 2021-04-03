@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import girl from "../../svg/girlSmiling.jpg";
 import Chat from './Chat';
 
-
 function Chats({chats_list}) {
     const chatsRef=useRef(null);
     const viewIt=useSelector(state=>state.zoomMessage);
