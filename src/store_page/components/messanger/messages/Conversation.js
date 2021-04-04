@@ -1,27 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from "react-redux";
 import Msg from "./Msg";
 import SendMessage from './SendMessage';
+import ScrollToBottom from 'react-scroll-to-bottom';
 
+function Conversation({chatText}) {
+    const convIndex=useSelector(state=>state.chatIndexer);
 
-function Conversation({chatText, index}) {
     return (
-        <div className="inner-conversation">
-            {chatText.map((item, index)=>{
-                const flag=item["Him"]===undefined ? "Me": "Him";
-                return <Msg flag={flag} textMsg={item[flag]} timeStamp={item.timeStamp} key={`#${index}`}/>
-            })}
+        <ScrollToBottom className="inner-conversation">
+            {
+                chatText.map((item, index)=>{
+                    const sender=!item["Him"] ? "Me": "Him";
+                    return <Msg flag={sender} 
+                        textMsg={item[sender]} 
+                        timeStamp={item.timeStamp} key={`#${index}`}/>;
+                })
+            }
             <div className="sender">
-                {chatText.length ? <SendMessage index={index}/>: <></>}
+                {chatText.length>0 && (<SendMessage index={convIndex}/>)}
             </div>
-        </div>
+        </ScrollToBottom>
     )
 }
 
 Conversation.defaultProps={
-    chatText: [],
-    ux: false,
-    index: -1
-        
+    chatText: []    
 };
 
 export default Conversation;
