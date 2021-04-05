@@ -10,7 +10,7 @@ function Conversation({chatText}) {
 
     useEffect(() => {
         if(divRef.current) divRef.current.scrollIntoView({behavior: "smooth", block: "end"});
-    });
+    }, [chatText]);
     return (
         <ScrollToBottom className="inner-conversation">
             {

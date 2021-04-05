@@ -276,41 +276,38 @@
   margin: 2px;
   box-shadow: 0 1px 2px 3px #1e1e1e1e;
   max-width: 100%;
+}
+
+.message-text p {
+  width: 100%;
   overflow-wrap: break-word;
 }
 
-.receipts {
+.reciepts {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.reciepts .default {
   display: grid;
-  grid-template-columns: 1fr 10%;
-  grid-template-rows: max-content max-content;
+  place-items: center;
 }
 
-.sent {
-  width: 100%;
-  height: max-content;
-  grid-area: 1/2/2/3;
-  fill: rgba(0, 0, 0, 0.5);
-}
-
-.received {
-  width: 100%;
-  height: max-content;
-  grid-area: 2/2/3/3;
-  fill: rgba(0, 0, 0, 0.5);
-}
-
-.sent .MuiSvgIcon-root,
-.received .MuiSvgIcon-root {
-  width: 5%;
+.default .MuiSvgIcon-root {
+  width: 6%;
   height: auto;
+  position: relative;
+  left: 40%;
 }
 
-.sent {
+.move-down {
   position: relative;
-  top: 20px;
+  top: 10px;
 }
 
 .viewed {
-  fill: rgb(49, 49, 199);
+  fill: blue;
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import fluffy from "../../svg/fluffy.jpg";
 import love from "../../svg/react/heart.svg";
+import Notification from "./Notification";
 
 
 export default function Notifications({list}){
     return(
         <div className="notifications">
-            Notifications Go Here...
+            {list.map(item=><Notification image={item.image} jsx={item.description}/>)}
         </div>
     )
 }
