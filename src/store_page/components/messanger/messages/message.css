@@ -11,6 +11,11 @@
   place-items: center;
 }
 
+.mobile-scrolling {
+  overflow-y: scroll;
+  height: 40vh;
+}
+
 .inner-chats,
 .inner-conversation,
 .notifications,
@@ -270,4 +275,42 @@
   flex-direction: row;
   margin: 2px;
   box-shadow: 0 1px 2px 3px #1e1e1e1e;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.receipts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 10%;
+  grid-template-rows: max-content max-content;
+}
+
+.sent {
+  width: 100%;
+  height: max-content;
+  grid-area: 1/2/2/3;
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.received {
+  width: 100%;
+  height: max-content;
+  grid-area: 2/2/3/3;
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.sent .MuiSvgIcon-root,
+.received .MuiSvgIcon-root {
+  width: 5%;
+  height: auto;
+}
+
+.sent {
+  position: relative;
+  top: 20px;
+}
+
+.viewed {
+  fill: rgb(49, 49, 199);
 }

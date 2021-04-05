@@ -1,17 +1,24 @@
 import React from 'react';
+import Receipts from "./Receipts";
 
 function Msg({flag, textMsg, timeStamp}) {
-    if(flag==="Me")
+    if(flag==="Him")
         return(
             <div className="message-section">
-                <div className="message-text me-border">{textMsg}</div>
-                <div className="timeStamp">{timeStamp}</div>
+                <div className="message-text him-border">{textMsg}</div>
+                <div className="timeStamp">
+                    <p>{timeStamp}</p>
+                    <Receipts sent={true} recieved={true} viewed={true}/>
+                </div>
             </div>
         );
     return (
         <div className="message-section">
             <div className="timeStamp">{timeStamp}</div>
-            <div className="message-text him-border">{textMsg}</div>
+            <div className="message-text me-border">
+                <p>{textMsg}</p>
+                <Receipts sent={true} recieved={true} viewed={true}/>
+            </div>
         </div>
     )
 }
