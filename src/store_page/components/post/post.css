@@ -190,3 +190,17 @@
 .inverse {
   transform: rotate(90deg);
 }
+
+::-webkit-scrollbar {
+  background-color: #1e1e1e;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: linear-gradient(
+    180deg,
+    rgb(97, 97, 223),
+    rgb(159, 159, 226)
+  );
+  border-radius: 5px;
+}
