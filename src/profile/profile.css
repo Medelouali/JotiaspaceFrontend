@@ -8,6 +8,8 @@
 .outer-feed {
   display: grid;
   place-items: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .profile-center {
@@ -43,7 +45,7 @@
 .nav,
 .feed {
   margin-top: 10px;
-  width: 98%;
+  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }

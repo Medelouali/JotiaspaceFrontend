@@ -1,10 +1,15 @@
 import React from 'react';
 import "./trending.css";
+import Post from "../../post/Post";
 
 function Trending() {
     return (
         <div className="trending-style">
-            Trending details goes here... 
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
+            <Post/>
         </div>
     )
 }
