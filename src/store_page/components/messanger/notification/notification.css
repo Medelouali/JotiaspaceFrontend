@@ -1,5 +1,4 @@
 .notifications {
-  background-color: lavenderblush;
   width: 80vw;
   margin: auto;
   overflow-y: scroll;
@@ -16,8 +15,8 @@
 
 .notification .image {
   grid-area: 1/1/2/2;
-  width: 5vw;
-  height: 5vw;
+  width: 8vw;
+  height: 8vw;
   overflow: hidden;
   border-radius: 50%;
 }

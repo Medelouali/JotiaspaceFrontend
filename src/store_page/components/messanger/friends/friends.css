@@ -1,4 +1,6 @@
-.friends {
-  width: 100%;
-  height: max-content;
+.friends-list {
+  width: 80vw;
+  margin: auto;
+  overflow-y: scroll;
+  border-radius: 4px;
 }

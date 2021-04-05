@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 import "./friends.css";
 import fluffy from "../../svg/fluffy.jpg";
-import Template from '../Template';
+import Notification from '../notification/Notification';
 
 function Friends() {
     return (
-        <div className="friends">
-            <Template image={fluffy} name="Fluffy" control={"..."} details={<div>Hello Friends</div>}/>            
+        <div className="friends-list">
+            <Notification image={fluffy} jsx={<h6>El Ouali</h6>}/>         
+            <Notification image={fluffy} jsx={<h6>El Ouali</h6>}/>         
+            <Notification image={fluffy} jsx={<h6>El Ouali</h6>}/>         
         </div>
     )
 }
