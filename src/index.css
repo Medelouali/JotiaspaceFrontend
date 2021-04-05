@@ -21,12 +21,14 @@ code {
 #root {
   font-family: Poppins, sans-serif;
 }
-::-webkit-scrollbar {
-  background-color: #1e1e1e;
-  width: 10px;
-}
+@media (min-width: 833px) {
+  ::-webkit-scrollbar {
+    background-color: #1e1e1e;
+    width: 10px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgb(97, 97, 223);
-  border-radius: 5px;
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(97, 97, 223);
+    border-radius: 5px;
+  }
 }
