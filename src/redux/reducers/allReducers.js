@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import usersReducer from "./updateUser";
+import updateUser from "./updateUser";
 import online from "./online";
 import updateAll from "./updateAll";
 import pager from "./pager";
@@ -15,9 +15,11 @@ import zoomMessage from "./intoView/zoomMessage";
 import storeHome from "./storeHome";
 import sendMessage from "./sendMessage";
 import chatIndexer from "./chatIndexer";
+import signer from "./signer";
+
 
 const allReducers=combineReducers({
-    usersData: usersReducer,
+    updateUser: updateUser,
     online: online,
     updatedUser: updateAll,
     pager: pager,
@@ -32,7 +34,8 @@ const allReducers=combineReducers({
     zoomMessage: zoomMessage,
     storeHome: storeHome,
     sendMessage: sendMessage,
-    chatIndexer: chatIndexer
+    chatIndexer: chatIndexer,
+    signer: signer
 });
 
 export default allReducers;

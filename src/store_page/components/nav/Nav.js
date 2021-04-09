@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import store from '../svg/store.svg';
 import search from '../svg/search.svg';
@@ -13,6 +13,14 @@ import Messanger from "../messanger/Messanger";
 import './nav.css';
 import messanger from '../../../redux/actions/messanger';
 
+import socket_io from 'socket.io-client';
+
+
+const endpoint="http://localhost:5000";
+const io=socket_io(endpoint, {
+    transports: ['websocket'],
+    rejectUnauthorized: false
+  });
 
 function Nav({fri, inv, not, mes, name, image}){
     const messangerIndex = useSelector(state => state.messanger);
@@ -23,6 +31,14 @@ function Nav({fri, inv, not, mes, name, image}){
             dispatch(messanger(page_number));
         }
     };
+
+    //Just testing socket.io
+    useEffect(() => {
+        io.on("connect_error", (err) => {
+            console.log(`connect_error due to ${err.message}`);
+        });
+        io.emit("server-response", {"name": "El Ouali"});
+    }, []);
 
     return (
         <header  className="header">

@@ -1,10 +1,7 @@
-const online=(state=true, action)=>{
+const online=(state=false, action)=>{
     switch(action.type){
-        case "Login":
-            state=true;
-            return state;
-        case "Logout":
-            state=false;
+        case "Log":
+            state=action.payload;
             return state;
         default:
             return state;

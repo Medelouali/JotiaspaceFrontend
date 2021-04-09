@@ -1,21 +1,16 @@
 .header-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  align-content: center;
-  background-color: rgb(245, 245, 250);
-  padding: 10px;
-  box-shadow: 0 2px 3px 1px rgba(150, 148, 148, 0.9);
-  margin-bottom: 2px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  position: relative;
 }
 
 .links {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 55%;
+  width: 50%;
+  justify-self: end;
 }
 
 .links .link {
@@ -66,6 +61,7 @@
   border: 2px solid rgb(127, 127, 238);
   border-radius: 4px;
   box-shadow: 0 0.3px 1.1px 1px rgb(205, 205, 207);
+  margin: 6px;
 }
 
 .search-query:hover {

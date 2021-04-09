@@ -1,6 +1,6 @@
-import user from "../../store_page/components/models/model.js";
+//import user from "../../store_page/components/models/model.js";
 
-const reducer=(state=user, action)=>{
+const reducer=(state={}, action)=>{
     switch(action.type){
         case "update":
             state.username=action.payload.username;

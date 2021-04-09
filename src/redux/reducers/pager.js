@@ -1,5 +1,5 @@
 //the default is home not store 
-const reducer=(state="store", action)=>{
+const reducer=(state="home", action)=>{
     switch(action.type){
         case "Page":
             state=action.payload;
