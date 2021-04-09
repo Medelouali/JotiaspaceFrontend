@@ -21,9 +21,9 @@ function Header(){
     return (
         <div ref={divRef} className="header-wrapper">
             <div className="search-query">
-                <img id="search-q" src={search} alt="Search"/>
                 <label htmlFor="query-s"></label>
-                <input type="text" name="query" id="query-s" placeholder="Type something..."/>
+                <input type="text" name="query" id="query-s" placeholder="Search..."/>
+                <img id="search-q" src={search} alt="Search"/>
             </div>
 
             <div className="links">

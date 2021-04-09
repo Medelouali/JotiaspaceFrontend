@@ -30,7 +30,7 @@ function SignIn(){
         }catch(err){
             console.log(err);
         }
-        
+
     }
     return(
         <div className="signUp">
@@ -42,7 +42,7 @@ function SignIn(){
                     <button onClick={handleSubmit} className="submit">Create Account</button>
                     <div onClick={()=>dispatch(pager("home-up"))} className="already-account">Don't Have An Account?!</div>
                     <div className="processing">
-                        { response.error ? response.error :<Start start={processing}/> }
+                        { response.error ? <p>response.error</p> :<Start start={processing}/> }
                     </div>
                 </div>
             </form>
