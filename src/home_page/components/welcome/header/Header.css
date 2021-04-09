@@ -97,3 +97,10 @@
     width: 40vw !important;
   }
 }
+
+@media (max-width: 679px) {
+  .search-query {
+    width: 40vw;
+    margin: auto;
+  }
+}
