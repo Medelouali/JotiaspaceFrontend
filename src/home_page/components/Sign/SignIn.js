@@ -14,10 +14,10 @@ function SignIn(){
     const dispatch=useDispatch();
     const isBigScreen=useMedia({minWidth: "900px"});
 
-    const [processing, setProcessing]=useState(true);
+    const [processing, setProcessing]=useState(false);
     const [response, setResponse]=useState({});
     const signData=useSelector(state=>state.signer);
-
+    
     const handleSubmit= async(e)=>{
         console.log(signData);
         e.preventDefault();
@@ -30,6 +30,7 @@ function SignIn(){
         }catch(err){
             console.log(err);
         }
+        
     }
     return(
         <div className="signUp">
