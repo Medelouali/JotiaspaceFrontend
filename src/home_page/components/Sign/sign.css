@@ -111,3 +111,7 @@
 .big-size {
   width: 30%;
 }
+
+.processing p {
+  color: red;
+}

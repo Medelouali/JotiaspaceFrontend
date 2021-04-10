@@ -3,6 +3,8 @@ import Input from "./Input";
 import axios from "axios";
 import Start from "../../../interface/Start";
 import pager from "../../../redux/actions/pager";
+import online from "../../../redux/actions/online";
+import updateUser from "../../../redux/actions/updateUser";
 import signer from "../../../redux/actions/signer";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -23,10 +25,17 @@ function SignIn(){
         e.preventDefault();
         setProcessing(true);
         try{
-            const response=await axios.post("http://localhost:5000/sign/signUp", signData);
-            setResponse(response.data);
-            const data=["email", "password"];
-            data.map((item)=>dispatch(signer({key: item, value: ""})));
+            const serverResponse=await axios.post("http://localhost:5000/sign/signIn", signData);
+            setResponse(serverResponse.data);
+            console.log(serverResponse.data.data);
+            
+            if(!serverResponse.data.error){
+                const data=["email", "password"];
+                data.map((item)=>dispatch(signer({key: item, value: ""})));
+                dispatch(online(true));
+                dispatch(updateUser(response.data));
+                dispatch(pager("store"));
+            }
         }catch(err){
             console.log(err);
         }
@@ -42,7 +51,7 @@ function SignIn(){
                     <button onClick={handleSubmit} className="submit">Create Account</button>
                     <div onClick={()=>dispatch(pager("home-up"))} className="already-account">Don't Have An Account?!</div>
                     <div className="processing">
-                        { response.error ? <p>response.error</p> :<Start start={processing}/> }
+                        { response.error ? <p>{ response.error }</p> :<Start start={processing}/> }
                     </div>
                 </div>
             </form>

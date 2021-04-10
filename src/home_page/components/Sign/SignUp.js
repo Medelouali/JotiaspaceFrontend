@@ -24,22 +24,25 @@ function SignUp(){
     const handleSubmit= async(e)=>{
         e.preventDefault();
         setProcessing(true);
-        try{
-            const response=await axios.post("http://localhost:5000/sign/signUp", signData);
-            console.log(response.data);
-            setResponse(response.data);
-            const data=["username", "email", "password", "confirm"];
-            data.map((item)=>dispatch(signer({key: item, value: ""})));
-            if(!response.data.error){
+
+        try {
+            const serverResponse=await axios.post("http://localhost:5000/sign/signUp", signData);
+            const jsonData=serverResponse.data;
+            setResponse(jsonData);
+            setProcessing(false);
+            
+            console.log(jsonData.error);
+            if(!jsonData.error){
+                const data=["username", "email", "password", "confirm"];
+                data.map((item)=>dispatch(signer({key: item, value: ""})));
                 dispatch(online(true));
-                dispatch(updateUser(response.data.data));
+                dispatch(updateUser(response.data));
+                console.log(response);
                 dispatch(pager("store"));
             }
-            setProcessing(false);
-        }catch(err){
-            console.log(err);
-        };
+        } catch (error) {}
     }
+
     return(
         <div className="signUp">
             <form onSubmit={handleSubmit} method="post" 
@@ -54,7 +57,7 @@ function SignUp(){
                     <button onClick={handleSubmit} className="submit">Create Account</button>
                     <div onClick={()=>dispatch(pager("home-in"))} className="already-account">Already Have An Account?!</div>
                     <div className="processing">
-                        { response.error ? response.error :<Start start={processing}/> }
+                        { response.error ? <p>{ response.error }</p> :<Start start={processing}/> }
                     </div>
                 </div>
             </form>

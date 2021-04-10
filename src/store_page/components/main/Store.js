@@ -7,7 +7,7 @@ import pager from "../../../redux/actions/pager";
 import "./main.css";
 
 function Store(){
-  const value = useSelector(state => state.usersData);
+  const value = useSelector(state => state.updateUser);
   const page = useSelector(state => state.pager);
   const isOnline=useSelector(state=>state.online);
   const dispatch = useDispatch();
@@ -17,7 +17,8 @@ function Store(){
         case "store":
           return(
             <div id="grid">
-              <Nav fri={value.fri} inv={value.inv} mes={value.mes} not={value.not} name={value.username}/>
+              <Nav fri={value.unread_fri} inv={value.unread_inv} mes={value.unread_mes} 
+                  not={value.unread_not} name={value.username}/>
               <Main/>
             </div>
           );

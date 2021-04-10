@@ -4,7 +4,7 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import { useMedia } from "use-media";
 import signer from "../../../redux/actions/signer";
 
-function Input({ label, isPassword, isEmail}) {
+function Input({ label, isPassword, isEmail }) {
     const [focusOn, setFocusOn]=useState(false);
     const [field, setField]=useState("");
     const [view, setView]=useState(true);
