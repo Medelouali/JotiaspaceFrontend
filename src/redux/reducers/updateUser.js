@@ -2,11 +2,8 @@
 
 const reducer=(state={}, action)=>{
     switch(action.type){
-        case "update":
-            state.username=action.payload.username;
-            state.email=action.payload.email;
-            state.password=action.payload.password;
-            state._id=action.payload._id;
+        case "Update":
+            state=action.payload;
             return state;
         default:
             return state;

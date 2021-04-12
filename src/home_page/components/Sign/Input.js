@@ -27,7 +27,7 @@ function Input({ label, isPassword, isEmail }) {
             <input onChange={(e)=>setField(e.target.value)} value={field} 
                 className={ smallScreen ? "smallScreen": "bigScreen"} onFocus={()=>setFocusOn(true)} 
                 type={isPassword && view ? "password": (isEmail ? "email": "text")} 
-                placeholder={!focusOn ? label: ""}/>
+                placeholder={!focusOn ? label: ""} required/>
             {isPassword && (
                 <div onClick={()=>setView(!view)} className="eye"><VisibilityIcon style={{fill: "rgb(120, 120, 241)"}}/></div>
             )}

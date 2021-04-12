@@ -2,7 +2,7 @@
 
 const  update=(pl)=>{
     return {
-        type: "update",
+        type: "Update",
         payload: pl
 
     };

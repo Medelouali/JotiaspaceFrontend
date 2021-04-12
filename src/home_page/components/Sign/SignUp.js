@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Input from "./Input";
 import axios from "axios";
 import Start from "../../../interface/Start";
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import pager from "../../../redux/actions/pager";
-import signer from "../../../redux/actions/signer";
 import online from "../../../redux/actions/online";
 import updateUser from "../../../redux/actions/updateUser";
 
@@ -17,30 +16,31 @@ function SignUp(){
     const dispatch=useDispatch();
     const isBigScreen=useMedia({minWidth: "900px"});
 
+    const divRef=useRef(null);
     const [processing, setProcessing]=useState(false);
     const [response, setResponse]=useState({});
     const signData=useSelector(state=>state.signer);
 
     const handleSubmit= async(e)=>{
         e.preventDefault();
+        if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth" });
         setProcessing(true);
 
         try {
-            const serverResponse=await axios.post("http://localhost:5000/sign/signUp", signData);
+            const serverResponse=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
             const jsonData=serverResponse.data;
+            
             setResponse(jsonData);
             setProcessing(false);
             
-            console.log(jsonData.error);
-            if(!jsonData.error){
-                const data=["username", "email", "password", "confirm"];
-                data.map((item)=>dispatch(signer({key: item, value: ""})));
+            if(jsonData.error===""){
                 dispatch(online(true));
-                dispatch(updateUser(response.data));
-                console.log(response);
+                dispatch(updateUser(jsonData.data));
                 dispatch(pager("store"));
             }
-        } catch (error) {}
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return(
@@ -51,12 +51,14 @@ function SignUp(){
                 <input id="avatar" type="file"/>
                 <Input label={"Username"}/>
                 <Input label={"Email"} isEmail={true}/>
+                <Input label={"Location"}/>
+                <Input label={"Occupation"}/>
                 <Input isPassword={true} label={"Password"}/>
                 <Input isPassword={true} label={"Confirm"}/>
                 <div className="submit">
                     <button onClick={handleSubmit} className="submit">Create Account</button>
                     <div onClick={()=>dispatch(pager("home-in"))} className="already-account">Already Have An Account?!</div>
-                    <div className="processing">
+                    <div ref={divRef} className="processing">
                         { response.error ? <p>{ response.error }</p> :<Start start={processing}/> }
                     </div>
                 </div>

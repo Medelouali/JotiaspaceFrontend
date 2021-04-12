@@ -4,11 +4,15 @@ import "./Links/links.css";
 import Info from './Links/Info';
 import Friends from './Links/Friends';
 
+import { useSelector } from "react-redux";
+
 function Output({what}) {
+    const user=useSelector(state=>state.updateUser);
+
     switch(what){
         case "info":
             return(
-                <Info email="JotiaSpace@gmail.com" occupation="Businessman" location="Morocco"/>
+                <Info email={user.email} occupation={user.occupation} location={user.location}/>
             );
         case "photos":
             return(
