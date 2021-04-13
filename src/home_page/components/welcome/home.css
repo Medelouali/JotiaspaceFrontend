@@ -5,4 +5,16 @@
 #welcome {
   width: 100%;
   overflow-x: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.main-section {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
 }

@@ -7,39 +7,27 @@
 
 .globe {
   width: 100vw;
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 15px;
   height: 100%;
   background-color: rgb(248, 246, 250);
   padding: 20px;
-  margin: auto;
 }
 
 .store-section {
   max-width: 100%;
-  background-image: url("../Sign/svg/Pins/background-1.jpg");
+  background-color: white;
   background-size: cover;
-  box-shadow: 0 2px 1px 3px rgb(117, 117, 119);
+  box-shadow: 0 2px 2px 3px rgb(201, 196, 196);
   padding: 10px;
   margin-right: 10px;
   margin-left: 10px;
   display: grid;
   place-items: center;
-  clip-path: polygon(
-    0 4%,
-    15% 15%,
-    5% 0,
-    96% 0,
-    85% 15%,
-    100% 4%,
-    100% 100%,
-    78% 98%,
-    83% 100%,
-    15% 100%,
-    26% 97%,
-    0 100%
-  );
+  border-radius: 10px;
+  width: 100%;
 }
 
 .details {
@@ -48,15 +36,15 @@
 }
 @keyframes zooming {
   100% {
-    transform: scale(1.05);
+    transform: scale(1.002);
   }
 }
 
 .globe .store-section:hover {
-  animation: zooming 0.5s ease-out forwards;
+  animation: zooming 0.3s ease-out forwards;
 }
 
-.store-section svg,
+.store-section .MuiSvgIcon-root,
 .inline-card svg {
   width: 2.5em;
   height: auto;

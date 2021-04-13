@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 import "./services.css";
 
@@ -9,11 +9,8 @@ function Card({icon, label, details}){
 
     const handleOpen=()=>{
         setOpen(!open);
+        if(ref.current && open) ref.current.scrollIntoView({behavior: "smooth", block: "start"});
     };
-    
-    useEffect(() => {
-        if(ref.current) ref.current.scrollIntoView({behavior: "smooth"});
-    }, [open]);
 
     return(
         <div ref={ref} onClick={handleOpen} className="store-section">
