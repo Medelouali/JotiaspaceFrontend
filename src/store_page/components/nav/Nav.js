@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import store from '../svg/store.svg';
+//import store from '../svg/store.svg';
 import search from '../svg/search.svg';
 import friends from '../svg/friend.svg';
 import invitations from '../svg/invitation.svg';
