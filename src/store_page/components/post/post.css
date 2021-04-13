@@ -151,13 +151,14 @@
   grid-template-columns: 50% 50%;
 }
 
-.get-comment h6 {
+.get-comment h5 {
   grid-area: 1/1/2/2;
   width: max-content;
   margin: 10px;
+  color: rgb(189, 131, 243);
 }
 
-.get-comment img {
+.get-comment .img {
   width: 5%;
   height: auto;
   justify-self: start;
@@ -175,6 +176,8 @@
   width: 70%;
   height: 4em;
   border-radius: 4px;
+  border: 1px solid rgb(162, 162, 219);
+  margin-bottom: 4px;
 }
 
 .message-form button {
@@ -185,10 +188,6 @@
   background-color: rgb(92, 92, 243);
   color: rgb(239, 239, 247);
   cursor: pointer;
-}
-
-.inverse {
-  transform: rotate(90deg);
 }
 
 @media (min-width: 833px) {

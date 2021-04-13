@@ -5,7 +5,9 @@ import heart from "../svg/react/heart.svg";
 import like from "../svg/react/like.svg";
 import dislike from "../svg/react/dislike.svg";
 import lool from "../svg/react/laugh.svg";
-import arrow from "../svg/double-arrow.svg";
+//import arrow from "../svg/double-arrow.svg";
+import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
+import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
 
 export function Reaction({reacters, is_comment_reaction}){
     return(
@@ -128,8 +130,10 @@ export function CommentOnly({comment_flag}){
     if(comment_flag){
         return(
             <div className="get-comment">
-                <h6 onClick={manage}>Add Comment?</h6>
-                <img onClick={manage} className={!ready ? "inverse": ""} src={arrow} alt=""/>
+                <h5 onClick={manage}>Add Comment?</h5>
+                <div className="img" onClick={manage} >
+                    { !ready ? <ChatOutlinedIcon/>: <ChatBubbleOutlineOutlinedIcon/>}
+                </div>
                 <Comment is_ready={ready}/>
             </div>
         );

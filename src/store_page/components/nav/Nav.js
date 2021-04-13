@@ -13,6 +13,9 @@ import Messanger from "../messanger/Messanger";
 import './nav.css';
 import messanger from '../../../redux/actions/messanger';
 
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+import StorefrontOutlinedIcon from '@material-ui/icons/StorefrontOutlined';
+
 import socket_io from 'socket.io-client';
 
 
@@ -44,9 +47,9 @@ function Nav({fri, inv, not, mes, name, image}){
         <header  className="header">
             <nav>
                 <div className="nav-bar">
-                    <img className="my-image" src={image} alt="My Profile"/>
+                    <PersonOutlineOutlinedIcon classname={"my-image"}/>
                     <h5>{name}</h5>
-                    <img className="store-logo" src={store} alt="Store"/>
+                    <StorefrontOutlinedIcon className={"store-logo"}/>
                     <div className="search">
                         <label htmlFor="search-query"><img id="search" src={search} alt="Search"/></label>
                         <input type="text" name="query" id="query" placeholder="Type something..."/>
