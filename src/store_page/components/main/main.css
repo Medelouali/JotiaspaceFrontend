@@ -1,15 +1,10 @@
 #grid {
   width: 100%;
   overflow-x: hidden;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  height: 100vh;
 }
 
 .main {
-  display: grid;
-  place-items: center;
-  overflow-y: scroll;
+  width: 100%;
 }
 
 .main-core {
