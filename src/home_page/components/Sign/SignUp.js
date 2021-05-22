@@ -23,7 +23,7 @@ function SignUp(){
 
     const handleSubmit= async(e)=>{
         e.preventDefault();
-        if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth" });
+        if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth", block: "center"});
         setProcessing(true);
 
         try {

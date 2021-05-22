@@ -12,7 +12,7 @@ function Output({what}) {
     switch(what){
         case "info":
             return(
-                <Info email={user.email} occupation={user.occupation} location={user.location}/>
+                <Info email={user.useremail} occupation={user.useroccupation} location={user.userlocation}/>
             );
         case "photos":
             return(

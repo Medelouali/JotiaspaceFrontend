@@ -6,7 +6,7 @@
 }
 
 .globe {
-  width: 100vw;
+  width: 98%;
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -14,22 +14,24 @@
   height: 100%;
   background-color: rgb(248, 246, 250);
   padding: 20px;
+  margin: auto;
 }
 
 .store-section {
-  max-width: 100%;
-  background-color: white;
-  background-size: cover;
-  box-shadow: 0 2px 2px 3px rgb(201, 196, 196);
-  padding: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
+  max-width: 100% !important;
+  background-color: rgb(216, 216, 247);
+  box-shadow: 0.1px 2px 3px 1px rgb(124, 122, 122);
   display: grid;
   place-items: center;
   border-radius: 10px;
   width: 100%;
+  font-weight: 800;
 }
 
+.store-section h3 {
+  color: rgb(122, 122, 228);
+  cursor: pointer;
+}
 .details {
   max-width: 100%;
   padding: 10px;

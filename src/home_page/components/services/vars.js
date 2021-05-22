@@ -37,16 +37,16 @@ export const web_details=`
 export const whoAmI=<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-alt" className="svg-inline--fa fa-user-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#000" d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"></path></svg>;
 export const whoAmI_label="Who Am I!?";
 export const whoAmI_details=`
-    My name is El Ouali Med, I am a 22 years old software engineering student from Morocco. 
-    You know this who am I question reminds me of the Who Am I movie yup, I love that movie. 
-    Let me tell you more about myself using some words, I am the type of person who works smarter 
-    to get what he's looking for, I believe in one thing and only one and that is solving REAL problems is 
-    the keyconcept to master anything in any field. For example, I created this website because I had a problem 
-    and that is I didn't know how to work on large real projects but now I do. One more thing about me is that I 
-    like pizza! no just kidding...I wanna say I like to try out new stuff I am not afraid of change I am the 
-    change. I said one more thing but who cares let's break the rule, in my work I care about the design 
-    and hoping I'd get better at it and another thing is that I like to work with people and hoping to 
-    do so, so if you are intrested we can work together and we'll build and learn together.   
+    My name is El Ouali Med, a software engineering student from Morocco. 
+    You know this who am I question reminds me of the Who Am I movie yup, I love that movie. I love 
+    watching movies by the way. Let me tell you more about myself using some words, I am the type of person 
+    who works smarter to get what he's looking for, I believe in one thing and only one and that is solving 
+    REAL problems is the keyconcept to master anything in any field. For example, I created this website 
+    because I had a problem and that is I didn't know how to work on large real projects but now I do. One 
+    more thing about me is that I like pizza! no just kidding...I wanna say I like to try out new stuff I 
+    am not afraid of change I am the change. I said one more thing but who cares let's break the rule, in 
+    my work I care about the design and hoping I'd get better at it and another thing is that I like to work 
+    with people and hoping to do so, so if you are intrested we can work together and we'll build and learn together.   
 `;
 export const goal=<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="dot-circle" className="svg-inline--fa fa-dot-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#000" d="M256 56c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m0-48C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 168c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"></path></svg>;
 export const goal_label="What Are My Goals!?";
@@ -56,8 +56,8 @@ export const goal_details=`
     future , yes that's my goal and building such websites like this one I work my way up to compose my own team
     by collaborating with different people from all over the world, I don't underestimate people I look for 
     learning from them because deep down I believe that anyone is good at something. With that all said, if 
-    you are a developper and wanna be my partner or you are looking for building your website with fair cost, don't hesitate to reach me I'll 
-    be glad to. 
+    you are a developper and wanna be my partner or you are looking for building your website with fair cost, 
+    don't hesitate to reach me I'll be glad to. 
 `;
 
 export const facebook=<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" className="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#000" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>;

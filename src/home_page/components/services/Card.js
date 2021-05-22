@@ -15,7 +15,7 @@ function Card({icon, label, details}){
     return(
         <div ref={ref} onClick={handleOpen} className="store-section">
             {icon}
-            <h5>{label}</h5>
+            <h3>{label}</h3>
             <div className="details">{open ? details: ""}</div>
         </div>
     );
