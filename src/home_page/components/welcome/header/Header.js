@@ -32,10 +32,12 @@ function Header(){
 
     return (
         <div className="header-wrapper">
-            <div className="search-query" ref={divRef}>
-                <label htmlFor="query-s"></label>
-                <input type="text" name="query" id="query-s" placeholder="Search..."/>
-                <img id="search-q" src={search} alt="Search"/>
+            <div className="search">
+                <div className="search-query" ref={divRef}>
+                    <label htmlFor="query-s"></label>
+                    <input type="text" name="query" id="query-s" placeholder="Search..."/>
+                    <img id="search-q" src={search} alt="Search"/>
+                </div>
             </div>
 
             {bigScreen ? (
@@ -48,8 +50,8 @@ function Header(){
             ):(
                 <div className={"card"}>
                     <div className="burger">
-                        {!open ? <MenuRoundedIcon onClick={handleClose} /> : (
-                            <div className={"burger-data"}>
+                        {!open && <MenuRoundedIcon onClick={handleClose} /> }
+                        <div className={ "burger-data" + (open? " show": "")}>
                                 <div className="openIcon">
                                     <AddIcon className={"addIcon"} onClick={handleClose} />
                                 </div>
@@ -60,7 +62,6 @@ function Header(){
                                     <div className="link-w" onClick={switchPage("home-abo")}>About</div>                            
                                 </div>    
                             </div>
-                        )}
                     </div>
                     
                 </div>

@@ -1,7 +1,12 @@
 .header-wrapper {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
   position: relative;
 }
 
@@ -55,6 +60,13 @@
   }
 }
 
+.search {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 2%;
+}
+
 .search-query {
   width: 20%;
   height: max-content;
@@ -62,12 +74,11 @@
   grid-template-columns: 0 1fr 10%;
   border: 2px solid blue;
   border-radius: 10px;
-  margin: 1vw auto 1vw auto;
   justify-self: center;
 }
 
 .search-query input {
-  width: 90%;
+  width: 100%;
   outline: none;
   border: none;
   justify-self: end;
@@ -108,9 +119,8 @@
 }
 
 .card {
-  width: 90vw;
+  width: 100vw;
   margin: auto;
-  background-color: rgb(213, 193, 233);
 }
 
 .link-w {
@@ -121,13 +131,57 @@
   border-radius: 6px;
   padding: 2px;
   letter-spacing: 1.5px;
+  opacity: 1;
+  font-weight: 800;
 }
 
 .burger {
   width: 100%;
+  display: grid;
+  place-items: center;
 }
 
-.burger .MuiSvgIcon {
+.burger .MuiSvgIcon-root {
   margin: auto;
   width: max-content;
+  fill: blue;
+  transform: scale(1.2);
+}
+
+.burger-data {
+  position: fixed;
+  top: 2px;
+  right: 2%;
+  left: 2%;
+  height: 70vh;
+  background-color: rgb(15, 15, 15);
+  z-index: 2;
+  transform: translateY(-110%);
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.show {
+  animation: showIt 0.5s ease-out forwards;
+}
+
+@keyframes showIt {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.openIcon .MuiSvgIcon-root {
+  fill: white;
+  transform: scale(1.3);
+  cursor: pointer;
+  transform: rotateZ(45deg);
+}
+
+.links-words {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
 }
