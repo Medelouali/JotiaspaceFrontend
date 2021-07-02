@@ -25,6 +25,7 @@
   cursor: pointer;
   color: rgb(83, 83, 238);
   height: max-content;
+  cursor: pointer;
 }
 
 .links .link:hover {
@@ -61,7 +62,8 @@
   grid-template-columns: 0 1fr 10%;
   border: 2px solid blue;
   border-radius: 10px;
-  margin: 1vw;
+  margin: 1vw auto 1vw auto;
+  justify-self: center;
 }
 
 .search-query input {
@@ -103,4 +105,29 @@
     width: 40vw;
     margin: auto;
   }
+}
+
+.card {
+  width: 90vw;
+  margin: auto;
+  background-color: rgb(213, 193, 233);
+}
+
+.link-w {
+  cursor: pointer;
+  margin: 1% auto 1% auto;
+  width: max-content;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  padding: 2px;
+  letter-spacing: 1.5px;
+}
+
+.burger {
+  width: 100%;
+}
+
+.burger .MuiSvgIcon {
+  margin: auto;
+  width: max-content;
 }

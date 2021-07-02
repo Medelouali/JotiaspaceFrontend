@@ -3,12 +3,14 @@
   place-items: center;
   background-image: url("../../../Sign/svg/Pins/background-1.jpg");
   background-size: cover;
+  width: 100%;
+  max-width: 100%;
 }
 
 .products-list {
   width: 95%;
-  margin: auto;
-  margin-top: 4%;
+  max-width: 100% !important;
+  margin-top: 2% auto 2% auto;
   overflow-x: scroll;
   height: max-content;
   white-space: nowrap;
