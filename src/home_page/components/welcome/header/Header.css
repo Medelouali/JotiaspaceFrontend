@@ -1,7 +1,5 @@
 .header-wrapper {
   width: 100%;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,8 +60,8 @@
 
 .search {
   width: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-items: center;
   padding: 2%;
 }
 
@@ -146,6 +144,8 @@
   width: max-content;
   fill: blue;
   transform: scale(1.2);
+  cursor: pointer;
+  width: max-content;
 }
 
 .burger-data {
@@ -176,6 +176,11 @@
   transform: scale(1.3);
   cursor: pointer;
   transform: rotateZ(45deg);
+}
+
+.openIcon {
+  display: grid;
+  place-items: center;
 }
 
 .links-words {
