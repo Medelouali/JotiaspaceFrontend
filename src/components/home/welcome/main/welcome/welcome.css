@@ -1,7 +1,8 @@
 .welcome-wrapper {
   display: grid;
   place-items: center;
-  background-image: url("../../../Sign/svg/Pins/background-1.jpg");
+  /* background-image: url("../../../Sign/svg/Pins/background-1.jpg"); */
+  background-color: #f4d301;
   background-size: cover;
   width: 100%;
   max-width: 100%;
@@ -23,6 +24,7 @@
   margin: 10px;
   box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .products-list img:hover {
@@ -49,10 +51,8 @@
   width: 50vw;
   margin: 10px;
   text-align: center;
-  font-size: 1.3em;
-  font-weight: 500;
   letter-spacing: 1px;
-  line-height: 1.4em;
+  color: rgb(6, 6, 173);
 }
 
 .intro-section .buttons {
@@ -63,14 +63,13 @@
 
 .intro-section .buttons button {
   width: 90%;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 4px;
   margin: 10px;
-  font-size: 1.2em;
-  font-weight: 600;
   box-shadow: 0 2px 3px 1px rgba(104, 104, 105, 0.1);
-  background-color: rgb(18, 48, 214);
-  color: rgb(237, 233, 247);
+  /* background-color: rgb(18, 48, 214); */
+  color: rgb(54, 17, 148);
+  border: 2px solid blue;
 }
 .intro-section .buttons button:hover {
   box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.2);

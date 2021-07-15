@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   align-content: center;
   position: relative;
+  background-color: yellow;
 }
 
 .links {
@@ -18,14 +19,15 @@
 
 .links .link {
   box-shadow: 0 0.1px 2px 1px rgba(194, 191, 191, 0.5);
-  background-color: white;
+  background-color: rgb(242, 241, 248);
   border-radius: 15px;
   padding: 3px;
   margin: 4px;
   cursor: pointer;
-  color: rgb(83, 83, 238);
+  color: rgb(33, 33, 185);
   height: max-content;
   border: 2px solid blue;
+  letter-spacing: 1px;
 }
 
 .links .link:hover {
@@ -60,17 +62,22 @@
 
 .burger {
   width: 100%;
+}
+
+.burger-inter {
+  width: 100%;
   display: grid;
   place-items: center;
 }
 
 .burger .MuiSvgIcon-root {
-  margin: auto;
-  width: max-content;
   fill: blue;
   transform: scale(1.2);
   cursor: pointer;
-  width: max-content;
+  width: 9vw;
+  border: 1px solid blue;
+  border-radius: 4px;
+  margin: 3px;
 }
 
 .burger-data {
@@ -119,5 +126,5 @@
 .web-logo {
   font-family: Lobster, sans-serif;
   width: max-content;
-  color: blue;
+  color: rgb(30, 30, 163);
 }

@@ -38,10 +38,10 @@ function Welcome(){
                 <img src={forn_3} alt="Product Model"/>
             </div>
             <div className="intro-section">
-                <div className="intro">{intro}</div>
+                <h3 className="intro">{intro}</h3>
                 <div className="buttons">
-                    <button onClick={()=>dispatch(pager("home-up"))}>Sign Up</button>
-                    <button onClick={()=>dispatch(pager("home-in"))}>Sign In</button>
+                    <button onClick={()=>dispatch(pager("home-up"))}><h2>Sign Up</h2></button>
+                    <button onClick={()=>dispatch(pager("home-in"))}><h2>Sign In</h2></button>
                 </div>
             </div>
         </div>
