@@ -31,13 +31,14 @@ function Header(){
 
     return (
         <div className="header-wrapper">
-            <div className="search-style"></div>
+            <h1 className="web-logo">JotiaSpace</h1>
+            <div className="search-bar"></div>
             {bigScreen ? (
                 <div className="links">
-                    <div className="link" onClick={()=>dispatch(pager("home"))}>Home</div>
-                    <div className="link" onClick={()=>dispatch(pager("home-ser"))}>Services</div>
-                    <div className="link" onClick={()=>dispatch(pager("home-con"))}>Contacts</div>
-                    <div className="link" onClick={()=>dispatch(pager("home-abo"))}>About</div>
+                    <h4 className="link" onClick={()=>dispatch(pager("home"))}>Home</h4>
+                    <h4 className="link" onClick={()=>dispatch(pager("home-ser"))}>Services</h4>
+                    <h4 className="link" onClick={()=>dispatch(pager("home-con"))}>Contacts</h4>
+                    <h4 className="link" onClick={()=>dispatch(pager("home-abo"))}>About</h4>
                 </div>
             ):(
                 <div className={"card"}>
