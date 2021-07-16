@@ -6,6 +6,7 @@ import { useMedia } from "use-media";
 
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import AddIcon from '@material-ui/icons/Add';
+import Search from './search/Search';
 
 function Header(){
     const dispatch = useDispatch();
@@ -29,10 +30,17 @@ function Header(){
         }
     };
 
+    const bringData=()=>{
+        //code goes here later;
+        return ()=>{
+            console.log("bring data please");
+        }
+    };
+
     return (
         <div className="header-wrapper">
             <h1 className="web-logo">JotiaSpace</h1>
-            <div className="search-bar"></div>
+            <div className="search-bar"><Search placeHolder="Search..." callback={bringData} action="get"/></div>
             {bigScreen ? (
                 <div className="links">
                     <h4 className="link" onClick={()=>dispatch(pager("home"))}>Home</h4>

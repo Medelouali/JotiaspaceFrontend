@@ -1,6 +1,7 @@
 .footer-wrapper {
   width: 100vw;
   background-color: #f4d301;
+  box-shadow: 0 1px 1px 0.5px rgb(145, 145, 142);
 }
 
 .footer-wrapper p {

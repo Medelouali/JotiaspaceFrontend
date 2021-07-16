@@ -88,3 +88,7 @@
     width: 20vw;
   }
 }
+
+button h2 {
+  cursor: pointer;
+}

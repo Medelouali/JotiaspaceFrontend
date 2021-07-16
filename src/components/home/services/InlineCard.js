@@ -1,11 +1,10 @@
 import React from 'react';
 
-function InlineCard({icon, label}){
+function InlineCard({icon, linkTo}){
     return (
-        <div className="inline-card">
+        <a href={linkTo} className="inline-card">
             {icon}
-            <h5>{label}</h5>
-        </div>
+        </a>
     )
 }
 

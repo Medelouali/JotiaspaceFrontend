@@ -1,11 +1,5 @@
 import React from "react";
 import InlineCard from "./InlineCard";
-import {
-        facebook_label,
-        linkedIn_label,
-        twitter_label,
-        gmail_label, 
-        } from "./vars";
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -16,11 +10,11 @@ function Contact(){
 
     return(
         <div className="services">
-            <div className="inline-globe">
-                <InlineCard icon={<FacebookIcon/>} label={facebook_label}/>
-                <InlineCard icon={<LinkedInIcon/>} label={linkedIn_label}/>
-                <InlineCard icon={<TwitterIcon/>} label={twitter_label}/>
-                <InlineCard icon={<EmailIcon/>} label={gmail_label}/>
+            <div className="globe">
+                <InlineCard icon={<FacebookIcon/>} linkTo="#"/>
+                <InlineCard icon={<LinkedInIcon/>} linkTo="#"/>
+                <InlineCard icon={<TwitterIcon/>} linkTo="#"/>
+                <InlineCard icon={<EmailIcon/>} linkTo="#"/>
             </div>
         </div>
     );
