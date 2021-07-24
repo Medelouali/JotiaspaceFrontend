@@ -41,34 +41,36 @@ function Header(){
         <div className="header-wrapper">
             <h1 className="web-logo">JotiaSpace</h1>
             <div className="search-bar"><Search placeHolder="Search..." callback={bringData} action="get"/></div>
-            {bigScreen ? (
-                <div className="links">
-                    <h4 className="link" onClick={()=>dispatch(pager("home"))}>Home</h4>
-                    <h4 className="link" onClick={()=>dispatch(pager("home-ser"))}>Services</h4>
-                    <h4 className="link" onClick={()=>dispatch(pager("home-con"))}>Contacts</h4>
-                    <h4 className="link" onClick={()=>dispatch(pager("home-abo"))}>About</h4>
-                </div>
-            ):(
-                <div className={"card"}>
-                    <div className="burger">
-                        <div className="burger-inter">
-                            {!open && <MenuRoundedIcon onClick={handleClose} /> }
-                        </div>
-                        <div className={ "burger-data" + (open? " show": "")}>
-                                <div className="openIcon">
-                                    <AddIcon className={"addIcon"} onClick={handleClose} />
-                                </div>
-                                <div className="links-words">
-                                    <div className="link-w" onClick={switchPage("home")}>Home</div>
-                                    <div className="link-w" onClick={switchPage("home-ser")}>Services</div>
-                                    <div className="link-w" onClick={switchPage("home-con")}>Contacts</div>
-                                    <div className="link-w" onClick={switchPage("home-abo")}>About</div>                            
-                                </div>    
-                            </div>
+            <div className="nav-menu">
+                {bigScreen ? (
+                    <div className="links">
+                        <h4 className="link" onClick={()=>dispatch(pager("home"))}>Home</h4>
+                        <h4 className="link" onClick={()=>dispatch(pager("home-ser"))}>Services</h4>
+                        <h4 className="link" onClick={()=>dispatch(pager("home-con"))}>Contacts</h4>
+                        <h4 className="link" onClick={()=>dispatch(pager("home-abo"))}>About</h4>
                     </div>
-                    
-                </div>
-            )}
+                ):(
+                    <div className="card">
+                        <div className="burger">
+                            <div className="burger-inter">
+                                {!open && <MenuRoundedIcon onClick={handleClose} /> }
+                            </div>
+                            <div className={ "burger-data" + (open? " show": "")}>
+                                    <div className="openIcon">
+                                        <AddIcon className={"addIcon"} onClick={handleClose} />
+                                    </div>
+                                    <div className="links-words">
+                                        <div className="link-w" onClick={switchPage("home")}>Home</div>
+                                        <div className="link-w" onClick={switchPage("home-ser")}>Services</div>
+                                        <div className="link-w" onClick={switchPage("home-con")}>Contacts</div>
+                                        <div className="link-w" onClick={switchPage("home-abo")}>About</div>                            
+                                    </div>    
+                                </div>
+                        </div>
+                        
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

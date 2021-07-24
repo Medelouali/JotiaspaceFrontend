@@ -39,4 +39,14 @@
 
 .selected-page {
   border: 5px solid rgb(111, 111, 236);
+  animation: come-in 0.8s ease-in forwards;
+}
+
+@keyframes come-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }

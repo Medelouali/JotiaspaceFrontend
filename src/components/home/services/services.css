@@ -8,14 +8,14 @@
 .globe {
   width: 94%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   justify-items: center;
   grid-gap: 10px;
 }
 
 .store-section {
-  max-width: 100% !important;
+  max-width: 100%;
   background-color: rgb(243, 243, 12);
   box-shadow: 0.1px 0.3px 2px 1px rgb(124, 122, 122);
   display: grid;

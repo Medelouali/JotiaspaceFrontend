@@ -29,7 +29,9 @@ function Input({ label, isPassword, isEmail }) {
                 type={isPassword && view ? "password": (isEmail ? "email": "text")} 
                 placeholder={!focusOn ? label: ""} required/>
             {isPassword && (
-                <div onClick={()=>setView(!view)} className="eye"><VisibilityIcon style={{fill: "rgb(120, 120, 241)"}}/></div>
+                <div onClick={()=>setView(!view)} className="eye">
+                    <VisibilityIcon style={{fill: "rgb(120, 120, 241)"}}/>
+                </div>
             )}
         </div>
     )
