@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+
 import { useMedia } from "use-media";
 import signer from "../../../redux/actions/signer";
 
 function Input({ label, isPassword, isEmail }) {
     const [focusOn, setFocusOn]=useState(false);
     const [field, setField]=useState("");
-    const [view, setView]=useState(true);
+    const [view, setView]=useState(false);
     const smallScreen=useMedia({maxWidth: "899px"});
     const dispatch=useDispatch();
 
@@ -23,14 +25,17 @@ function Input({ label, isPassword, isEmail }) {
     }, [field, label, dispatch]);
     return (
         <div className="input">
-            <div className={(focusOn ? "show-yes": "show-no")}>{label}</div>
+            <h4 className={(focusOn ? "show-yes": "show-no")}>{label}</h4>
             <input onChange={(e)=>setField(e.target.value)} value={field} 
                 className={ smallScreen ? "smallScreen": "bigScreen"} onFocus={()=>setFocusOn(true)} 
                 type={isPassword && view ? "password": (isEmail ? "email": "text")} 
                 placeholder={!focusOn ? label: ""} required/>
             {isPassword && (
                 <div onClick={()=>setView(!view)} className="eye">
-                    <VisibilityIcon style={{fill: "rgb(120, 120, 241)"}}/>
+                    {
+                        !view ? <VisibilityOffIcon style={{fill: "rgb(120, 120, 241)"}}/> : 
+                        <VisibilityIcon style={{fill: "rgb(120, 120, 241)"}}/>
+                    }
                 </div>
             )}
         </div>
