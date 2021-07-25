@@ -2,19 +2,19 @@
   padding: 4px;
   display: grid;
   grid-template-columns: 10% 20% 10% 1fr;
+  align-content: center;
   width: 100vw;
   align-items: center;
-  background-color: blueviolet;
+  background-color: rgb(194, 188, 245);
 }
 
 .search {
   display: grid;
-  grid-template-columns: 1.3em 1fr;
-  justify-self: center;
-  border: 1px solid black;
+  place-items: center;
   border-radius: 4px;
-  width: 45%;
+  width: 100%;
   padding: 2px;
+  margin: auto;
 }
 
 .search label {
@@ -70,11 +70,9 @@
   cursor: pointer;
 }
 
-.social-logo .logo {
-  width: 2.5em;
-  height: auto;
-  margin-top: 6px;
-  padding: 1px;
+.social-logo .MuiSvgIcon-root {
+  border: none;
+  fill: blue;
 }
 
 .social-logo i {
@@ -82,5 +80,13 @@
 }
 
 .header {
-  box-shadow: 0 1px 1px 2px rgb(133, 123, 148);
+  box-shadow: 0 1px 1px 1px rgb(88, 87, 88);
+}
+
+.search-query {
+  width: 100%;
+}
+
+.input-field {
+  border: 2px solid whitesmoke;
 }

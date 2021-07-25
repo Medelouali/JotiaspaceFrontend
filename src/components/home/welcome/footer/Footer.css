@@ -39,7 +39,7 @@
 
 .selected-page {
   border: 5px solid rgb(111, 111, 236);
-  animation: come-in 0.8s ease-in forwards;
+  animation: come-in 0.5s ease-in forwards;
 }
 
 @keyframes come-in {

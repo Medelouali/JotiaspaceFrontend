@@ -1,23 +1,23 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-//import store from '../svg/store.svg';
-import search from '../svg/search.svg';
-import friends from '../svg/friend.svg';
-import invitations from '../svg/invitation.svg';
-import notifications from '../svg/notification.svg';
-import messages from '../svg/message.svg';
 import { shorten } from "../algorithms/algorithms";
 import profile_image from "../svg/profile.svg";
 import Messanger from "../messanger/Messanger";
+import Search from "../../../home/welcome/header/search/Search";
 
-import './nav.css';
 import messanger from '../../../../redux/actions/messanger';
 
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import StorefrontOutlinedIcon from '@material-ui/icons/StorefrontOutlined';
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+
 
 import socket_io from 'socket.io-client';
 
+import './nav.css';
 
 const endpoint="http://localhost:5000";
 const io=socket_io(endpoint, {
@@ -51,15 +51,16 @@ function Nav({fri, inv, not, mes, name, image}){
                     <h5>{name}</h5>
                     <StorefrontOutlinedIcon className={"store-logo"}/>
                     <div className="search">
-                        <label htmlFor="search-query"><img id="search" src={search} alt="Search"/></label>
-                        <input type="text" name="query" id="query" placeholder="Type something..."/>
+                        {/* <label htmlFor="search-query"><img id="search" src={search} alt="Search"/></label>
+                        <input type="text" name="query" id="query" placeholder="Type something..."/> */}
+                        <Search />
                     </div>
                 </div>
                 <div className="social">
-                    <div onClick={handleMessage(0)} className="social-logo"><img className="logo" src={friends} alt="Friends"/><i>{shorten(fri)}</i></div>
-                    <div onClick={handleMessage(1)} className="social-logo"><img className="logo" src={invitations} alt="Invitations"/><i>{shorten(inv)}</i></div>
-                    <div onClick={handleMessage(2)} className="social-logo"><img className="logo" id="bell" src={notifications} alt="Notifications"/><i>{shorten(not)}</i></div>
-                    <div onClick={handleMessage(3)} className="social-logo"><img className="logo" src={messages} alt="Messages"/><i>{shorten(mes)}</i></div>
+                    <div onClick={handleMessage(0)} className="social-logo"><PeopleOutlineIcon/><i>{shorten(fri)}</i></div>
+                    <div onClick={handleMessage(1)} className="social-logo"><PersonAddIcon/><i>{shorten(inv)}</i></div>
+                    <div onClick={handleMessage(2)} className="social-logo"><NotificationsNoneIcon/><i>{shorten(not)}</i></div>
+                    <div onClick={handleMessage(3)} className="social-logo"><ChatBubbleOutlineIcon/><i>{shorten(mes)}</i></div>
                 </div>
             </nav>
             <div className="">

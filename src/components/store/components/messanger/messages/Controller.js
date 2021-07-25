@@ -1,5 +1,6 @@
 import React from 'react'
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+
 import { useDispatch, useSelector } from "react-redux";
 import deleteMessage from "../../../../../redux/actions/deleteMessage";
 import messanger from '../../../../../redux/actions/messanger';
@@ -16,7 +17,7 @@ function Controller({index}) {
     };
     return (
         <div onClick={handleDelete} className="controller">
-            <DeleteIcon/>
+            <DeleteOutlineIcon/>
         </div>
     )
 }

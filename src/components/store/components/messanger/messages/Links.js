@@ -1,10 +1,8 @@
-import React from 'react'
-import { useMedia } from "use-media";
+import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import messanger from "../../../../../redux/actions/messanger";
 
 function Links() {
-    const smallScreen=useMedia({maxWidth: "800px"});
     const dispatch=useDispatch();
     const page=useSelector(state=>state.messanger);
 
@@ -26,7 +24,7 @@ function Links() {
     return (
         <>
             <div onClick={handlePage} className="plus">+</div>
-            <div className={"links" + (smallScreen ? " scroller-x": "")}>
+            <div className="links">
                 <h4 className={currentPage(3)} onClick={handlePager(3)}>Messages</h4>
                 <h4 className={currentPage(2)} onClick={handlePager(2)}>Notifications</h4>
                 <h4 className={currentPage(0)} onClick={handlePager(0)} >Friends</h4>

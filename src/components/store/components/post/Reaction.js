@@ -5,14 +5,13 @@ import heart from "../svg/react/heart.svg";
 import like from "../svg/react/like.svg";
 import dislike from "../svg/react/dislike.svg";
 import lool from "../svg/react/laugh.svg";
-//import arrow from "../svg/double-arrow.svg";
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
 import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
 
 export function Reaction({reacters, is_comment_reaction}){
     return(
         <div className="reactions">
-            <div className="">
+            <div className="reaction-list">
                 {reacters.map((reacter, index_1)=>(
                     reacter.re_words.map((word, index_2)=>(
                         <div className="reaction" key={`${index_1}${word}#${index_2}`}>
@@ -44,14 +43,14 @@ Reaction.defaultProps={
     is_comment_reaction: false
 }
 
-export function Dialogue({flag, is_comment_dialogue}){
+export function Dialogue({flag}){
     if(flag===0){
         return(
             <Reaction reacters={
                 [
                     {re_image: fluffy, re_name: "Fluffy", re_logo: comment, re_words:["You are Dope", "Awesome"]},
                     {re_image: fluffy, re_name: "Fluffy", re_logo: comment, re_words:["Really Good", "Beautifull"]}
-                ]} is_comment_reaction={is_comment_dialogue}/>
+                ]} is_comment_reaction={true}/>
         );
     }else if(flag===1){
         return(
@@ -59,7 +58,7 @@ export function Dialogue({flag, is_comment_dialogue}){
                 [
                     {re_image: fluffy, re_name: "Leo", re_logo: heart, re_words:[""]},
                     {re_image: fluffy, re_name: "Leo", re_logo: heart, re_words:[""]},
-                ]} is_comment_reaction={is_comment_dialogue}/>
+                ]} is_comment_reaction={false}/>
         );
     }else if(flag===2){
         return(
@@ -67,7 +66,7 @@ export function Dialogue({flag, is_comment_dialogue}){
                 [
                     {re_image: fluffy, re_name: "Leo Decap", re_logo: like, re_words:[""]},
                     {re_image: fluffy, re_name: "Leo Deco", re_logo: like, re_words:[""]},
-                ]} is_comment_reaction={is_comment_dialogue}/>
+                ]} is_comment_reaction={false}/>
         );
     }else if(flag===3){
         return(
@@ -75,7 +74,7 @@ export function Dialogue({flag, is_comment_dialogue}){
                 [
                     {re_image: fluffy, re_name: "Lee Monna", re_logo: dislike, re_words:[""]},
                     {re_image: fluffy, re_name: "Putta", re_logo: dislike, re_words:[""]},
-                ]} is_comment_reaction={is_comment_dialogue}/>
+                ]} is_comment_reaction={false}/>
         );
     }else if(flag===4){
         return(
@@ -83,7 +82,7 @@ export function Dialogue({flag, is_comment_dialogue}){
                 [
                     {re_image: fluffy, re_name: "Hamid", re_logo: lool, re_words:[""]},
                     {re_image: fluffy, re_name: "Ali", re_logo: lool, re_words:[""]},
-                ]} is_comment_reaction={is_comment_dialogue}/>
+                ]} is_comment_reaction={false}/>
         );
     }else{
         return(
@@ -119,12 +118,8 @@ Comment.defaultProps={
 
 export function CommentOnly({comment_flag}){
     const [ready, setReady]=useState(false);
-    // const divRef=useRef(null);
-
     const manage=()=>{
         setReady(!ready);
-        // if(divRef.current) divRef.current.scrollIntoView({behavior: "smooth", block: "center"});
-        // console.log(divRef.current);
     };
 
     if(comment_flag){

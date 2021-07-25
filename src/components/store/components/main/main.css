@@ -1,23 +1,25 @@
-#grid {
+.grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
 
 .main {
   width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main-core {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: center;
+  height: auto;
   width: 99%;
-  height: max-content;
   background-color: rgb(228, 228, 240);
   margin-top: 1vh;
-}
-
-@media (max-width: 800px) {
-  .main-core {
-    display: block;
-  }
 }

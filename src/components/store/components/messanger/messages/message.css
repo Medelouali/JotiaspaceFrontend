@@ -55,13 +55,13 @@
   top: 4px; */
 
 .links {
-  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
   max-width: 100%;
-  height: max-content;
   color: rgb(130, 130, 238);
+  overflow-x: scroll;
 }
 .links h4 {
   width: max-content;
@@ -119,13 +119,12 @@
 }
 
 .controller .MuiSvgIcon-root {
-  width: 60%;
+  width: 1.5em;
   height: auto;
   cursor: pointer;
   position: absolute;
   right: 0;
   bottom: 40%;
-  border-bottom: 0.2px solid blue;
 }
 
 .message-section-left {
@@ -180,6 +179,7 @@
   color: rgb(59, 59, 199);
   animation: rotating 1s ease-out forwards;
   font-weight: 600;
+  cursor: pointer;
 }
 
 @keyframes rotating {
@@ -238,6 +238,7 @@
   width: 98%;
   height: auto;
   cursor: pointer;
+  border: none;
 }
 
 .audio .MuiSvgIcon-root {
@@ -246,6 +247,7 @@
 
 .sending .MuiSvgIcon-root {
   fill: blue;
+  border: none;
 }
 
 .sender {
@@ -310,4 +312,8 @@
 
 .viewed {
   fill: blue;
+}
+
+.MuiSvgIcon-root {
+  border: none;
 }
