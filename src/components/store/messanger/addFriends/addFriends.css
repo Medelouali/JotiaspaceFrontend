@@ -1,0 +1,47 @@
+.add-friends {
+  width: 98%;
+  overflow-y: scroll;
+  margin: auto;
+  height: 80vh;
+}
+.inv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inv h6 {
+  width: 40%;
+  position: relative;
+  left: 6vw;
+}
+
+.accept-refuse {
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.accept-refuse .accept,
+.accept-refuse .refuse {
+  width: max-content;
+  border-radius: 6px;
+  background-color: rgb(227, 227, 238);
+  outline: none;
+  color: rgb(68, 68, 206);
+  margin: 4px;
+  cursor: pointer;
+  border: 2px solid blue;
+  font-weight: bold;
+  max-width: 100%;
+}
+
+.accept-refuse .accept:hover,
+.accept-refuse .refuse:hover {
+  background-color: rgb(198, 198, 228);
+}

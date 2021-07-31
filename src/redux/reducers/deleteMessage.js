@@ -1,4 +1,4 @@
-import user from "../../components/store/components/models/model";
+import user from "../../components/store/models/model";
 
 
 const reducer=(state=user.messages, action)=>{

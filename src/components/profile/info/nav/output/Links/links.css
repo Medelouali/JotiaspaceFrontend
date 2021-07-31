@@ -1,0 +1,76 @@
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 8px;
+  margin: auto;
+  width: 100%;
+}
+
+.photos img {
+  width: 100%;
+  height: auto;
+}
+
+.slide :is(.label, .info) {
+  width: 100%;
+}
+
+.label {
+  text-align: start;
+  font-weight: 600;
+}
+
+.info {
+  text-align: end;
+}
+
+.slide {
+  padding: 5px;
+}
+
+.about-info {
+  box-shadow: 0 1px 1.5px 1px rgb(126, 123, 123);
+  background-color: rgb(228, 231, 240);
+  border-radius: 3px;
+}
+
+.slider .sphere-1,
+.slider .sphere-2 {
+  width: 1.2em;
+  height: 1.2em;
+  margin: 5px;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.on {
+  background-color: rgb(8, 8, 8) !important;
+}
+
+.drivers {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin: auto;
+  width: 80%;
+}
+
+.message-dr,
+.profile-dr {
+  background-color: rgb(200, 203, 221);
+  border-radius: 4px;
+  justify-self: center;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 1px 1px 1px rgb(168, 164, 164);
+  font-weight: 600;
+  color: rgb(46, 46, 189);
+  cursor: pointer;
+}
+
+.message-dr:hover,
+.profile-dr:hover {
+  background-color: rgb(194, 194, 226);
+}

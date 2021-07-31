@@ -16,7 +16,7 @@ import storeHome from "./storeHome";
 import sendMessage from "./sendMessage";
 import chatIndexer from "./chatIndexer";
 import signer from "./signer";
-
+import processing from "./processing";
 
 const allReducers=combineReducers({
     updateUser: updateUser,
@@ -35,7 +35,8 @@ const allReducers=combineReducers({
     storeHome: storeHome,
     sendMessage: sendMessage,
     chatIndexer: chatIndexer,
-    signer: signer
+    signer: signer,
+    processing: processing
 });
 
 export default allReducers;

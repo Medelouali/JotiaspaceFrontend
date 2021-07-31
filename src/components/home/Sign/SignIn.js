@@ -8,15 +8,16 @@ import updateUser from "../../../redux/actions/updateUser";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useMedia } from "use-media";
-
+import { motion } from "framer-motion";
 import "./sign.css";
 
 function SignIn(){
     const dispatch=useDispatch();
     const isBigScreen=useMedia({minWidth: "900px"});
 
-    const [processing, setProcessing]=useState(false);
     const [response, setResponse]=useState({});
+    const [processing, setProcessing]=useState(false);
+
     const signData=useSelector(state=>state.signer);
 
     const handleSubmit= async(e)=>{
@@ -29,7 +30,7 @@ function SignIn(){
             
             setResponse(jsonData);
             setProcessing(false);
-            
+
             if(jsonData.error===""){
                 dispatch(online(true));
                 dispatch(updateUser(jsonData.data));
@@ -41,7 +42,11 @@ function SignIn(){
 
     }
     return(
-        <div className="signUp">
+        <motion.div 
+        initial={{x: "100%"}}
+        animate={{x: 0}}
+        transition={{duration: 0.4}} 
+        className="signUp">
             <form onSubmit={handleSubmit} method="post" 
                     className={ "inner-sign" + (isBigScreen ? " big-size": "")}>
                 <Input label={"Email"} isEmail={true}/>
@@ -50,11 +55,12 @@ function SignIn(){
                     <button onClick={handleSubmit} className="submit">Log In</button>
                     <div onClick={()=>dispatch(pager("home-up"))} className="already-account">Don't Have An Account?!</div>
                     <div className="processing">
-                        { response.error ? <p>{ response.error }</p> :<Start start={processing}/> }
+                    { response.error ? <p>{ response.error }</p>: 
+                            <Start start={processing} phrase={"Signing In..."}/>}
                     </div>
                 </div>
             </form>
-        </div>
+        </motion.div>
     );
 }
 

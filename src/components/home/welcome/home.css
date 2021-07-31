@@ -17,4 +17,5 @@
   max-width: 100%;
   display: grid;
   place-items: center;
+  background-color: rgb(247, 243, 41);
 }

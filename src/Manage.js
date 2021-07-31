@@ -2,7 +2,7 @@ import React from 'react';
 import Home from "./components/home/welcome/Home";
 import Post from './components/interface/Post';
 import Profile from './components/profile/Profile';
-import Store from './components/store/components/main/Store';
+import Store from './components/store/main/Store';
 
 function Manage({page}) {
     switch(page){

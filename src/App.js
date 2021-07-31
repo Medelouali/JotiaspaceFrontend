@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 
 function App(){
   const page = useSelector(state => state.pager);
-  return(
-    <Manage page={page}/>
-  );
+  return <Manage page={page}/> ;
 };
 
 export default App;

@@ -1,5 +1,5 @@
-import React from 'react'
-import Info from './Info';
+import React from 'react';
+import Info from './info/Info';
 import "./profile.css";
 
 

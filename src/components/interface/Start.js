@@ -1,11 +1,15 @@
 import React from 'react'
-import process from "./svg/process.svg";
+import CachedRoundedIcon from '@material-ui/icons/CachedRounded';
+import "./Post.css";
 
-function Start({start}) {
+function Start({start, phrase}) {
     if(start){
         return (
             <div className="posting">
-                <img className="posting-icon" src={process} alt=""/>            
+                <div className="posting-icon">
+                    <CachedRoundedIcon/>    
+                </div>
+                <div className="phrase">{phrase}</div>            
             </div>
         )
     }else{
@@ -13,4 +17,8 @@ function Start({start}) {
     }
 }
 
+Start.defaultProps={
+    start: false,
+    phrase: ""
+}
 export default Start

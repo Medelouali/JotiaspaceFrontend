@@ -1,0 +1,7 @@
+.browser {
+  width: 60%;
+  background-color: rgb(221, 221, 236);
+  height: max-content;
+  height: 100vh;
+  overflow-y: scroll;
+}

@@ -1,0 +1,17 @@
+.privacy {
+  background-color: rgb(249, 249, 252);
+  height: 98vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.outer-privacy {
+  width: 39%;
+  background-color: rgb(221, 221, 236);
+  height: max-content;
+  display: grid;
+  place-items: center;
+  height: 98vh;
+  display: grid;
+  place-items: center;
+}

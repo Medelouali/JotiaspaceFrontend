@@ -1,0 +1,36 @@
+.notifications {
+  width: 98% !important;
+  margin: auto;
+  overflow-y: scroll;
+  border-radius: 3px;
+  border: 1px solid rgb(204, 204, 245);
+}
+
+.notification {
+  width: 100%;
+  padding: 2px;
+}
+
+.notification .image {
+  grid-area: 1/1/2/2;
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid rgb(167, 167, 228);
+}
+
+.image img {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+.notification .jsx {
+  width: 100%;
+  grid-area: 1/2/3/3;
+  font-weight: bold;
+  font-size: small;
+  width: 100%;
+  border: 1px solid rgb(241, 241, 248);
+  border-radius: 4px 4px 0 4px;
+}

@@ -1,0 +1,34 @@
+.friends {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  grid-template-rows: 1em 1em max-content;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.friends .friend-image {
+  grid-area: 1/1/3/2;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1px solid rgb(181, 181, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.friend-image img {
+  width: auto;
+  height: 100%;
+}
+.friends h6 {
+  grid-area: 1/2/2/3;
+  position: relative;
+  left: 20px;
+  font-size: 1em;
+}
+
+.friends .jsx {
+  grid-area: 3/2/4/3;
+}

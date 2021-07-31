@@ -1,158 +1,181 @@
+.post-wrapper {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+  background-color: white;
+}
 
+.labels {
+  width: 40%;
+  background-color: rgb(248, 248, 252);
+  display: grid;
+  place-items: center;
+}
 
-.post-wrapper{
+.data {
+  width: 57%;
+  background-color: rgb(248, 248, 252);
+  display: grid;
+  place-items: center;
+}
+
+.inner-1,
+.inner-2 {
+  width: 94%;
+  height: 94%;
+  display: grid;
+  place-items: center;
+  background-color: rgb(253, 253, 253);
+  box-shadow: 0 1px 2px 1px rgb(209, 199, 199);
+}
+
+@media (max-width: 869px) {
+  .labels,
+  .data {
     width: 100%;
-    display: flex;
-    height: 100vh;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: stretch;
-    background-color: white;
+  }
+  #picture__ {
+    width: 80vw;
+  }
 }
 
-.labels{
-    width: 40%;
-    background-color: rgb(248, 248, 252);
-    display: grid;
-    place-items: center;
+.price-wrapper,
+.info-wrapper {
+  width: 94%;
+  height: 94%;
+  overflow-y: scroll;
+  background-color: white;
 }
 
-.data{
-    width: 57%;
-    background-color: rgb(248, 248, 252);
-    display: grid;
-    place-items: center;
+.data-input {
+  height: 3em;
+  width: 90%;
+  outline: none;
+  font-size: 1.5em;
+  font-weight: 500;
+  box-shadow: 0 1px 1px 1px rgb(235, 228, 228);
+  border-radius: 5px;
 }
 
-.inner-1, .inner-2{
-    width: 94%;
-    height: 94%;
-    display: grid;
-    place-items: center;
-    background-color: rgb(253, 253, 253);
-    box-shadow: 0 1px 2px 1px rgb(209, 199, 199);
+.info-wrapper h3,
+.price-wrapper h3 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-@media(max-width: 869px){
-    .labels, .data{
-        width: 100%;
-    }
-    #picture__{
-        width: 80vw;
-    }
+.field {
+  margin: 10px;
 }
 
-.price-wrapper, .info-wrapper{
-    width: 94%;
-    height: 94%;
-    overflow-y: scroll;
-    background-color: white;
+.image-input {
+  display: none;
 }
 
-.data-input{
-    height: 3em;
-    width: 90%;
-    outline: none;
-    font-size: 1.5em;
-    font-weight: 500;
-    box-shadow: 0 1px 1px 1px rgb(235, 228, 228);
-    border-radius: 5px;
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.info-wrapper h3, .price-wrapper h3{
-    text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
-};
-
-.field{
-    margin: 10px;
+.input-icon {
+  width: 13%;
+  height: auto;
+  cursor: pointer;
 }
 
-.image-input{
-    display: none;
+#picture__ {
+  height: 40vh;
 }
 
-.price-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.post-data button {
+  width: 8em;
+  height: 1.5em;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-
-.input-icon{
-    width: 13%;
-    height: auto;
-    cursor: pointer;
+.post-data button:hover {
+  color: rgb(76, 76, 230);
 }
 
-#picture__{
-    height: 40vh;
+.post-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px;
 }
 
-.post-data button{
-    width: 8em;
-    height: 1.5em;
-    margin: 10px;
-    font-size: 1.2em;
-    font-weight: 600;
-    cursor: pointer;
+.posting {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.post-data button:hover{
-    color: rgb(76, 76, 230);
+.posting-icon {
+  width: 2em;
+  height: auto;
+  animation: working 1s ease-in infinite;
+  position: relative;
+  bottom: 22px;
 }
 
-.post-data{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-    margin: 20px;
+@keyframes working {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.posting{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+label span {
+  position: relative;
+  bottom: 10px;
+  margin: 5px;
 }
 
-.posting-icon{
-    width: 2em;
-    height: auto;
-    animation: working 1s ease-in infinite;
-    position: relative;
-    bottom: 22px;
+.field-label {
+  font-weight: 600;
 }
 
-@keyframes working{
-    100%{
-        transform: rotate(360deg);
-    }
+.back-icon {
+  width: 1em;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
 }
 
-label span{
-    position: relative;
-    bottom: 10px;
-    margin: 5px;
+.routes {
+  height: 3em;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
 }
 
-.field-label{
-    font-weight: 600;
+.posting-icon {
+  width: 2.5em;
+  height: 2.5em;
+  margin: auto;
 }
 
-.back-icon{
-    width: 1em;
-    height: auto;
-    margin: 10px;
-    cursor: pointer;
+.posting-icon .MuiSvgIcon-root {
+  width: 100%;
+  height: 100%;
+  fill: rgb(116, 116, 228);
 }
 
-.routes{
-    height: 3em;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
+.posting {
+  height: max-content;
+  display: grid;
+}
+
+.phrase {
+  margin: auto;
+  color: blue;
 }

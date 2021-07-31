@@ -1,0 +1,20 @@
+.collect {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: rgb(240, 242, 247);
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 0 1px 1px 1px rgb(221, 218, 218);
+}
+
+.collect h6 {
+  width: 70%;
+}
+
+.collect img {
+  width: 29%;
+  height: auto;
+}

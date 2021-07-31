@@ -1,0 +1,13 @@
+.nav {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.outer-nav {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 100%;
+}

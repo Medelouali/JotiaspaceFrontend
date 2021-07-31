@@ -1,0 +1,10 @@
+.link {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  cursor: pointer;
+}
+
+.link img {
+  width: 60%;
+  height: auto;
+}

@@ -43,7 +43,7 @@ function Header(){
             <div className="search-bar"><Search placeHolder="Search..." callback={bringData} action="get"/></div>
             <div className="nav-menu">
                 {bigScreen ? (
-                    <div className="links">
+                    <div className="header-links">
                         <h4 className="link" onClick={()=>dispatch(pager("home"))}>Home</h4>
                         <h4 className="link" onClick={()=>dispatch(pager("home-ser"))}>Services</h4>
                         <h4 className="link" onClick={()=>dispatch(pager("home-con"))}>Contacts</h4>
