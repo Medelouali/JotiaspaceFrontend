@@ -1,69 +1,15 @@
 .profile {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-}
-
-.profile,
-.outer-nav {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  max-width: 100%;
+  padding: 3px;
+  overflow: hidden;
 }
 
 .profile-center {
-  width: 98%;
-  height: 98vh;
-  background-color: rgb(247, 239, 239);
-}
-
-.outer-nav {
-  width: 30%;
-  height: 100%;
+  border: 1px solid rgb(180, 180, 241);
+  border-radius: 3px;
   overflow-y: scroll;
-  background-color: rgb(241, 241, 247);
-}
-
-.outer-feed {
-  width: 69%;
-  height: 100%;
-  overflow-y: scroll;
-  background-color: rgb(241, 241, 247);
-  position: relative;
-}
-
-.feed {
-  position: absolute;
-  top: 0;
-  height: max-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.scroller-11 {
-  height: 15em;
-  background-color: rgb(247, 241, 241);
-}
-
-.scroller-1 {
-  background-color: rgb(241, 236, 236);
-}
-
-.clip {
-  width: 300px;
-  height: auto;
-}
-
-.feed .outer-privacy {
-  overflow-x: hidden;
   max-width: 100%;
-}
-
-.store {
-  width: 100% !important;
-}
-
-.outer-privacy {
-  width: 100% !important;
+  height: 98%;
+  margin: auto;
 }

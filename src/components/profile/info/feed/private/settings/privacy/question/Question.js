@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Choices from './Choices';
+import Choices from '../choices/Choices';
+
+import "./question.css";
 
 function Question({question}){
     const [on, setOn] = useState(false);

@@ -1,5 +1,6 @@
 import React from 'react';
-import Question from './Question';
+import Question from './question/Question';
+import "./privacy.css";
 
 function Privacy(){
     return (

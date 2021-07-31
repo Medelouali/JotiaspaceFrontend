@@ -9,7 +9,7 @@ function Nav() {
     const what=useSelector(state => state.profile);
     return (
         <div className="outer-nav">
-            <div className="nav">
+            <div className="inner-nav">
                 <Picture/>
                 <hr/>
                 <Output what={what}/>

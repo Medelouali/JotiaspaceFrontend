@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import "./choices.css";
 
 function Choices({on}) {
     const divRef=useRef(null);
@@ -13,7 +14,6 @@ function Choices({on}) {
         
         return (
             <div ref={divRef} className="choices">
-                <div className="nothing"></div>
                 <div className="options">
                     <label htmlFor="question-1">
                         <input type="radio" name="question" id="question-1" value="Only Me"/>
