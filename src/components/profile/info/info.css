@@ -1,14 +1,1 @@
-.center {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-items: center;
-  align-items: center;
-  grid-gap: 4px;
-}
 
-@media (max-width: 200px) {
-  .center {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}

@@ -1,4 +1,5 @@
 import React from 'react'
+import "./images.css";
 
 function Images({urls}) {
     return (

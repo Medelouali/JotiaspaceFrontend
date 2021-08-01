@@ -1,0 +1,19 @@
+.urls {
+  grid-area: 2/2/3/3;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  white-space: nowrap;
+  overflow-x: scroll;
+  border: 2px solid rgb(18, 18, 202);
+  border-radius: 4px;
+  padding: 1px;
+}
+
+.urls img {
+  display: inline-block;
+  margin: 2px;
+  height: 40vh;
+  width: auto;
+  border-radius: 4px;
+}

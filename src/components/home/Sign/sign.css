@@ -107,10 +107,6 @@
   cursor: pointer;
 }
 
-::-webkit-scrollbar-track {
-  height: 10vh;
-}
-
 .big-size {
   width: 30%;
 }

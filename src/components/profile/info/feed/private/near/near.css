@@ -1,14 +1,1 @@
-.near-head h3 {
-  letter-spacing: 2px;
-}
 
-.near-head img {
-  width: 1em;
-  height: auto;
-  margin-left: 10px;
-}
-
-.near-head {
-  display: grid;
-  grid-template-columns: 5% max-content 1fr;
-}

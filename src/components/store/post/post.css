@@ -1,6 +1,7 @@
 .post {
   background-color: white;
   box-shadow: 0 1px 2px 1px rgb(194, 191, 191);
+  border-radius: 3px;
   margin: 6px;
   padding: 2px;
   width: 100%;
@@ -8,21 +9,21 @@
 }
 .card-header {
   width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .card-header .poster-image {
-  width: 4em;
-  height: 4em;
+  width: 3.5em;
+  height: 3.5em;
   border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 2px solid rgb(163, 163, 243);
   margin: 2px;
+  overflow: hidden;
 }
 
 .poster-image img {
@@ -30,34 +31,21 @@
   height: auto;
 }
 .card-header h3 {
-  width: 60%;
   background-color: white;
+  border: 1px solid rgb(237, 237, 248);
+  border-radius: 10px;
+  margin: auto;
+  padding: 2px;
 }
 
 .card-data {
   display: grid;
   grid-template-columns: 2% 1fr 2%;
   grid-template-rows: 10px max-content max-content 10px;
-  grid-gap: 0 5px;
-}
-
-.card-data .urls {
-  grid-area: 2/2/3/3;
+  grid-gap: 0 2px;
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  white-space: nowrap;
-  overflow-x: scroll;
-  border: 1px solid rgb(150, 150, 248);
-  box-shadow: 0 1px 1px 2px rgb(136, 132, 132);
 }
 
-.urls img {
-  display: inline-block;
-  margin: 2px;
-  height: 40vh;
-  width: auto;
-}
 .card-data p {
   grid-area: 3/2/4/3;
   width: 100%;
@@ -72,154 +60,13 @@
   align-content: center;
   background-color: rgb(246, 245, 250);
   border-radius: 6px;
-  margin: 2.5%;
+  margin: 2px;
   padding: 4px;
   margin-bottom: 6px;
   box-shadow: 0 0.8px 0.8px 0.6px rgb(194, 194, 199);
 }
 
-.cell {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 19%;
-}
-
-.cell svg {
-  width: 40%;
-  height: auto;
-  grid-area: 1/1/3/2;
-}
-
-.cell i {
-  width: 100%;
-  grid-area: 1/2/2/3;
-  text-align: center;
-}
-
-.cell img {
-  margin: auto;
-  width: 30%;
-  height: auto;
-  grid-area: 2/2/3/3;
-}
-
-.reactions {
-  width: 100%;
-  max-width: 100%;
-}
-
-.reaction {
-  width: 100%;
-}
-.reacter {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-.reacter .reacter-image {
-  width: 3em;
-  height: 3em;
-  border: 2px solid rgb(201, 201, 245);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.reacter-image img {
-  width: auto;
-  height: 100%;
-}
-.reacter h5 {
-  width: max-content;
-  color: blue;
-}
-
-.reacter .reacter-logo {
-  width: 1.2em;
-  height: auto;
-}
-
-.reaction p {
-  margin: 3%;
-  border-left: 3px double rgb(50, 50, 240);
-  border-bottom: 1px solid rgb(68, 68, 245);
-  border-radius: 0 0 10px 10px;
-}
-
-.get-comment {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.get-comment h5 {
-  grid-area: 1/1/2/2;
-  width: max-content;
-  margin: 10px;
-  color: rgb(189, 131, 243);
-}
-
-.get-comment .img {
-  width: 5%;
-  height: auto;
-  justify-self: start;
-  cursor: pointer;
-}
-
-.get-comment .message-form {
-  grid-area: 2/1/3/3;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-}
-.message-form .post-comment {
-  width: 70%;
-  height: 4em;
-  border-radius: 4px;
-  border: 2px solid rgb(144, 144, 224);
-  margin-bottom: 4px;
-  outline: none;
-}
-
-.message-form button {
-  width: max-content;
-  border-radius: 4px;
-  margin: 6px;
-  padding: 2px;
-  background-color: rgb(107, 107, 231);
-  color: white;
-  cursor: pointer;
-  border: 2px solid blue;
-}
-
-@media (min-width: 833px) {
-  ::-webkit-scrollbar {
-    background-color: #1e1e1e;
-    height: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: linear-gradient(
-      180deg,
-      rgb(97, 97, 223),
-      rgb(159, 159, 226)
-    );
-    border-radius: 5px;
-  }
-}
-
 .cell svg,
 .cell img {
   cursor: pointer;
-}
-
-.reaction-list {
-  height: 30vh;
-  overflow-y: scroll;
 }

@@ -1,0 +1,53 @@
+.reactions {
+  width: 100%;
+  max-width: 100%;
+}
+.reaction-list {
+  height: 30vh;
+  overflow-y: scroll;
+}
+
+.reaction {
+  width: 100%;
+}
+.reacter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.reacter .reacter-image {
+  width: 3em;
+  height: 3em;
+  border: 2px solid rgb(201, 201, 245);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.reacter-image img {
+  width: auto;
+  height: 100%;
+}
+
+.reacter h5 {
+  width: max-content;
+  color: blue;
+}
+
+.reacter .reacter-logo {
+  width: 1.2em;
+  height: auto;
+}
+
+.reaction p {
+  margin: 3%;
+  border-left: 3px double rgb(50, 50, 240);
+  border-bottom: 1px solid rgb(68, 68, 245);
+  border-radius: 0 0 10px 10px;
+}
