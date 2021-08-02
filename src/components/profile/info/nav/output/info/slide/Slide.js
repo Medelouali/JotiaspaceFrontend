@@ -1,4 +1,5 @@
 import React from 'react';
+import "./slide.css";
 
 function Slide({label, info}) {
     return (

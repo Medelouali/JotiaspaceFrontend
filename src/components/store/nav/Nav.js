@@ -34,7 +34,6 @@ function Nav({fri, inv, not, mes, name, image}){
         }
     };
 
-    //Just testing socket.io
     useEffect(() => {
         io.on("connect_error", (err) => {
             console.log(`connect_error due to ${err.message}`);
@@ -49,7 +48,7 @@ function Nav({fri, inv, not, mes, name, image}){
                     <PersonOutlineOutlinedIcon classname={"my-image"}/>
                     <h4>{name}</h4>
                     <div className="search">
-                        <Search />
+                        <Search placeHolder={"Search..."}/>
                     </div>
                 </div>
                 <div className="social">

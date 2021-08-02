@@ -1,1 +1,18 @@
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 2px;
+  max-width: 100%;
+  width: 100%;
+}
 
+.link img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: 1px dashed blue;
+  padding: 1px;
+}

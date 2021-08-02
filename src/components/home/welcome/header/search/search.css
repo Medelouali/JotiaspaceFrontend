@@ -2,6 +2,7 @@
   width: 100%;
   display: grid;
   place-items: center;
+  height: max-content;
 }
 
 .MuiSvgIcon-root {
@@ -22,9 +23,11 @@
 }
 
 .get-data .input-field {
-  border: 2px solid rgb(101, 101, 230);
+  border: 2px solid rgb(30, 30, 63);
   border-radius: 4px;
-  height: 100%;
+  margin: 1px;
+  padding: 2px;
+  height: 1.6em;
 }
 
 .get-data .hidden {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Friend from '../../../network/friend/Friend';
-import person from "../svg/mark.webp";
+import person from "../../../../../svg/animals/crow.svg";
 import "./profile.css";
 
 function More({name}){

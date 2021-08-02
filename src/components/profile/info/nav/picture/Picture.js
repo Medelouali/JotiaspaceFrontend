@@ -4,16 +4,13 @@ import info from "../../../svg/info.svg";
 import friends from "../../../svg/friends.svg";
 import photos from "../../../svg/photos.svg";
 import Link from './link/Link';
-import { useMedia } from "use-media";
 import "./picture.css";
 
 function Picture() {
-    const bigScreen=useMedia({minWidth: "1000px"});
-
     return (
         <div className="picture">
             <div className="my-picture">
-                <div className={"mee" + (bigScreen ? " go-small": "")}>
+                <div className="mee">
                     <img src={bill_pic} alt=""/>
                 </div>
 

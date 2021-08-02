@@ -1,1 +1,24 @@
+.picture {
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+}
 
+.my-picture .mee {
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid rgb(139, 139, 228);
+  margin: auto;
+}
+
+.mee img {
+  width: auto;
+  height: 100%;
+}
+
+.go-to {
+  width: 100%;
+  max-width: 100%;
+}

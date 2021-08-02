@@ -1,5 +1,5 @@
 import React from 'react';
-import person from "../svg/mark.webp";
+import person from "../../../../../svg/animals/crow.svg";
 
 function Img({name}) {
     return (

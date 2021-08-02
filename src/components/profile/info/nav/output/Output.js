@@ -1,7 +1,7 @@
 import React from 'react'
-import Photos from './Links/Photos';
-import Info from './Links/Info';
-import Friends from './Links/Friends';
+import Photos from './photos/Photos';
+import Info from './info/Info';
+import Friends from './friends/Friends';
 import "./output.css";
 
 import { useSelector } from "react-redux";

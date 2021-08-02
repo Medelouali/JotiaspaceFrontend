@@ -2,6 +2,8 @@ import React from 'react';
 import Friend from "../../network/friend/Friend";
 import pic from "../../../../svg/Bill.jpg";
 
+import "./friends.css";
+
 function Friends() {
     return (
         <div className="friends-list">

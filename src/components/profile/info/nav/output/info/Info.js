@@ -1,6 +1,6 @@
 import React from 'react';
-import Slide from './Slide';
-import "./links.css";
+import Slide from './slide/Slide';
+import "./info.css";
 
 function Info({email, occupation, location}) {
     return (

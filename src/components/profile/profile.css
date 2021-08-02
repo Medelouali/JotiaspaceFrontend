@@ -1,1 +1,16 @@
+.profile {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
 
+.profile-center {
+  width: 98%;
+  height: 98%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid blue;
+}
