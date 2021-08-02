@@ -1,1 +1,27 @@
+.near {
+  width: 100%;
+  border: 1px solid rgb(210, 210, 235);
+  border-radius: 4px;
+  padding: 2px;
+}
 
+.near .near-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.near-head h3 {
+  color: blue;
+}
+
+.near-logo {
+  width: max-content;
+}
+
+.near-logo .MuiSvgIcon-root {
+  width: 1.5em;
+  height: auto;
+}

@@ -1,9 +1,11 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
-//import mark from "../../../svg/mark.jpg";
-import "./welcome.css";
 import intro from "../../../svg/vars/vars";
 import pager from '../../../../../redux/actions/pager';
+
+import { Button } from "@material-ui/core";
+
+import "./welcome.css";
 
 //some images from pintrest:
 import clothes_1 from "../../../Sign/svg/Pins/clothes-1.jpg";
@@ -40,8 +42,16 @@ function Welcome(){
             <div className="intro-section">
                 <h3 className="intro">{intro}</h3>
                 <div className="buttons">
-                    <button onClick={()=>dispatch(pager("home-up"))}><h2>Sign Up</h2></button>
-                    <button onClick={()=>dispatch(pager("home-in"))}><h2>Sign In</h2></button>
+                    <button onClick={()=>dispatch(pager("home-up"))}>
+                        <Button variant="contained" color="primary"
+                            size="small">
+                            Sign Up
+                        </Button></button>
+                    <button onClick={()=>dispatch(pager("home-in"))}>
+                        <Button variant="contained" color="primary"
+                            size="small">
+                            Sign In
+                        </Button></button>
                 </div>
             </div>
         </div>

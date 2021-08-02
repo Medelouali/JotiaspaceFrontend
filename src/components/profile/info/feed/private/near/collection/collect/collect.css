@@ -1,1 +1,18 @@
+.collect {
+  width: max-content;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid rgb(243, 243, 248);
+  border-radius: 3px;
+  padding: 1px;
+}
 
+.collect h6 {
+  border-radius: 4px;
+  border: 1px solid rgb(231, 231, 243);
+}
+.collect img {
+  height: 1.8em;
+  width: auto;
+}

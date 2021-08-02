@@ -1,0 +1,7 @@
+.outer-expaind {
+  width: 100% !important;
+  border-radius: 4px;
+  border: 1px solid rgb(230, 230, 243);
+  padding: 2px;
+  margin-top: 2px;
+}

@@ -16,9 +16,8 @@ function Near({title, logo}) {
     return (
         <div className="near">
             <div className="near-head">
-                <div className=""></div>
                 <h3>{title}</h3>
-                <img src={logo} alt=""/>
+                <div className="near-logo">{logo}</div>
             </div>
             <hr/>
             <Store logo={car} title="Transport" jsx_details={<Collection coordinates={{

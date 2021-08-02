@@ -1,1 +1,23 @@
+.product-2 {
+  display: inline-block;
+  width: min-content;
+  width: max-content;
+}
 
+.product-image-2 {
+  height: max-content;
+  width: auto;
+}
+
+.product-image-2 img {
+  height: 10vh;
+  width: auto;
+}
+
+.price-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}

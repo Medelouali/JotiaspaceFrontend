@@ -10,7 +10,7 @@ function Expaind({origin, what}) {
                 if(data.hasOwnProperty(what.type)){
                     if(data[what.type].hasOwnProperty(what.name))
                         return (
-                            <div className="expaind">
+                            <div className="outer-expaind">
                                     <Mapper list={data[what.type][what.name]}/>
                             </div>
                         );
@@ -24,7 +24,7 @@ function Expaind({origin, what}) {
                 if(data.hasOwnProperty(what.type)){
                     if(data[what.type].hasOwnProperty(what.name))
                         return (
-                            <div className="expaind">
+                            <div className="outer-expaind">
                                     <Mapper list={data[what.type][what.name]}/>
                             </div>
                         );
