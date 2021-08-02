@@ -27,7 +27,7 @@ function Links() {
             <div className="links">
                 <h4 className={currentPage(3)} onClick={handlePager(3)}>Messages</h4>
                 <h4 className={currentPage(2)} onClick={handlePager(2)}>Notifications</h4>
-                <h4 className={currentPage(0)} onClick={handlePager(0)} >Friends</h4>
+                <h4 className={currentPage(0)} onClick={handlePager(0)}>Friends</h4>
                 <h4 className={currentPage(1)} onClick={handlePager(1)}>Invitations</h4>
             </div>
         </>

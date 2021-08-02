@@ -1,0 +1,47 @@
+.friends {
+  width: 100%;
+  max-width: 100%;
+}
+
+.friends-controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.friend-image {
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid rgb(160, 160, 221);
+}
+
+.friend-image img {
+  width: auto;
+  height: 100%;
+}
+.friend h6 {
+  margin: auto;
+  border: 1px solid rgb(212, 212, 233);
+  padding: 1px;
+  border-radius: 4px;
+}
+
+.friend-controller {
+  width: 1.5em;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid rgb(187, 187, 231);
+  padding: 1px;
+  display: grid;
+  place-items: center;
+}
+
+.friend-controller .MuiSvgIcon-root {
+  margin: auto;
+  width: 90%;
+  height: auto;
+}

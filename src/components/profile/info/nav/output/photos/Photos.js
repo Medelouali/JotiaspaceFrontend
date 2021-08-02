@@ -1,18 +1,18 @@
 import React from 'react';
-import crow from "../../../../svg/animals/crow.svg";
+import girl from "../../../../../store/svg/girlSmiling.jpg";
 import "./photos.css";
 
 function Photos() {
     return (
         <div className="photos">
-            <img src={crow} alt=""/>            
-            <img src={crow} alt=""/>            
-            <img src={crow} alt=""/>            
-            <img src={crow} alt=""/>            
-            <img src={crow} alt=""/>            
-            <img src={crow} alt=""/>            
-            <img src={crow} alt=""/>            
-            <img src={crow} alt=""/>            
+            <img src={girl} alt=""/>            
+            <img src={girl} alt=""/>            
+            <img src={girl} alt=""/>            
+            <img src={girl} alt=""/>            
+            <img src={girl} alt=""/>            
+            <img src={girl} alt=""/>            
+            <img src={girl} alt=""/>            
+            <img src={girl} alt=""/>            
         </div>
     )
 }

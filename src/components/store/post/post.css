@@ -2,19 +2,21 @@
   background-color: white;
   box-shadow: 0 1px 2px 1px rgb(194, 191, 191);
   border-radius: 3px;
-  margin: 6px;
+  /* margin: 6px; */
   padding: 2px;
-  width: 100%;
+  width: 98%;
+  margin: 4px auto 4px auto;
   max-width: 100%;
 }
 .card-header {
-  width: 100%;
+  width: 99%;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+  margin: auto;
 }
 
 .card-header .poster-image {
@@ -50,6 +52,9 @@
   grid-area: 3/2/4/3;
   width: 100%;
   margin-top: 1%;
+  border: 1px solid rgb(227, 227, 245);
+  padding: 1px;
+  border-radius: 4px;
 }
 
 .cells {
@@ -60,10 +65,11 @@
   align-content: center;
   background-color: rgb(246, 245, 250);
   border-radius: 6px;
-  margin: 2px;
-  padding: 4px;
+  margin: 2px auto 2px auto;
+  padding: 2px;
   margin-bottom: 6px;
   box-shadow: 0 0.8px 0.8px 0.6px rgb(194, 194, 199);
+  width: 96%;
 }
 
 .cell svg,

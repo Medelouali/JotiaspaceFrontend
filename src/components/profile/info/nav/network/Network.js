@@ -6,7 +6,7 @@ import "./network.css";
 function Network({name}) {
     return (
         <div className="network">
-            <h6>{name}</h6>
+            <h5>{name}</h5>
             <Friend picture={image} name="Mark" jsx={"New York City"}/>
             <Friend picture={image} name="Mark" jsx={"New York City"}/>
             <Friend picture={image} name="Mark" jsx={"New York City"}/>
