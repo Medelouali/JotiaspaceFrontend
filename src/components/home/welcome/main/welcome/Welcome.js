@@ -42,16 +42,14 @@ function Welcome(){
             <div className="intro-section">
                 <h3 className="intro">{intro}</h3>
                 <div className="buttons">
-                    <button onClick={()=>dispatch(pager("home-up"))}>
-                        <Button variant="contained" color="primary"
-                            size="small">
-                            Sign Up
-                        </Button></button>
-                    <button onClick={()=>dispatch(pager("home-in"))}>
-                        <Button variant="contained" color="primary"
+                        <Button onClick={()=>dispatch(pager("home-up"))} variant="contained" color="primary"
+                                    size="small">
+                                    Sign Up
+                        </Button>
+                        <Button onClick={()=>dispatch(pager("home-in"))} variant="contained" color="primary"
                             size="small">
                             Sign In
-                        </Button></button>
+                        </Button>
                 </div>
             </div>
         </div>

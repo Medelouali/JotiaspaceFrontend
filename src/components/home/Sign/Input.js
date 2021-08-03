@@ -33,7 +33,7 @@ function Input({ label, isPassword, isEmail }) {
             {isPassword && (
                 <div onClick={()=>setView(!view)} className="eye">
                     {
-                        !view ? <VisibilityOffIcon style={{fill: "rgb(0, 0, 0)"}}/> : 
+                        view ? <VisibilityOffIcon style={{fill: "rgb(0, 0, 0)"}}/> : 
                         <VisibilityIcon style={{fill: "rgb(0, 0, 0)"}}/>
                     }
                 </div>

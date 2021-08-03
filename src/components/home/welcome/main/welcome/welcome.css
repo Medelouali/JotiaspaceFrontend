@@ -63,13 +63,9 @@
 
 .intro-section .buttons button {
   width: 90%;
-  border-radius: 15px;
+  border-radius: 4px;
   padding: 4px;
   margin: 10px;
-  box-shadow: 0 2px 3px 1px rgba(104, 104, 105, 0.1);
-  /* background-color: rgb(18, 48, 214); */
-  color: rgb(54, 17, 148);
-  border: 2px solid blue;
 }
 .intro-section .buttons button:hover {
   box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.2);
