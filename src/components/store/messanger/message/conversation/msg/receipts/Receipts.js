@@ -1,7 +1,7 @@
 import React from 'react'
 import CheckIcon from '@material-ui/icons/Check';
 
-import "./message.css";
+import "./receipts.css";
 
 function Receipts({sent, received, viewed}) {
     return (

@@ -1,0 +1,30 @@
+.chat {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+}
+
+.chat .chat-image {
+  width: 4em;
+  height: 4em;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  border: 3px solid rgb(167, 167, 228);
+  cursor: pointer;
+}
+
+.chat-image img {
+  width: auto;
+  height: 100%;
+}
+
+.chat h4 {
+  width: 35%;
+  cursor: pointer;
+}

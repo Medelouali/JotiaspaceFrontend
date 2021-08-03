@@ -1,6 +1,7 @@
 import React from 'react'
-import Links from "./messages/Links";
+import Links from "./message/Links";
 import { useMedia } from "use-media";
+
 import "./messanger.css";
 
 function Wrapper({jsx}) {

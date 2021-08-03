@@ -1,0 +1,23 @@
+.reciepts {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.default {
+  display: grid;
+  place-items: center;
+}
+
+.default .MuiSvgIcon-root {
+  width: 6%;
+  height: auto;
+  position: relative;
+  left: 40%;
+}
+.move-down {
+  position: relative;
+  top: 10px;
+}

@@ -44,7 +44,7 @@ function FriendData({out, content}){
                         </Button>
                     </div>
                 </div>
-                <div ref={ref}><Driver go={driver}/></div>
+                <div className="absolute" ref={ref}><Driver go={driver}/></div>
             </div>
         );
     }else{

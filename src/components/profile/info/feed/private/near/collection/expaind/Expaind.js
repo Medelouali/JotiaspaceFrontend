@@ -1,6 +1,7 @@
 import React from 'react';
 import data from "../../../../../../data.js";
 import Mapper from "./mapper/Mapper";
+
 import "./expaind.css";
 
 function Expaind({origin, what}) {
@@ -15,10 +16,10 @@ function Expaind({origin, what}) {
                             </div>
                         );
                     else{
-                        return(<div className=""></div>);
+                        return(<></>);
                     }
                 }else{
-                    return(<div className=""></div>);
+                    return(<></>);
                 };
             case "global":
                 if(data.hasOwnProperty(what.type)){
@@ -29,14 +30,14 @@ function Expaind({origin, what}) {
                             </div>
                         );
                     else{
-                        return(<div className=""></div>);
+                        return(<></>);
                     }
                 }else{
-                    return(<div className=""></div>);
+                    return(<></>);
                 }
             default:
                 return(
-                    <div className=""></div>
+                    <></>
                 );
         };
     }else{

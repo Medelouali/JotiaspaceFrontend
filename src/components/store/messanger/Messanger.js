@@ -2,8 +2,7 @@ import React from "react";
 import Friends from "./friends/Friends";
 import AddFriends from "./addFriends/AddFriends";
 import Notifications from "./notification/Notifications";
-import Invitation from "./invitation/Invitation";
-import Message from './messages/Message';
+import Message from './message/Message';
 
 import "./messanger.css";
 import Wrapper from "./Wrapper";
@@ -18,8 +17,6 @@ function Messanger({app}){
             return(<Wrapper jsx={<Notifications/>}/>);
         case 3:
             return(<Wrapper jsx={<Message/>}/>);
-        case 4:
-            return(<Wrapper jsx={<Invitation/>}/>);
         default:
             return(
                 <></>

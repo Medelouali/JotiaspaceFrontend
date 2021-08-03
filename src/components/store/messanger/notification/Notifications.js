@@ -3,6 +3,7 @@ import fluffy from "../../svg/fluffy.jpg";
 import love from "../../svg/react/heart.svg";
 import Notification from "./Notification";
 
+import "./notification.css";
 
 export default function Notifications({list}){
     return(

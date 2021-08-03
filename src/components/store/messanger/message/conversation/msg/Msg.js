@@ -1,5 +1,7 @@
 import React from 'react';
-import Receipts from "./Receipts";
+import Receipts from "./receipts/Receipts";
+
+import "./msg.css";
 
 function Msg({flag, textMsg, timeStamp}) {
     if(flag==="Him")

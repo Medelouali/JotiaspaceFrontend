@@ -1,17 +1,30 @@
 .product-2 {
+  height: 30vh;
+  width: auto;
   display: inline-block;
-  width: min-content;
-  width: max-content;
+  margin: 10px;
+  box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 6px;
 }
-
 .product-image-2 {
   height: max-content;
   width: auto;
 }
 
+.product-2 .model {
+  border: 1px solid rgb(205, 205, 240);
+  border-radius: 4px;
+  padding: 2px;
+  margin: 4px;
+  width: max-content;
+}
+
 .product-image-2 img {
-  height: 10vh;
+  height: 20vh;
   width: auto;
+  border-radius: 4px;
+  margin: 4px;
 }
 
 .price-location {
@@ -20,4 +33,9 @@
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+  margin: 4px;
+  border: 1px solid rgb(205, 205, 240);
+  padding: 2px;
+  border-radius: 4px;
+  color: blue;
 }

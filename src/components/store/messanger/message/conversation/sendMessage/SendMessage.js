@@ -3,10 +3,10 @@ import MicIcon from '@material-ui/icons/Mic';
 import SendIcon from '@material-ui/icons/Send';
 
 import { useDispatch, useSelector } from "react-redux";
-import sendMessage from '../../../../redux/actions/sendMessage';
-import chatIndexer from '../../../../redux/actions/chatIndexer';
+import sendMessage from '../../../../../../redux/actions/sendMessage';
+import chatIndexer from '../../../../../../redux/actions/chatIndexer';
 
-import "./message.css";
+import "./sendMessage.css";
 
 function SendMessage({index}) {
     const [message, setMessage]=useState("");
@@ -31,7 +31,7 @@ function SendMessage({index}) {
     }
 
     return (
-        <form onSubmit={handleMessage} className="message-sending" action="">
+        <form onSubmit={handleMessage} className="message-sending" action="post">
             <div className="audio"><MicIcon/></div>
             <div className="field"><input value={message} onChange={loadMessage} type="text" placeholder="message..."/></div>
             <div onClick={handleMessage} className="sending">

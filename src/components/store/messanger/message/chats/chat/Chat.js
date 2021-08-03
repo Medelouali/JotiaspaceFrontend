@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Controller from "./Controller";
-import Conversation from "./Conversation";
+import Controller from "./controller/Controller";
+import Conversation from ".././../conversation/Conversation";
 
 import { useSelector } from "react-redux";
 
-import messages from '../../../../redux/actions/messages';
-import chatIndexer from '../../../../redux/actions/chatIndexer';
+import messages from '../../../../../../redux/actions/messages';
+import chatIndexer from '../../../../../../redux/actions/chatIndexer';
 import { useMedia } from "use-media";
 import { useDispatch } from "react-redux";
+
+import "./chat.css";
 
 function Chat({chat, index}) {
     const smallScreen=useMedia({maxWidth: "833px"});

@@ -1,8 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { useSelector } from "react-redux";
-import Msg from "./Msg";
-import SendMessage from './SendMessage';
+import Msg from "./msg/Msg";
+import SendMessage from './sendMessage/SendMessage';
 import ScrollToBottom from 'react-scroll-to-bottom';
+
+import "./conversation.css";
 
 function Conversation({chatText}) {
     const convIndex=useSelector(state=>state.chatIndexer);

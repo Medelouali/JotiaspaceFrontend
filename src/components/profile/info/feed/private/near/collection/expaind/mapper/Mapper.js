@@ -4,7 +4,7 @@ import "./mapper.css";
 
 function Mapper({list}) {
     return (
-        <div className="expaind">
+        <div className="expaind-scroll">
             {list.map((item, index)=>(
                 <Product key={`${item.model}#-${index}`} model={item.model}
                     price={item.price} location={item.location}

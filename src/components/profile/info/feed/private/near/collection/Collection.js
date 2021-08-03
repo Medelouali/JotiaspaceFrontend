@@ -14,7 +14,7 @@ function Collection({coordinates}){
         };    
     }, [coords])
     return (
-        <div ref={ref} className="collection">
+        <div className="collection">
             <div className="collections">
                 {coordinates.list.map((item, index)=>(
                     <Collect key={`${item.name}#${index}`} name={item.name.toLowerCase()} 
@@ -22,7 +22,7 @@ function Collection({coordinates}){
                     />
                 ))}
             </div>
-            <div className=""><Expaind origin={coordinates} what={coords}/></div>
+            <div ref={ref} className="get-image"><Expaind origin={coordinates} what={coords}/></div>
         </div>
     )
 }

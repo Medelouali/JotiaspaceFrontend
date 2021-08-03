@@ -1,13 +1,18 @@
 .drivers {
-  width: 90%;
+  width: 60%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+  margin: auto;
 }
 
 .profile-dr,
 .message-dr {
   padding: 4px;
+}
+
+.data {
+  width: 100%;
 }

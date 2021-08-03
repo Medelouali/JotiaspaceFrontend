@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
-import Chats from './Chats';
-import Conversation from './Conversation';
+import Chats from './chats/Chats';
+import Conversation from './conversation/Conversation';
 import { useSelector } from "react-redux";
 import { useMedia } from "use-media";
 

@@ -1,7 +1,16 @@
-.expaind {
-  overflow-x: scroll;
-  white-space: nowrap;
-  width: 100% !important;
+/* #expaind-scroll {
+  width: 100%;
   max-width: 100%;
   height: max-content;
+  overflow-x: scroll;
+  white-space: nowrap;
+} */
+
+.expaind-scroll {
+  width: 95%;
+  max-width: 100% !important;
+  margin-top: 2% auto 2% auto;
+  overflow-x: scroll;
+  height: max-content;
+  white-space: nowrap;
 }

@@ -7,8 +7,8 @@ function Product({model, price, image, location}) {
             <div className="model">{model}</div>
             <div className="product-image-2"><img src={image} alt=""/></div>
             <div className="price-location">
-                <div className="price">{price}</div>
-                <div className="location">{location}</div>
+                <h5 className="price">{price}</h5>
+                <h5 className="location">{location}</h5>
             </div>
         </div>
     )

@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import { useSelector } from "react-redux";
-import girl from "../../svg/girlSmiling.jpg";
-import Chat from './Chat';
+import girl from "../../../svg/girlSmiling.jpg";
+import Chat from './chat/Chat';
+
+import "./chats.css";
 
 function Chats({chats_list}) {
     const chatsRef=useRef(null);
