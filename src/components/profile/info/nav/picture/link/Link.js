@@ -25,7 +25,7 @@ function Link({logo, name}) {
     
     return (
         <div onClick={handleOutput} className="link">
-            <img className="icon" src={logo} alt="Logo"/>
+            <div className="icon">{logo}</div>
             <h4>{name}</h4>    
         </div>
     )

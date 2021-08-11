@@ -9,10 +9,12 @@
   width: 100%;
 }
 
-.link img {
+.link .icon {
   width: 2em;
   height: 2em;
   border-radius: 50%;
   border: 1px dashed blue;
   padding: 1px;
+  display: grid;
+  place-items: center;
 }
