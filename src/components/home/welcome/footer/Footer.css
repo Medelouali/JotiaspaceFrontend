@@ -1,7 +1,7 @@
 .footer-wrapper {
-  padding: 2px;
+  padding: 4px;
   width: 100vw;
-  background-color: #f4d301;
+  background-color: rgb(15, 15, 15);
   box-shadow: -1px -1px 0.6px 0.5px rgb(17, 17, 17);
 }
 

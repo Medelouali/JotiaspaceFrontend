@@ -13,10 +13,6 @@ function Input({ label, isPassword, isEmail }) {
     const smallScreen=useMedia({maxWidth: "899px"});
     const dispatch=useDispatch();
 
-    // const handleData=async(e)=>{
-    //     setField(e.target.value);
-        
-    // };
     useEffect(() => {
         dispatch(signer({
             key: label.toLowerCase(),

@@ -128,8 +128,17 @@
 }
 
 @keyframes working {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-100deg);
+  }
+  80% {
+    transform: rotate(-300deg);
+  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 

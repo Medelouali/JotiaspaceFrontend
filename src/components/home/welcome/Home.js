@@ -8,7 +8,7 @@ function Home({page}){
     return(
         <div id="welcome">
             <Header/>
-            <div className="main-section">
+            <div className="main-section" id="main-section">
                 <Main page={page}/>
             </div>
             <Footer/>

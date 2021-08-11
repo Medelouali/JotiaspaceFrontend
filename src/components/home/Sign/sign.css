@@ -26,13 +26,13 @@
 }
 
 .input input {
-  outline: none;
   height: 2em;
   width: 100%;
   border-radius: 10px;
   padding: 5px;
-  border: 2px solid rgb(94, 94, 245);
+  border: 1px solid rgb(91, 91, 197);
   margin: 2px;
+  outline: none;
 }
 
 .input h4 {
@@ -105,6 +105,7 @@
   color: rgb(231, 231, 241);
   font-weight: 600;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .big-size {
@@ -113,4 +114,11 @@
 
 .processing p {
   color: red;
+}
+
+.submit .MuiButton-root {
+  background-color: rgb(36, 35, 35);
+  color: rgb(211, 211, 233);
+  letter-spacing: 1.5px;
+  border-radius: 4px;
 }

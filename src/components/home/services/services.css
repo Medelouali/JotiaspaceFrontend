@@ -16,8 +16,8 @@
 
 .store-section {
   max-width: 100%;
-  background-color: rgb(243, 243, 12);
-  box-shadow: 0.1px 0.3px 2px 1px rgb(124, 122, 122);
+  background-color: #a020f0;
+  /* box-shadow: 0.1px 0.3px 2px 1px rgb(124, 122, 122); */
   display: grid;
   place-items: center;
   border-radius: 10px;
@@ -30,7 +30,7 @@
 }
 
 .store-section h4 {
-  color: blue;
+  color: rgb(187, 187, 243);
   cursor: pointer;
 }
 .details {

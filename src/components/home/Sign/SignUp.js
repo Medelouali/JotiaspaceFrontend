@@ -5,7 +5,9 @@ import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import pager from "../../../redux/actions/pager";
 import online from "../../../redux/actions/online";
 import updateUser from "../../../redux/actions/updateUser";
+import signer from "../../../redux/actions/signer";
 
+import { Button } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { useMedia } from "use-media";
 
@@ -38,6 +40,8 @@ function SignUp(){
                 dispatch(online(true));
                 dispatch(updateUser(jsonData.data));
                 dispatch(pager("store"));
+            }else{
+                dispatch(signer({set: true}));
             }
         } catch (error) {
             console.log(error);
@@ -61,7 +65,10 @@ function SignUp(){
                 <Input isPassword={true} label={"Password"}/>
                 <Input isPassword={true} label={"Confirm"}/>
                 <div className="submit">
-                    <button onClick={handleSubmit} className="submit">Create Account</button>
+                        <Button onClick={()=>dispatch(pager("home-in"))} variant="contained" 
+                            className="submit-button">
+                            Create Account
+                        </Button>
                     <div onClick={()=>dispatch(pager("home-in"))} className="already-account">Already Have An Account?!</div>
                     <div ref={divRef} className="processing">
                         { response.error ? <p>{ response.error }</p>: 

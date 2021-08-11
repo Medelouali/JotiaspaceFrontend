@@ -1,13 +1,4 @@
-import valid from "./svg/valid.svg";
-import invalid from "./svg/invalid.svg";
-//import socket from "socket.io-client";
-//import { useDispatch } from "react-redux";
-//import updateAll from "../../../redux/actions/updateAll";
-/*
-const endpoint="http://localhost:8000/";
 
-const io=socket(endpoint);
-*/
 export function valid_name(name){
     let regex=/^\w+$/;
     return regex.test(name) && name.length>1;
@@ -59,17 +50,4 @@ export function handler(flag){
             return "";
     };
 }
-/*
-export function getUser(user_id, my_id){
-    io.emit("getUser", user_id);
-    io.on("giveUser", (user)=>{
-        if(user_id===my_id){
-            const dispatch=useDispatch();
-            dispatch(updateAll(user));
-        }else{
-            return user;
-        };
-    });
-};
 
-*/

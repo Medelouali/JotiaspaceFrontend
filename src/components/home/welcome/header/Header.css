@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   align-content: center;
   position: relative;
-  background-color: yellow;
+  background-color: rgb(15, 15, 15);
   box-shadow: 0 1px 1px 0.5px rgb(145, 145, 142);
 }
 
@@ -21,7 +21,7 @@
 }
 
 .header-links .link {
-  box-shadow: 0 0.1px 2px 1px rgba(194, 191, 191, 0.5);
+  /* box-shadow: 0 0.1px 2px 1px rgba(194, 191, 191, 0.5); */
   background-color: rgb(242, 241, 248);
   border-radius: 15px;
   padding: 3px;
@@ -29,12 +29,12 @@
   cursor: pointer;
   color: rgb(33, 33, 185);
   height: max-content;
-  border: 2px solid blue;
+  border: 2px solid rgb(78, 19, 214);
   letter-spacing: 1px;
 }
 
 .header-links .link:hover {
-  color: rgb(140, 140, 235);
+  color: rgb(130, 130, 240);
 }
 
 .up img {
@@ -130,7 +130,7 @@
 .web-logo {
   font-family: Lobster, sans-serif;
   width: max-content;
-  color: rgb(30, 30, 163);
+  color: rgb(213, 252, 123);
 }
 
 .search-bar {
