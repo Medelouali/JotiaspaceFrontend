@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.store img {
+.store .img {
   width: 2em;
   height: auto;
 }

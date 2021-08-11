@@ -2,13 +2,20 @@ import React from 'react';
 import Store from './store/Store';
 import Collection from "./collection/Collection";
 
-import car from "../../../../svg/transport/car.svg";
-import house from "../../../../svg/properties/house.svg";
-import horse from "../../../../svg/animals/horse.svg";
-import pc from "../../../../svg/electronics/pc.svg";
-import apps from "../../../../svg/apps/apps.svg";
-import clothings from "../../../../svg/clothings/tshirt.svg";
+// import car from "../../../../svg/transport/car.svg";
+// import house from "../../../../svg/properties/house.svg";
+// import horse from "../../../../svg/animals/horse.svg";
+// import pc from "../../../../svg/electronics/pc.svg";
+// import apps from "../../../../svg/apps/apps.svg";
+// import clothings from "../../../../svg/clothings/tshirt.svg";
 import collections from "../../../../vars.js";
+
+import DriveEtaOutlinedIcon from '@material-ui/icons/DriveEtaOutlined';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import PetsOutlinedIcon from '@material-ui/icons/PetsOutlined';
+import DesktopWindowsOutlinedIcon from '@material-ui/icons/DesktopWindowsOutlined';
+import DeveloperModeOutlinedIcon from '@material-ui/icons/DeveloperModeOutlined';
+import AccessibilityOutlinedIcon from '@material-ui/icons/AccessibilityOutlined';
 
 import "./near.css";
 
@@ -20,32 +27,32 @@ function Near({title, logo}) {
                 <div className="near-logo">{logo}</div>
             </div>
             <hr/>
-            <Store logo={car} title="Transport" jsx_details={<Collection coordinates={{
+            <Store logo={<DriveEtaOutlinedIcon/>} title="Transport" jsx_details={<Collection coordinates={{
                 cath: title.toLowerCase(),
                 type: "transport",
                 list: collections.transport
                 }}/>}/>
-            <Store logo={house} title="Properties" jsx_details={<Collection coordinates={{
+            <Store logo={<HomeOutlinedIcon/>} title="Properties" jsx_details={<Collection coordinates={{
                 cath: title.toLowerCase(),
                 type: "properties",
                 list: collections.properties
                 }}/>}/>
-            <Store logo={pc} title="Electronics" jsx_details={<Collection coordinates={{
+            <Store logo={<DesktopWindowsOutlinedIcon/>} title="Electronics" jsx_details={<Collection coordinates={{
                 cath: title.toLowerCase(),
                 type: "electronics",
                 list: collections.electronics
                 }}/>}/>
-            <Store logo={horse} title="animals" jsx_details={<Collection coordinates={{
+            <Store logo={<PetsOutlinedIcon/>} title="animals" jsx_details={<Collection coordinates={{
                 cath: title.toLowerCase(),
                 type: "animals",
                 list: collections.animals
                 }}/>}/>
-            <Store logo={clothings} title="Clothings" jsx_details={<Collection coordinates={{
+            <Store logo={<AccessibilityOutlinedIcon/>} title="Clothings" jsx_details={<Collection coordinates={{
                 cath: title.toLowerCase(),
                 type: "clothings",
                 list: collections.clothings
                 }}/>}/>
-            <Store logo={apps} title="Apps" jsx_details={<Collection coordinates={{
+            <Store logo={<DeveloperModeOutlinedIcon/>} title="Apps" jsx_details={<Collection coordinates={{
                 cath: title.toLowerCase(),
                 type: "apps",
                 list: collections.apps

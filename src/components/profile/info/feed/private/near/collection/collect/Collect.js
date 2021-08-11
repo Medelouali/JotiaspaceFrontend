@@ -23,7 +23,7 @@ function Collect({name, logo, cath, type}) {
     return (
         <div onClick={handleCollection} className="collect">
             <h6>{name}</h6>
-            <img src={logo} alt=""/>
+            <img src={logo} alt="" />
         </div>
     )
 }

@@ -13,7 +13,7 @@ function Store({logo, title, jsx_details}) {
 
     return (
         <div ref={divRef} className="store">
-            <img onClick={handleShow} src={logo} alt=""/>
+            <div onClick={handleShow} className="img">{logo}</div>
             <h4 onClick={handleShow} className={show ? "selected": ""}>{title}</h4>
             <div className="details">
                 { show ? jsx_details: null}
