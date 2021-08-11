@@ -37,7 +37,7 @@
 
 .reacter h5 {
   width: max-content;
-  color: blue;
+  color: rgb(168, 168, 230);
 }
 
 .reacter .reacter-logo {
@@ -50,4 +50,5 @@
   border-left: 3px double rgb(50, 50, 240);
   border-bottom: 1px solid rgb(68, 68, 245);
   border-radius: 0 0 10px 10px;
+  color: rgb(179, 180, 226);
 }

@@ -1,11 +1,10 @@
 .post {
-  background-color: white;
-  box-shadow: 0 1px 2px 1px rgb(194, 191, 191);
+  background-color: rgb(14, 13, 13);
+  box-shadow: 0 1px 2px 1px rgb(51, 50, 50);
   border-radius: 3px;
-  /* margin: 6px; */
   padding: 2px;
   width: 98%;
-  margin: 4px auto 4px auto;
+  margin: 6px auto 6px auto;
   max-width: 100%;
 }
 .card-header {
@@ -52,9 +51,10 @@
   grid-area: 3/2/4/3;
   width: 100%;
   margin-top: 1%;
-  border: 1px solid rgb(227, 227, 245);
-  padding: 1px;
+  border: 1px solid rgb(233, 233, 14);
+  padding: 2px;
   border-radius: 4px;
+  color: rgb(188, 188, 235);
 }
 
 .cells {

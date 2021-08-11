@@ -6,7 +6,8 @@
   flex-wrap: wrap;
   align-content: center;
   width: 100vw;
-  background-color: #5e33bbf8;
+  background-color: rgb(15, 15, 15);
+  height: 10vh;
 }
 
 .search {

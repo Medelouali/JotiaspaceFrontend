@@ -20,8 +20,8 @@
   border-radius: 4px;
   margin: 6px;
   padding: 2px;
-  background-color: rgb(107, 107, 231);
-  color: white;
+  background-color: rgb(37, 37, 39);
+  color: rgb(207, 208, 236);
   cursor: pointer;
-  border: 2px solid blue;
+  border: 2px solid rgb(212, 212, 102);
 }
