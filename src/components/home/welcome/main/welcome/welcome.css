@@ -47,43 +47,33 @@
 }
 
 .intro-section .intro {
-  width: 50vw;
   margin: 10px;
   letter-spacing: 1px;
   color: rgb(185, 185, 236);
   padding: 10px;
-  border-left: 1px solid rgb(228, 228, 238);
-  border-radius: 10px 0 0 10px;
+  border-left: 1px dotted rgb(231, 247, 11);
+  border-right: 2px dotted rgb(146, 250, 10);
+  border-radius: 0 10px 0 10px;
+  font-size: 1.5em;
+  text-indent: 1.1em;
 }
 
 .intro-section .buttons {
-  width: 10%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .intro-section .buttons button {
-  width: 90%;
   border-radius: 4px;
   padding: 4px;
   margin: 10px;
+  box-shadow: 0px 1px 2px 2.5px rgb(22, 22, 22);
 }
 .intro-section .buttons button:hover {
   box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 680px) {
-  .intro-section {
-    flex-direction: column;
-  }
-  .intro-section .buttons {
-    width: 100vw;
-    display: grid;
-    place-items: center;
-  }
-  .intro-section .buttons button {
-    width: 20vw;
-  }
 }
 
 button h2 {

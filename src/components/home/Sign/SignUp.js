@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Input from "./Input";
 import axios from "axios";
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
@@ -12,20 +12,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { useMedia } from "use-media";
 
 import { motion } from "framer-motion";
-import "./sign.css";
 import Start from "../../interface/Start";
+
+import "./sign.css";
 
 function SignUp(){
     const dispatch=useDispatch();
+    const signData= useSelector(state => state.signer);
     const isBigScreen=useMedia({minWidth: "900px"});
 
     const divRef=useRef(null);
     const [response, setResponse]=useState({});
+    const [modefied, setModefied]=useState(false);
     const [processing, setProcessing]=useState(false);
 
-    const signData=useSelector(state=>state.signer);
+    useEffect(() => {
+        setModefied(true);
+    }, [signData]);
 
     const handleSubmit= async(e)=>{
+        setModefied(false);
         e.preventDefault();
         if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth", block: "center"});
         setProcessing(true);
@@ -34,13 +40,13 @@ function SignUp(){
             const jsonData=serverResponse.data;
             
             setResponse(jsonData);
+            console.log(jsonData);
             setProcessing(false);
 
             if(jsonData.error===""){
                 dispatch(online(true));
                 dispatch(updateUser(jsonData.data));
                 dispatch(pager("store"));
-            }else{
                 dispatch(signer({set: true}));
             }
         } catch (error) {
@@ -65,13 +71,13 @@ function SignUp(){
                 <Input isPassword={true} label={"Password"}/>
                 <Input isPassword={true} label={"Confirm"}/>
                 <div className="submit">
-                        <Button onClick={()=>dispatch(pager("home-in"))} variant="contained" 
-                            className="submit-button">
-                            Create Account
+                        <Button onClick={handleSubmit} variant="contained" color="primary"
+                            size="small">
+                            <h3>Create</h3>
                         </Button>
                     <div onClick={()=>dispatch(pager("home-in"))} className="already-account">Already Have An Account?!</div>
                     <div ref={divRef} className="processing">
-                        { response.error ? <p>{ response.error }</p>: 
+                        { response.error && !modefied  && !processing ? <p>{ response.error }</p>: 
                             <Start start={processing} phrase={"Signing Up..."}/>}
                     </div>
                 </div>
