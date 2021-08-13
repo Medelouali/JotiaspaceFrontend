@@ -28,9 +28,11 @@
 .notification .jsx {
   width: 100%;
   grid-area: 1/2/3/3;
-  font-weight: bold;
   font-size: small;
-  width: 100%;
-  border: 1px solid rgb(241, 241, 248);
+  border-left: 1px solid rgb(59, 59, 63);
+  border-bottom: 1px solid rgb(79, 79, 85);
   border-radius: 4px 4px 0 4px;
+  padding: 4px;
+  margin: 2px;
+  color: rgb(171, 171, 238);
 }

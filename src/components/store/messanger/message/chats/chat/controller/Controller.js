@@ -18,7 +18,7 @@ function Controller({index}) {
         dispatch(chat([]));
     };
     return (
-        <div onClick={handleDelete} className="controller">
+        <div onClick={handleDelete} className="controller-2">
             <DeleteOutlineIcon/>
         </div>
     )

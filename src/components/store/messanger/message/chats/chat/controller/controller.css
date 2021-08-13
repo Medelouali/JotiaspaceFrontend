@@ -1,6 +1,12 @@
-.controller {
-  width: 25%;
-  position: relative;
+.controller-2 {
+  width: max-content;
+  margin: 4px;
+  display: grid;
+}
+
+.controller-2 .MuiSvgIcon-root {
+  width: 1.5em;
+  height: auto;
+  fill: rgb(105, 98, 168) !important;
   justify-self: end;
-  align-self: center;
 }
