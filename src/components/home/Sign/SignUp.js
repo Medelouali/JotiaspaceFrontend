@@ -40,7 +40,6 @@ function SignUp(){
             const jsonData=serverResponse.data;
             
             setResponse(jsonData);
-            console.log(jsonData);
             setProcessing(false);
 
             if(jsonData.error===""){

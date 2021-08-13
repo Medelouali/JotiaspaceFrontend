@@ -1,9 +1,15 @@
+.outer-chat {
+  width: 100%;
+  max-width: 100%;
+}
+
 .chat {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: max-content;
+  max-width: 100%;
 }
 
 .chat .chat-image {
@@ -27,4 +33,5 @@
 .chat h4 {
   width: 35%;
   cursor: pointer;
+  color: rgb(127, 127, 194);
 }

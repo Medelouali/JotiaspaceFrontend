@@ -1,34 +1,58 @@
 .message-text {
-  background-color: rgb(246, 244, 248);
+  background-color: rgb(240, 236, 245);
   color: black;
   width: 80%;
   flex-direction: row;
   margin: 2px;
-  box-shadow: 0 1px 2px 3px #1e1e1e1e;
+  box-shadow: 1px 1px 2px 3px #3636361e;
   max-width: 100%;
-}
-.message-section {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
   align-items: center;
-  width: 100%;
-  padding: 2%;
-}
-.timeStamp {
-  font-size: small;
-  font-weight: 600;
-  width: 20%;
-  color: blue;
 }
 
 .message-text p {
-  width: 100%;
-  overflow-wrap: break-word;
+  width: 99%;
+  max-width: 100%;
+  overflow-wrap: break-word !important;
+  grid-area: 1/1/2/4;
+  padding: 2px;
+  font-weight: 600;
 }
+
+.message-text .receipts-box {
+  grid-area: 2/3/3/4;
+}
+
+.message-text .timeStamp {
+  grid-area: 2/2/3/3;
+  font-size: xx-small;
+  color: rgb(91, 4, 253);
+  width: max-content;
+  border: 1px solid rgb(152, 101, 233);
+  padding: 3px;
+  border-radius: 4px;
+}
+.message-section {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 3px;
+}
+
 .him-border {
   border-radius: 0px 10px 10px 10px;
+  grid-area: 1/1/2/2;
+  width: 100%;
+  max-width: 100%;
 }
 
 .me-border {
   border-radius: 10px 0px 10px 10px;
+  grid-area: 1/2/2/3;
+  width: 100%;
+  max-width: 100%;
 }

@@ -1,23 +1,13 @@
-.reciepts {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-direction: column;
-}
-
-.default {
-  display: grid;
-  place-items: center;
-}
-
-.default .MuiSvgIcon-root {
-  width: 6%;
+.sent-msg .MuiSvgIcon-root,
+.received-msg .MuiSvgIcon-root,
+.viewed-r .MuiSvgIcon-root {
+  width: 1em;
   height: auto;
-  position: relative;
-  left: 40%;
+  fill: blue !important;
 }
-.move-down {
-  position: relative;
-  top: 10px;
+
+.no-viewed-r .MuiSvgIcon-root {
+  width: 1em;
+  height: auto;
+  fill: rgb(178, 146, 228) !important;
 }

@@ -29,7 +29,7 @@ function Chat({chat, index}) {
     }, [currentChat]);
 
     return (
-        <div className="">
+        <div className="outer-chat">
             <div className="chat">
                 <div onClick={handleChat} className="chat-image">
                     <img src={chat.chater_image} alt=""/>

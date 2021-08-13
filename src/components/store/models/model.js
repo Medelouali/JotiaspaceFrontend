@@ -53,12 +53,18 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Salam", timeStamp: time},
-                {"Him": "Heyy I was waiting for you....", timeStamp: time},
-                {"Me": "really I was little bit busy theses days u know", timeStamp: time},
-                {"Him": "So now that u are back I have a project for u!?", timeStamp: time},
-                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time},
-                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time}
+                {"Me": "Salam", timeStamp: time, receipts: {sent: true, received: false, viewed: false}},
+                {"Him": "Heyy I was waiting for you....", timeStamp: time,  receipts: {sent: false, received: false, viewed: false}},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Salam", timeStamp: time, receipts: {sent: true, received: true, viewed: false}},
+                {"Him": "Heyy I was waiting for you....", timeStamp: time,  receipts: {sent: false, received: false, viewed: false}},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}}
             ]
         },
         {
@@ -67,12 +73,12 @@ const user={
             chater_name: "Fluffy",
             chater_image: fluffy, 
             chats:[
-                {"Me": "Hello", timeStamp: time},
-                {"Him": "Heyy I was waiting for you....", timeStamp: time},
-                {"Me": "really I was little bit busy theses days u know", timeStamp: time},
-                {"Him": "So now that u are back I have a project for u!?", timeStamp: time},
-                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time},
-                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time}
+                {"Me": "Salam", timeStamp: time, receipts: {sent: true, received: false, viewed: false}},
+                {"Him": "Heyy I was waiting for you....", timeStamp: time,  receipts: {sent: false, received: false, viewed: false}},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: time,  receipts: {sent: true, received: true, viewed: false}},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}}
             ]
         },
         {
@@ -81,12 +87,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "bonjour", timeStamp: time},
-                {"Him": "Heyy I was waiting for you....", timeStamp: time},
-                {"Me": "really I was little bit busy theses days u know", timeStamp: time},
-                {"Him": "So now that u are back I have a project for u!?", timeStamp: time},
-                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time},
-                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time}
+                {"Me": "Salam", timeStamp: time, receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "Heyy I was waiting for you....", timeStamp: time,  receipts: {sent: false, received: false, viewed: false}},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: time,  receipts: {sent: true, received: true, viewed: false}},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}}
             ]
         },
         {
@@ -95,12 +101,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Salut", timeStamp: time},
-                {"Him": "Heyy I was waiting for you....", timeStamp: time},
-                {"Me": "really I was little bit busy theses days u know", timeStamp: time},
-                {"Him": "So now that u are back I have a project for u!?", timeStamp: time},
-                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time},
-                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time}
+                {"Me": "Salam", timeStamp: time, receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "Heyy I was waiting for you....", timeStamp: time,  receipts: {sent: false, received: false, viewed: false}},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: time,  receipts: {sent: true, received: true, viewed: false}},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}}
             ]
         },
         {
@@ -109,12 +115,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Hey", timeStamp: time},
-                {"Him": "Heyy I was waiting for you....", timeStamp: time},
-                {"Me": "really I was little bit busy theses days u know", timeStamp: time},
-                {"Him": "So now that u are back I have a project for u!?", timeStamp: time},
-                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time},
-                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time}
+                {"Me": "Salam", timeStamp: time, receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "Heyy I was waiting for you....", timeStamp: time,  receipts: {sent: false, received: false, viewed: false}},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: time,  receipts: {sent: true, received: true, viewed: false}},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}}
             ]
         },
         {
@@ -123,12 +129,12 @@ const user={
             chater_name: "Lissa",
             chater_image: lissa, 
             chats:[
-                {"Me": "Holla", timeStamp: time},
-                {"Him": "Heyy I was waiting for you....", timeStamp: time},
-                {"Me": "really I was little bit busy theses days u know", timeStamp: time},
-                {"Him": "So now that u are back I have a project for u!?", timeStamp: time},
-                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time},
-                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time}
+                {"Me": "Salam", timeStamp: time, receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "Heyy I was waiting for you....", timeStamp: time,  receipts: {sent: false, received: false, viewed: false}},
+                {"Me": "really I was little bit busy theses days u know", timeStamp: time,  receipts: {sent: true, received: true, viewed: false}},
+                {"Him": "So now that u are back I have a project for u!?", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Me": "Alright so tell me about it? Hope it's as the last one", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}},
+                {"Him": "btw u did a great job last time, that was amazing what u did...", timeStamp: time,  receipts: {sent: true, received: true, viewed: true}}
             ]
         },
     ],

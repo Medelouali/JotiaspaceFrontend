@@ -6,4 +6,5 @@
   box-shadow: 0 1px 0.5px 1px rgb(165, 165, 167);
   border-radius: 2px;
   margin: auto;
+  max-width: 100%;
 }
