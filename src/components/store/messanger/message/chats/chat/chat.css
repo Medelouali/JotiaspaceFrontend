@@ -1,14 +1,13 @@
 .outer-chat {
-  width: 100%;
+  width: 100vw !important;
   max-width: 100%;
 }
 
-.chat {
+.outer-chat .chat {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: max-content;
   flex-wrap: wrap;
   align-content: center;
   max-width: 100%;
@@ -33,7 +32,7 @@
 }
 
 .chat h4 {
-  width: 35%;
+  width: max-content;
   cursor: pointer;
   color: rgb(127, 127, 194);
 }

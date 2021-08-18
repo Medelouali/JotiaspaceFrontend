@@ -1,0 +1,41 @@
+.posting {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.posting-icon {
+  width: 2em;
+  height: auto;
+  animation: working 1s ease-in infinite;
+  position: relative;
+  bottom: 22px;
+}
+
+@keyframes working {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.posting-icon {
+  width: 2.5em;
+  height: 2.5em;
+  margin: auto;
+}
+
+.posting-icon .MuiSvgIcon-root {
+  width: 100%;
+  height: 100%;
+  fill: rgb(116, 116, 228);
+}
+
+.posting {
+  height: max-content;
+  display: grid;
+}
+
+.phrase {
+  margin: auto;
+  color: blue;
+}

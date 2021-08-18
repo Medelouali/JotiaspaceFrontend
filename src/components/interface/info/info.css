@@ -1,0 +1,61 @@
+.info-wrapper {
+  width: 94%;
+  height: 94%;
+  overflow-y: scroll;
+  background-color: white !important;
+}
+
+.info-wrapper h3 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.post-data button {
+  width: 8em;
+  height: 1.5em;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: blueviolet;
+  letter-spacing: 1px;
+}
+
+.post-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px;
+}
+
+.post-data button:hover {
+  color: rgb(76, 76, 230);
+}
+
+label span {
+  position: relative;
+  bottom: 10px;
+  margin: 5px;
+}
+
+.field-label {
+  font-weight: 600;
+}
+
+.image-input {
+  display: none;
+}
+
+.data-input {
+  height: 3em;
+  width: 90%;
+  outline: none;
+  font-size: 1.5em;
+  font-weight: 500;
+  box-shadow: 0 1px 1px 1px rgb(235, 228, 228);
+  border-radius: 5px;
+}

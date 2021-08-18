@@ -1,6 +1,6 @@
 import React from 'react'
 import CachedRoundedIcon from '@material-ui/icons/CachedRounded';
-import "./Post.css";
+import "./start.css";
 
 function Start({start, phrase}) {
     if(start){

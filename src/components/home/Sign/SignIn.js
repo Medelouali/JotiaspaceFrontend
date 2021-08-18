@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useMedia } from "use-media";
 import { motion } from "framer-motion";
 
-import Start from "../../interface/Start";
+import Start from "../../interface/info/start/Start";
 import Input from "./Input";
 import { Button } from "@material-ui/core";
 

@@ -1,0 +1,26 @@
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: max-content;
+  padding: 10px;
+}
+
+.routes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: rgb(27, 26, 26);
+}
+
+.routes .MuiSvgicon-root {
+  width: 2em;
+  height: auto;
+}
+
+.routes h4 {
+  color: rgb(156, 90, 231);
+}

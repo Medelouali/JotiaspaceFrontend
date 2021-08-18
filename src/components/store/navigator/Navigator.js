@@ -28,12 +28,12 @@ function Navigator(){
     return(
         <div className="store-links">
             <div className="navigator-core">
-                <h4 onClick={handleStore("all")} className={selected("all")}>All</h4>
-                <h4 onClick={handleStore("categories")} className={selected("categories")}>Categories</h4>
-                <h4 onClick={handleStore("trending")} className={selected("trending")}>Trending</h4>
-                <h4 onClick={handleStore("vidoes")} className={selected("vidoes")}>Videos</h4>
-                <h4 onClick={handlePage("profile")}>Profile</h4>
-                <h4 onClick={handlePage("post")}>Post</h4>
+                <h3 onClick={handleStore("all")} className={selected("all")}>All</h3>
+                <h3 onClick={handleStore("categories")} className={selected("categories")}>Categories</h3>
+                <h3 onClick={handleStore("trending")} className={selected("trending")}>Trending</h3>
+                <h3 onClick={handleStore("vidoes")} className={selected("vidoes")}>Videos</h3>
+                <h3 onClick={handlePage("profile")}>Profile</h3>
+                <h3 onClick={handlePage("post")}>Post</h3>
             </div>
         </div>
     );
