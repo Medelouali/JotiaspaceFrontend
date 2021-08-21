@@ -20,10 +20,9 @@ function Info(){
 
     const handlePost=async(e)=>{
         setStart(true);
-        // const serverResponse=await axios.post("https://jotiaspacewebsite.herokuapp.com/posts/saveIt", postData);
         try {
-            const serverResponse=await axios.post("https://jotiaspacewebsite.herokuapp.com/posts/saveIt", postData);
-            console.log(serverResponse.data);
+            const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/posts/savePost", postData);
+            console.log(data);
         } catch (error) {
             console.log(error);
         }
@@ -51,7 +50,7 @@ function Info(){
             <div className="post-data">
                 <button type="submit" onClick={handlePost}>Post</button>
             </div>
-            <div className="ref-div" ref={divRef}><Start start={start}/></div>
+            <div className="ref-div" ref={divRef}><Start start={start} phrase={"Uploading your post..."}/></div>
         </div>
     );
 }

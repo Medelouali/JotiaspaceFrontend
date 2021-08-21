@@ -1,26 +1,25 @@
 .post-wrapper-2 {
   width: 100%;
-  display: flex;
-  height: 100vh;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   background-color: rgb(236, 225, 225);
   color: rgb(62, 62, 218);
 }
 
 .labels {
-  width: 40%;
+  width: 100%;
   background-color: rgb(210, 210, 226);
   display: grid;
   place-items: center;
+  border-radius: 4px;
 }
 
 .data {
-  width: 57%;
+  width: 100%;
   background-color: rgb(210, 210, 226) !important;
   display: grid;
   place-items: center;
+  border-radius: 4px;
 }
 
 .inner-1,
@@ -31,16 +30,6 @@
   place-items: center;
   background-color: rgb(253, 253, 253);
   box-shadow: 0 1px 2px 1px rgb(209, 199, 199);
-}
-
-@media (max-width: 869px) {
-  .labels,
-  .data {
-    width: 100%;
-  }
-  #picture__ {
-    width: 80vw;
-  }
 }
 
 .input-icon {
@@ -66,4 +55,17 @@
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
+}
+
+.routes-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 2px;
+}
+
+.routes-icon h3 {
+  color: rgb(14, 14, 209);
 }
