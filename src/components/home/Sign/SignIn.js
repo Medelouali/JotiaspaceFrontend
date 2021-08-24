@@ -13,6 +13,10 @@ import Start from "../../interface/info/start/Start";
 import Input from "./Input";
 import { Button } from "@material-ui/core";
 
+//localStorage:
+import { reactLocalStorage } from 'reactjs-localstorage';
+
+
 import "./sign.css";
 
 function SignIn(){
@@ -35,18 +39,22 @@ function SignIn(){
         if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth", block: "center"});
         setProcessing(true);
         try {
-            const serverResponse=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signIn", {
+            const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signIn", {
                 email: signData.email, password: signData.password
             });
-            const jsonData=serverResponse.data;
+            // const { data }=await axios.post("http://localhost:5000/sign/signIn", {
+            //     email: signData.email, password: signData.password
+            // });
             
-            setResponse(jsonData);
-            console.log(jsonData);
+            setResponse(data);
+            Object.keys(data.tokens).forEach(token=>{
+                reactLocalStorage.setObject("authToken", data.tokens[token]);
+            });
             setProcessing(false);
 
-            if(jsonData.error===""){
+            if(data.error===""){
                 dispatch(online(true));
-                dispatch(updateUser(jsonData.data));
+                dispatch(updateUser(data.data));
                 dispatch(pager("store"));
                 dispatch(signer({set: true}));
             }

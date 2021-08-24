@@ -14,6 +14,9 @@ import { useMedia } from "use-media";
 import { motion } from "framer-motion";
 import Start from "../../interface/info/start/Start";
 
+import { reactLocalStorage } from 'reactjs-localstorage';
+
+
 import "./sign.css";
 
 function SignUp(){
@@ -36,15 +39,20 @@ function SignUp(){
         if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth", block: "center"});
         setProcessing(true);
         try {
-            const serverResponse=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
-            const jsonData=serverResponse.data;
-            
-            setResponse(jsonData);
+            const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
+            console.log(data);
+            Object.keys(data.tokens).forEach(token=>{
+                reactLocalStorage.setObject(`${token}`, data.tokens[token]);
+            });
+
+            reactLocalStorage.setObject("Email", signData.email);
+            reactLocalStorage.setObject("Password", signData.password);
+            setResponse(data);
             setProcessing(false);
 
-            if(jsonData.error===""){
+            if(data.error===""){
                 dispatch(online(true));
-                dispatch(updateUser(jsonData.data));
+                dispatch(updateUser(data.data));
                 dispatch(pager("store"));
                 dispatch(signer({set: true}));
             }
@@ -65,10 +73,10 @@ function SignUp(){
                 <input id="avatar" type="file"/>
                 <Input label={"Username"}/>
                 <Input label={"Email"} isEmail={true}/>
-                <Input label={"Location"}/>
-                <Input label={"Occupation"}/>
                 <Input isPassword={true} label={"Password"}/>
                 <Input isPassword={true} label={"Confirm"}/>
+                <Input label={"Location"}/>
+                <Input label={"Occupation"}/>
                 <div className="submit">
                         <Button onClick={handleSubmit} variant="contained" color="primary"
                             size="small">

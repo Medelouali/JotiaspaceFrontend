@@ -45,7 +45,7 @@ function Nav({fri, inv, not, mes, name, image}){
         <header  className="header">
             <nav>
                 <div className="nav-bar">
-                    <PersonOutlineOutlinedIcon classname={"my-image"}/>
+                    <PersonOutlineOutlinedIcon className={"my-image"}/>
                     <h4>{name}</h4>
                     <div className="search">
                         <Search placeHolder={"Search..."}/>

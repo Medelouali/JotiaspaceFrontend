@@ -6,9 +6,11 @@ import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { useMedia } from "use-media";
 import signer from "../../../redux/actions/signer";
 
+import { reactLocalStorage } from "reactjs-localstorage";
+
 function Input({ label, isPassword, isEmail }) {
     const [focusOn, setFocusOn]=useState(false);
-    const [field, setField]=useState("");
+    const [field, setField]=useState(reactLocalStorage.getObject(`${label}`, "", true));
     const [view, setView]=useState(false);
     const smallScreen=useMedia({maxWidth: "899px"});
     const dispatch=useDispatch();
@@ -18,11 +20,12 @@ function Input({ label, isPassword, isEmail }) {
             key: label.toLowerCase(),
             value: field
             }));
-    }, [field, label, dispatch]);
+    }, [field, label, dispatch, isPassword, isEmail]);
     return (
         <div className="input">
             <h4 className={(focusOn ? "show-yes": "show-no")}>{label}</h4>
-            <input onChange={(e)=>setField(e.target.value)} value={field} 
+            <input onChange={(e)=>setField(e.target.value)} 
+                value={ field } 
                 className={ smallScreen ? "smallScreen": "bigScreen"} onFocus={()=>setFocusOn(true)} 
                 type={isPassword && view ? "password": (isEmail ? "email": "text")} 
                 placeholder={!focusOn ? label: ""} required/>

@@ -6,26 +6,32 @@ import signer from "../../../redux/actions/signer";
 import axios from 'axios';
 import "./info.css";
 
+import { reactLocalStorage } from "reactjs-localstorage";
+
 function Info(){
     const [start, setStart]=useState(false);
+    const [data, setData]=useState({});
     const divRef=useRef(null);
     const [value, setValue]=useState("");
     const dispatch=useDispatch();
-    const postData= useSelector(state => state.signer);
+    const post= useSelector(state => state.signer);
 
     const handleValue=(e)=>{
         setValue(e.target.value);
-        dispatch(signer({key: "productDescription", value: value}));
+        dispatch(signer({key: "description", value: value}));
     }
 
     const handlePost=async(e)=>{
         setStart(true);
         try {
-            const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/posts/savePost", postData);
-            console.log(data);
+            const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/posts/savePost", { 
+                post, tokens: { authToken: reactLocalStorage.getObject("authToken", {}, true) } });
+            // const { data }=await axios.post("http://localhost:5000/posts/savePost", { 
+            //     post, tokens: { authToken: reactLocalStorage.getObject("authToken", {}, true) } });
+            setData(data);
         } catch (error) {
             console.log(error);
-        }
+        };
         if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth", block: "center"});
         setStart(false);
     };
@@ -41,16 +47,21 @@ function Info(){
                     <input id="picture__" className="image-input" type="file"/>
                 </div>
                 <div className="">
-                    <label className="field-label" htmlFor="picture__">Add a product description:</label>
+                    <label className="field-label" htmlFor="pictures">Add a product description:</label>
                     <textarea value={value} onChange={handleValue} 
-                    className="data-input" name="picture" id="picture__" rows="10" required></textarea>
+                    className="data-input" name="picture" id="pictures" rows="10" required></textarea>
                 </div>
             </div>
 
             <div className="post-data">
                 <button type="submit" onClick={handlePost}>Post</button>
             </div>
-            <div className="ref-div" ref={divRef}><Start start={start} phrase={"Uploading your post..."}/></div>
+            <div className="ref-div" ref={divRef}>
+                {   data.done ?
+                    <h6>{data.data}</h6>:
+                    <Start start={start} phrase={"Uploading your post..."}/>
+                }
+            </div>
         </div>
     );
 }
