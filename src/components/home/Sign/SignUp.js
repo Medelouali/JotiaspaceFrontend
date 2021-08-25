@@ -40,6 +40,7 @@ function SignUp(){
         setProcessing(true);
         try {
             const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
+            // const { data }=await axios.post("http://localhost:5000/sign/signUp", signData);
             console.log(data);
             Object.keys(data.tokens).forEach(token=>{
                 reactLocalStorage.setObject(`${token}`, data.tokens[token]);

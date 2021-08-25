@@ -11,7 +11,7 @@ function Price() {
             <Field field_name="Country/City" label="countryCity"/>
             <Field field_name="Product Name" label="productName"/>
             <Field field_name="Last Price(USD)" label="lastPrice"/>
-            <Field field_name="Items Number" label="itemsNumber"/>            
+            <Field field_name="Items Number/Quantity" label="itemsNumber"/>            
             <Field field_name="Product Lifetime" label="productLifetime"/>            
             <Field field_name="Model/Type" label="model"/>
         </div>

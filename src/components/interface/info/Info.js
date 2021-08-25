@@ -27,8 +27,9 @@ function Info(){
             const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/posts/savePost", { 
                 post, tokens: { authToken: reactLocalStorage.getObject("authToken", {}, true) } });
             // const { data }=await axios.post("http://localhost:5000/posts/savePost", { 
-            //     post, tokens: { authToken: reactLocalStorage.getObject("authToken", {}, true) } });
+            //     post, tokens: { authToken: reactLocalStorage.getObject("authToken", "", true) } });
             setData(data);
+            if(data.data) dispatch(signer({set : true}));
         } catch (error) {
             console.log(error);
         };
