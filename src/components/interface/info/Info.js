@@ -10,7 +10,7 @@ import { reactLocalStorage } from "reactjs-localstorage";
 
 function Info(){
     const [start, setStart]=useState(false);
-    const [data, setData]=useState({});
+    const [response, setResponse]=useState({});
     const divRef=useRef(null);
     const [value, setValue]=useState("");
     const dispatch=useDispatch();
@@ -28,10 +28,9 @@ function Info(){
             post.posterName=user.username;
             const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/posts/savePost", { 
                 post, tokens: { authToken: reactLocalStorage.getObject("authToken", {}, true) } });
-                console.log(post);
             // const { data }=await axios.post("http://localhost:5000/posts/savePost", { 
             //     post, tokens: { authToken: reactLocalStorage.getObject("authToken", "", true) } });
-            setData(data);
+            setResponse(data);
             if(data.data) dispatch(signer({set : true}));
         } catch (error) {
             console.log(error);
@@ -61,8 +60,8 @@ function Info(){
                 <button type="submit" onClick={handlePost}>Post</button>
             </div>
             <div className="ref-div" ref={divRef}>
-                {   data.done===true ?
-                    <h6>{data.data}</h6>: data.done===false ? <h6>{data.error}</h6> :
+                {   response.done===true ?
+                    <h6>{response.data}</h6>: response.done===false ? <h6>{response.error}</h6> :
                     <Start start={start} phrase={"Uploading your post..."}/>
                 }
             </div>
