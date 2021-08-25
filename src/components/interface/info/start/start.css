@@ -31,8 +31,11 @@
 }
 
 .posting {
-  height: max-content;
   display: grid;
+  height: max-content;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .phrase {

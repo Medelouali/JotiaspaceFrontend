@@ -21,7 +21,19 @@ import Dialogue from "./dialogue/Dialogue";
 import Images from './images/Images';
 import Cell from './cell/Cell';
 
+const urls=[
+    "https://i.pinimg.com/236x/d3/dd/09/d3dd096e6b94620c6de7091541b80d3b.jpg",
+    "https://i.pinimg.com/236x/2d/2d/39/2d2d396843a0a1d62589988fd16a815f.jpg",
+    "https://i.pinimg.com/236x/10/ef/46/10ef466d5c6a9239c279b883e6c5d88d.jpg",
+    "https://i.pinimg.com/236x/4b/37/c7/4b37c72691a2b412a92b037b625c7bc8.jpg",
+    "https://i.pinimg.com/236x/d2/ba/46/d2ba460d85add026bad85e79c6d89484.jpg",
+    "https://i.pinimg.com/236x/f8/d6/8e/f8d68e3f103d9a24dcdb4570ff6f7146.jpg",
+    "https://i.pinimg.com/236x/be/66/ac/be66ac085c6f085734b4741406d05132.jpg",
+    "https://i.pinimg.com/236x/c0/db/9e/c0db9ed759e0be4d8f3aa6cee8baaca6.jpg",
+    "https://i.pinimg.com/236x/eb/58/af/eb58af292e621886d551c1e8dc506a27.jpg"
+];
 function Post({post}){
+    console.log(post);
     const divRef=useRef(null);
     const [comments, setComments]=useState(0);
     const [commentsBlue, setCommentsblue]=useState(false);
@@ -107,11 +119,11 @@ function Post({post}){
                 <div className="poster-image">
                     <img className="" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
                 </div>
-                <h3>{post.poster_name}</h3>
+                <h3>{post.posterName}</h3>
             </div>
 
             <div className="card-data">
-                <Images urls={post.urls}/>
+                <Images urls={urls}/>
                 <p>{post.description}</p>
             </div>
 
@@ -134,7 +146,7 @@ function Post({post}){
 
 Post.defaultProps={
     post: {
-        poster_name: "Mark Zuckerberg",
+        posterName: "Mark Zuckerberg",
         urls:[
             "https://i.pinimg.com/236x/d3/dd/09/d3dd096e6b94620c6de7091541b80d3b.jpg",
             "https://i.pinimg.com/236x/2d/2d/39/2d2d396843a0a1d62589988fd16a815f.jpg",

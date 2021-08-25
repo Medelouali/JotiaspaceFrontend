@@ -47,9 +47,6 @@ function SignIn(){
             // });
             
             setResponse(data);
-            Object.keys(data.tokens).forEach(token=>{
-                reactLocalStorage.setObject("authToken", data.tokens[token]);
-            });
             setProcessing(false);
 
             if(data.error===""){
@@ -57,7 +54,11 @@ function SignIn(){
                 dispatch(updateUser(data.data));
                 dispatch(pager("store"));
                 dispatch(signer({set: true}));
-            }
+                Object.keys(data.tokens).forEach(token=>{
+                    reactLocalStorage.setObject("authToken", data.tokens[token]);
+                });
+                dispatch(signer({ key: "posterName", value: data.username}));
+            };
         } catch (error) {
             console.log(error);
         }

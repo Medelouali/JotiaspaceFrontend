@@ -42,12 +42,6 @@ function SignUp(){
             const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
             // const { data }=await axios.post("http://localhost:5000/sign/signUp", signData);
             console.log(data);
-            Object.keys(data.tokens).forEach(token=>{
-                reactLocalStorage.setObject(`${token}`, data.tokens[token]);
-            });
-
-            reactLocalStorage.setObject("Email", signData.email);
-            reactLocalStorage.setObject("Password", signData.password);
             setResponse(data);
             setProcessing(false);
 
@@ -56,7 +50,14 @@ function SignUp(){
                 dispatch(updateUser(data.data));
                 dispatch(pager("store"));
                 dispatch(signer({set: true}));
-            }
+                Object.keys(data.tokens).forEach(token=>{
+                    reactLocalStorage.setObject(`${token}`, data.tokens[token]);
+                });
+    
+                reactLocalStorage.setObject("Email", signData.email);
+                reactLocalStorage.setObject("Password", signData.password);
+                dispatch(signer({ key: "posterName", value: signData.username}));
+            };
         } catch (error) {
             console.log(error);
         }
