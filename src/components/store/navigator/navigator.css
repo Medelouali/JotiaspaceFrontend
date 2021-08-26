@@ -30,10 +30,10 @@
   margin: 10px;
   background-color: rgb(27, 77, 226);
   border-radius: 16px;
-  border: 3px solid rgb(157, 157, 231);
-  padding: 2px;
+  padding: 4px;
   color: rgb(24, 24, 24);
   cursor: pointer;
+  letter-spacing: 1px;
   box-shadow: 1px 1px 1.5px 1px black;
 }
 
@@ -45,5 +45,5 @@
 }
 
 .on-page {
-  border-color: rgb(96, 96, 245) !important;
+  background-color: rgb(170, 170, 209) !important;
 }
