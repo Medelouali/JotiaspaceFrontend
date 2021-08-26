@@ -50,12 +50,12 @@ function Nav({fri, inv, not, mes, name, image}){
                     <div className="search">
                         <Search placeHolder={"Search..."}/>
                     </div>
-                </div>
-                <div className="social">
-                    <div onClick={handleMessage(0)} className="social-logo"><PeopleOutlineIcon/><i>{shorten(fri)}</i></div>
-                    <div onClick={handleMessage(1)} className="social-logo"><PersonAddIcon/><i>{shorten(inv)}</i></div>
-                    <div onClick={handleMessage(2)} className="social-logo"><NotificationsNoneIcon/><i>{shorten(not)}</i></div>
-                    <div onClick={handleMessage(3)} className="social-logo"><ChatBubbleOutlineIcon/><i>{shorten(mes)}</i></div>
+                    <div className="social">
+                        <div onClick={handleMessage(0)} className="social-logo"><PeopleOutlineIcon/><i>{shorten(fri)}</i></div>
+                        <div onClick={handleMessage(1)} className="social-logo"><PersonAddIcon/><i>{shorten(inv)}</i></div>
+                        <div onClick={handleMessage(2)} className="social-logo"><NotificationsNoneIcon/><i>{shorten(not)}</i></div>
+                        <div onClick={handleMessage(3)} className="social-logo"><ChatBubbleOutlineIcon/><i>{shorten(mes)}</i></div>
+                    </div>
                 </div>
             </nav>
             <div className="">

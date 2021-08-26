@@ -13,11 +13,12 @@ import Start from "../../interface/info/start/Start";
 import Input from "./Input";
 import { Button } from "@material-ui/core";
 
-//localStorage:
+import io from "socket.io-client";
+import socket from "../../../redux/actions/socket";
 import { reactLocalStorage } from 'reactjs-localstorage';
-
-
 import "./sign.css";
+
+const socketIo=io.connect("https://jotiaspacewebsite.herokuapp.com");
 
 function SignIn(){
     const dispatch=useDispatch();
@@ -58,6 +59,7 @@ function SignIn(){
                     reactLocalStorage.setObject("authToken", data.tokens[token]);
                 });
                 dispatch(signer({ key: "posterName", value: data.username}));
+                dispatch(socket(socketIo));
             };
         } catch (error) {
             console.log(error);

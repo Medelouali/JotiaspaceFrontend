@@ -13,11 +13,13 @@ import { useMedia } from "use-media";
 
 import { motion } from "framer-motion";
 import Start from "../../interface/info/start/Start";
+import io from "socket.io-client";
+import socket from "../../../redux/actions/socket";
 
-import { reactLocalStorage } from 'reactjs-localstorage';
-
+import { reactLocalStorage }  from 'reactjs-localstorage';
 
 import "./sign.css";
+const socketIo=io.connect("https://jotiaspacewebsite.herokuapp.com");
 
 function SignUp(){
     const dispatch=useDispatch();
@@ -57,6 +59,7 @@ function SignUp(){
                 reactLocalStorage.setObject("Email", signData.email);
                 reactLocalStorage.setObject("Password", signData.password);
                 dispatch(signer({ key: "posterName", value: signData.username}));
+                dispatch(socket(socketIo));
             };
         } catch (error) {
             console.log(error);

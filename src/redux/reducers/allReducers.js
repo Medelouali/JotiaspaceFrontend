@@ -17,6 +17,7 @@ import sendMessage from "./sendMessage";
 import chatIndexer from "./chatIndexer";
 import signer from "./signer";
 import processing from "./processing";
+import socket from "./socket";
 
 const allReducers=combineReducers({
     updateUser: updateUser,
@@ -36,7 +37,8 @@ const allReducers=combineReducers({
     sendMessage: sendMessage,
     chatIndexer: chatIndexer,
     signer: signer,
-    processing: processing
+    processing: processing,
+    socket: socket
 });
 
 export default allReducers;
