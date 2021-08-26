@@ -24,7 +24,6 @@ function All() {
             }
         };
         getData();
-        console.log(1);
     }, []);
     return (
         <div className="all-posts">

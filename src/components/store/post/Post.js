@@ -33,7 +33,7 @@ const urls=[
     "https://i.pinimg.com/236x/eb/58/af/eb58af292e621886d551c1e8dc506a27.jpg"
 ];
 function Post({post}){
-    console.log(post);
+    // console.log(post);
     const divRef=useRef(null);
     const [comments, setComments]=useState(0);
     const [commentsBlue, setCommentsblue]=useState(false);
