@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { shorten } from "../algorithms/algorithms";
-import profile_image from "../svg/profile.svg";
-import Messanger from "../messanger/Messanger";
-import Search from "../../home/welcome/header/search/Search";
+import { shorten } from "../../algorithms/algorithms";
+import profile_image from "../../svg/profile.svg";
+import Messanger from "../../messanger/Messanger";
+import Search from "../../../home/welcome/header/search/Search";
 
-import messanger from '../../../redux/actions/messanger';
+import messanger from '../../../../redux/actions/messanger';
 
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';

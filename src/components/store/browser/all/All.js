@@ -3,7 +3,6 @@ import "./all.css";
 import Post from '../../post/Post';
 import axios from 'axios';
 import Start from '../../../interface/info/start/Start';
-
 import { reactLocalStorage } from "reactjs-localstorage";
 
 function All() {

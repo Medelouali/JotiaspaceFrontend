@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from '../nav/Nav';
+import Nav from './nav/Nav';
 import Main from "./Main";
 import { useSelector } from "react-redux";  
 import { useDispatch } from "react-redux";
@@ -17,8 +17,8 @@ function Store(){
         case "store":
           return(
             <div className="grid">
-              <Nav fri={value.unread_fri} inv={value.unread_inv} mes={value.unread_mes} 
-                  not={value.unread_not} name={value.username}/>
+              <Nav fri={value.unreadFri} inv={value.unreadInv} mes={value.unreadMes} 
+                  not={value.unreadNot} name={value.username}/>
               <Main/>
             </div>
           );

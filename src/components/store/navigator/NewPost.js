@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
-import pager from "../../../../redux/actions/pager";
+import pager from "../../../redux/actions/pager";
 
 function NewPost() {
     const dispatch=useDispatch();
