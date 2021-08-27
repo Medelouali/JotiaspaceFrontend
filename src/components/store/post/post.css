@@ -128,9 +128,10 @@
   right: 2%;
   bottom: 0;
   height: 100%;
-  background-color: rgb(220, 229, 236);
+  background-color: #f6feff;
   z-index: 10;
   border-radius: 4px;
+  overflow-y: scroll;
 }
 
 li span {

@@ -160,7 +160,7 @@ function Post({post}){
                     initial={{y: "100vh"}}
                     animate={{y: 0}}
                     className="pro">
-                        <ProfilePage/>
+                        <ProfilePage name={post.posterName}/>
                     </motion.div>
                 }
             </div>
