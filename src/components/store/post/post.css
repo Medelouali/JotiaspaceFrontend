@@ -96,16 +96,18 @@
   top: 0;
   right: calc(2px + 2%);
   width: 40%;
-  z-index: 3;
+  z-index: 10;
   list-style: none;
   padding: 6px;
   border-radius: 3px;
   border: 1px solid rgb(229, 255, 0);
   animation: appear 0.5s ease-out forwards;
+  background-color: black;
 }
 
 .card-data ul li {
-  background-color: rgb(43, 22, 84);
+  /* background-color: rgb(43, 22, 84); */
+  background-color: rgb(85, 0, 255);
   padding: 6px;
   margin: 2px;
   border-radius: 20px;
@@ -129,7 +131,7 @@
   bottom: 0;
   height: 100%;
   background-color: #f6feff;
-  z-index: 10;
+  z-index: 12;
   border-radius: 4px;
   overflow-y: scroll;
 }
