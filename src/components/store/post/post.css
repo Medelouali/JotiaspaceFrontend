@@ -96,18 +96,17 @@
   top: 0;
   right: calc(2px + 2%);
   width: 40%;
-  z-index: 100 !important;
+  z-index: 6;
   list-style: none;
   padding: 6px;
   border-radius: 3px;
-  border: 1px solid rgb(229, 255, 0);
+  border: 1px solid rgb(255, 255, 255);
   animation: appear 0.5s ease-out forwards;
-  background-color: black;
 }
 
 .card-data ul li {
-  /* background-color: rgb(43, 22, 84); */
-  background-color: rgb(85, 0, 255);
+  background-color: rgb(43, 22, 84);
+  /* background-color: rgb(85, 0, 255); */
   padding: 6px;
   margin: 2px;
   border-radius: 20px;
