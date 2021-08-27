@@ -27,7 +27,7 @@ function Navigator(){
     }
     return(
         <div className="store-links">
-            <div className="navigator-core">
+            <div className="navigator-core_">
                 <h3 onClick={handleStore("all")} className={selected("all")}>All</h3>
                 <h3 onClick={handleStore("categories")} className={selected("categories")}>Categories</h3>
                 <h3 onClick={handleStore("trending")} className={selected("trending")}>Trending</h3>

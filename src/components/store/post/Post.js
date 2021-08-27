@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { shorten } from "../algorithms/algorithms";
+import { motion } from "framer-motion";
 import "./post.css";
 
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
@@ -17,9 +18,13 @@ import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
 import VisibilityOffOutlinedIcon from '@material-ui/icons/VisibilityOffOutlined';
 
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import Dialogue from "./dialogue/Dialogue";
 import Images from './images/Images';
 import Cell from './cell/Cell';
+import ProfilePage from './profilePage/ProfilePage';
 
 const urls=[
     "https://i.pinimg.com/236x/d3/dd/09/d3dd096e6b94620c6de7091541b80d3b.jpg",
@@ -113,6 +118,17 @@ function Post({post}){
         if(num===dialogue) return <VisibilityOffOutlinedIcon onClick={setDial(num)}/>
         return <VisibilityOutlinedIcon onClick={setDial(num)}/>
     }
+    const  [more, setMore]=useState(false);
+    const  [profile, setProfile]=useState(false);
+    const handleMore=()=>{
+        setMore(!more);
+        if(!more) setProfile(false);
+    };
+
+    const handleProfile=()=>{
+        setProfile(!profile);
+    }
+
     return(
         <div className="post">
             <div className="card-header">
@@ -120,11 +136,33 @@ function Post({post}){
                     <img className="" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
                 </div>
                 <h3>{post.posterName}</h3>
+                <div className="view-more">
+                    { more ? 
+                        <div onClick={handleMore} className="less"><ExpandMoreIcon/></div> : 
+                        <div  onClick={handleMore} className="more"><MoreHorizIcon/></div>    
+                    }
+                </div>
             </div>
 
             <div className="card-data">
                 <Images urls={urls}/>
                 <p>{post.description}</p>
+                {more && 
+                    <ul>
+                        <li onClick={handleProfile} >Profile</li>
+                        <li>Follow {post.posterName}</li>
+                        <li>Hide {post.posterName}'s posts</li>
+                    </ul>
+                }
+                {
+                    more && profile && 
+                    <motion.div 
+                    initial={{y: "100vh"}}
+                    animate={{y: 0}}
+                    className="pro">
+                        <ProfilePage/>
+                    </motion.div>
+                }
             </div>
 
             <div className="cells">

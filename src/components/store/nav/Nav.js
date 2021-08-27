@@ -12,11 +12,12 @@ import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-
+// import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
 import socket_io from 'socket.io-client';
 
 import './nav.css';
+// import PowerSettingsNew from '@material-ui/icons/PowerSettingsNew';
 
 const endpoint="http://localhost:5000";
 const io=socket_io(endpoint, {

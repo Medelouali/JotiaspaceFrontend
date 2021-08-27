@@ -1,4 +1,4 @@
-.navigator-core {
+.navigator-core_ {
   width: 48vw;
   margin: auto;
   display: flex;
@@ -11,22 +11,25 @@
 }
 
 @media (max-width: 800px) {
-  .navigator-core {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
+  .navigator-core_ {
     white-space: nowrap;
-    height: max-content;
+    height: 3.5em;
     width: 100vw;
+    overflow-x: scroll;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    overflow-y: hidden;
   }
-  .navigator-core h3 {
+  .navigator-core_ h3 {
     display: inline-block;
-    width: max-content;
+    width: auto;
+    margin-bottom: 4px;
   }
 }
 
-.navigator-core h3 {
+.navigator-core_ h3 {
   margin: 10px;
   background-color: rgb(27, 77, 226);
   border-radius: 16px;

@@ -45,13 +45,14 @@
   grid-template-rows: 10px max-content max-content 10px;
   grid-gap: 0 2px;
   width: 100%;
+  position: relative;
 }
 
 .card-data p {
   grid-area: 3/2/4/3;
   width: 100%;
   margin-top: 1%;
-  border: 1px solid rgb(233, 233, 14);
+  border: 1px solid rgb(59, 58, 61);
   padding: 2px;
   border-radius: 4px;
   color: rgb(188, 188, 235);
@@ -75,4 +76,59 @@
 .cell svg,
 .cell img {
   cursor: pointer;
+}
+
+.view-more {
+  margin-right: 2%;
+}
+
+.view-more div .MuiSvgIcon-root {
+  width: 1.5em;
+  height: auto;
+}
+
+.view-more div {
+  cursor: pointer;
+}
+
+.card-data ul {
+  position: absolute;
+  top: 0;
+  right: calc(2px + 2%);
+  width: 40%;
+  z-index: 3;
+  list-style: none;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid rgb(240, 240, 247);
+  animation: appear 0.5s ease-out forwards;
+}
+
+.card-data ul li {
+  background-color: rgb(43, 22, 84);
+  padding: 6px;
+  margin: 2px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.card-data .pro {
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  bottom: 0;
+  height: 100%;
+  background-color: blue;
+  z-index: 10;
+  border-radius: 4px;
 }

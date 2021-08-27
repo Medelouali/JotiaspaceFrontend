@@ -97,3 +97,9 @@
 .nav-bar h4 {
   color: whitesmoke;
 }
+
+@media (max-width: 375px) {
+  .social {
+    width: 90vw;
+  }
+}
