@@ -150,8 +150,8 @@ function Post({post}){
                 {more && 
                     <ul>
                         <li onClick={handleProfile} >Profile</li>
-                        <li>Follow {post.posterName}</li>
-                        <li>Hide {post.posterName}'s posts</li>
+                        <li>Follow <span>{post.posterName}</span></li>
+                        <li>Hide <span>{post.posterName}</span>'s posts</li>
                     </ul>
                 }
                 {
