@@ -100,7 +100,7 @@
   list-style: none;
   padding: 6px;
   border-radius: 3px;
-  border: 1px solid rgb(240, 240, 247);
+  border: 1px solid rgb(229, 255, 0);
   animation: appear 0.5s ease-out forwards;
 }
 
