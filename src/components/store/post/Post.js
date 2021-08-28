@@ -148,11 +148,15 @@ function Post({post}){
                 <Images urls={urls}/>
                 <p>{post.description}</p>
                 {more && 
-                    <ul>
+                    <motion.ul
+                        initial={{ height: 0 }}
+                        animate={{ height: "100%"}}
+                        transition={{ duration: 0.5 }}
+                    >
                         <li onClick={handleProfile} >Profile</li>
                         <li>Follow <span>{post.posterName}</span></li>
                         <li>Hide <span>{post.posterName}</span>'s posts</li>
-                    </ul>
+                    </motion.ul>
                 }
                 {
                     more && profile && 
