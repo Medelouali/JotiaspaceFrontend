@@ -112,6 +112,7 @@
   border-radius: 20px;
   color: white;
   cursor: pointer;
+  color: blue !important;
 }
 
 @keyframes appear {
