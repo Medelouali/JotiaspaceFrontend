@@ -39,7 +39,7 @@ function Header(){
 
     return (
         <div className="header-wrapper">
-            <h1 className="web-logo">JotiaSpace</h1>
+            <h1 className="web-logo">Market</h1>
             <div className="search-bar"><Search placeHolder="Search..." callback={bringData} action="get"/></div>
             <div className="nav-menu">
                 {bigScreen ? (

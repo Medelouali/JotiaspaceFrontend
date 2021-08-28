@@ -4,10 +4,10 @@ import Friend from '../../../profile/info/nav/network/friend/Friend';
 import "./profilePage.css";
 import Picture from '../../../profile/info/nav/picture/Picture';
 
-export default function ProfilePage({pic, name, bio, isFriend, isMe, friends, posts}) {
+export default function ProfilePage({picture, name, bio, isFriend, isMe, friends, posts}) {
     return (
         <div className="profile-page">
-            <Picture isMe={isMe} picture={pic}/>
+            <Picture isMe={isMe} picture={picture}/>
             <h3 className="my-name">{name}</h3>
             <div className="bio">{bio}</div>
             { 
@@ -16,7 +16,7 @@ export default function ProfilePage({pic, name, bio, isFriend, isMe, friends, po
             }
             {
                 ( isMe || friends.public ) && 
-                    friends.list.map((fr, index)=><Friend picture={pic} name={name} jsx={""}/> )
+                    friends.list.map((fr, index)=><Friend picture={picture} name={name} jsx={""}/> )
             }
             {
                 ( isMe || isFriend ) && 
@@ -28,7 +28,7 @@ export default function ProfilePage({pic, name, bio, isFriend, isMe, friends, po
 }
 
 ProfilePage.defaultProps={
-    pic: "http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg",
+    picture: "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png",
     name: "El Ouali",
     bio: "I Will Never Give Up",
     isMe: false,
