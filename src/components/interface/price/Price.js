@@ -4,10 +4,11 @@ import Field from "./field/Field";
 import "./price.css";
 
 function Price() {
+    const categories=["Transport","Properties", "Electronics", "Animals", "Clothings", "Apps"];
     return (
         <div className="price-wrapper">
             <h3>Put A Price For Your Product</h3>
-            <Field field_name="Product Category" label="category"/>
+            <Field field_name="Product Category" label="category" dataList={categories}/>
             <Field field_name="Country/City" label="countryCity"/>
             <Field field_name="Product Name" label="productName"/>
             <Field field_name="Last Price(USD)" label="lastPrice"/>

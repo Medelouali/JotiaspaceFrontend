@@ -42,7 +42,7 @@ function Near({title, logo}) {
                 type: "electronics",
                 list: collections.electronics
                 }}/>}/>
-            <Store logo={<PetsOutlinedIcon/>} title="animals" jsx_details={<Collection coordinates={{
+            <Store logo={<PetsOutlinedIcon/>} title="Animals" jsx_details={<Collection coordinates={{
                 cath: title.toLowerCase(),
                 type: "animals",
                 list: collections.animals
