@@ -100,7 +100,7 @@
   padding: 6px;
   border-radius: 3px;
   border: 1px solid rgb(255, 255, 255);
-  animation: appear 0.5s ease-out forwards;
+  /* animation: appear 0.5s ease-out forwards; */
 }
 
 .card-data ul li {
@@ -110,7 +110,6 @@
   border-radius: 20px;
   color: white;
   cursor: pointer;
-  color: blue;
   list-style: none;
 }
 
