@@ -10,7 +10,7 @@ import { reactLocalStorage } from "reactjs-localstorage";
 
 function Info(){
     const [start, setStart]=useState(false);
-    const [response, setResponse]=useState({});
+    const [response, setResponse]=useState(null);
     const divRef=useRef(null);
     const [value, setValue]=useState("");
     const dispatch=useDispatch();
@@ -23,6 +23,7 @@ function Info(){
     }
 
     const handlePost=async(e)=>{
+        console.log(post);
         setStart(true);
         try {
             post.posterName=user.username;
@@ -31,9 +32,9 @@ function Info(){
             // const { data }=await axios.post("http://localhost:5000/posts/savePost", { 
             //     post, tokens: { authToken: reactLocalStorage.getObject("authToken", "", true) } });
             setResponse(data);
-            if(data.data) dispatch(signer({set : true}));
+            if(data.done) dispatch(signer({ set : true }));
         } catch (error) {
-            console.log(error);
+            console.log(response);
         };
         if(divRef.current) divRef.current.scrollIntoView({ behavior: "smooth", block: "center"});
         setStart(false);
@@ -60,9 +61,11 @@ function Info(){
                 <button type="submit" onClick={handlePost}>Post</button>
             </div>
             <div className="ref-div" ref={divRef}>
-                {   response.done===true ?
-                    <h6>{response.data}</h6>: response.done===false ? <h6>{response.error}</h6> :
-                    <Start start={start} phrase={"Uploading your post..."}/>
+                {
+                    response===null ? <Start start={start} phrase={"Uploading your post..."}/>: 
+                    response.error!=="" ? <h6>{response.error}</h6> :
+                    response.done===true ? <h6>{response.data}</h6>:
+                    <></>
                 }
             </div>
         </div>

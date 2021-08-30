@@ -2,11 +2,9 @@ import React from "react";
 import fluffy from "../../../svg/fluffy.jpg";
 import like from "../../../svg/react/like.svg";
 
-import CommentOnly from "./commentOnly/CommentOnly";
-
 import "./reaction.css";
 
-export default function Reaction({reacters, is_comment_reaction}){
+export default function Reaction({reacters}){
     return(
         <div className="reactions">
             <div className="reaction-list">
@@ -28,7 +26,6 @@ export default function Reaction({reacters, is_comment_reaction}){
                 ))}
                 <hr/>
             </div>
-            <CommentOnly comment_flag={is_comment_reaction}/>
         </div>
     );
 }
@@ -39,8 +36,7 @@ Reaction.defaultProps={
         {re_image: fluffy, re_name: "Fluffy", re_logo: like, re_words:["You are Dope", "Awesome"]},
         {re_image: fluffy, re_name: "Fluffy", re_logo: like, re_words:["You are Dope", "Awesome"]},
         {re_image: fluffy, re_name: "Fluffy", re_logo: like, re_words:["You are Dope", "Awesome"]}
-    ],
-    is_comment_reaction: false
+    ]
 }
 
 

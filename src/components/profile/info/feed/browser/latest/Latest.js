@@ -29,10 +29,11 @@ function Latest() {
     }, []);
     return (
         <div className="latest">
-            <h5>Posts</h5>
+            <h5>Posts{posts!==null ? `(${posts.length})`: ""}</h5>
             <div className="posts">
                 {
                     posts===null ? <Start start={true} phrase={"Getting your posts"}/> :
+                    posts.length===0 ? <h6>You didn't post anything yet</h6>:
                     error!=="" ? <h6>{error}</h6> : 
                     posts.map((post, index)=><Post post={ post } key={`${index}#${post.posterName}`} />)                    
                 }

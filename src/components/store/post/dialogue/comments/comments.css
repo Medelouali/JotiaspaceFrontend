@@ -1,0 +1,56 @@
+.comments {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-gap: 4px 0;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  padding: 2px 1% 2px 1%;
+  overflow-y: scroll;
+}
+
+.tweet-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border: 1px solid aqua;
+  border-radius: 15px;
+  height: 2em;
+}
+
+.tweet-input input {
+  width: 80%;
+  padding: 2px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid black;
+  font-size: 1em;
+}
+
+.tweet-input .send-comment {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.send-comment .MuiSvgIcon-root {
+  margin: auto;
+  border: 1px solid rgb(34, 32, 32) !important;
+  border-radius: 10px !important;
+}
+
+.subtweets {
+  background-color: rgb(12, 11, 11);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.tweet {
+  width: 100%;
+}

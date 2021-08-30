@@ -1,0 +1,46 @@
+.tweeter {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 4px 0;
+  overflow-x: hidden;
+}
+
+.tweeter-picture {
+  grid-area: 1/1/2/2;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border-right: 1px solid aqua;
+  border-bottom: 1px solid aqua;
+  padding: 2px;
+  overflow: hidden;
+}
+.tweeter-picture img {
+  height: 100%;
+  width: auto;
+}
+.tweeter-name {
+  grid-area: 1/2/2/3;
+  color: azure;
+  letter-spacing: 1px;
+}
+.tweeter-text {
+  grid-area: 2/1/3/4;
+  margin-left: 10px;
+  border-left: 1px solid aqua;
+  border-radius: 0 0 0 6px;
+  padding: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.tweeter-replies {
+  grid-area: 3/3/4/4;
+  font-size: small;
+  color: rgb(216, 219, 241);
+}

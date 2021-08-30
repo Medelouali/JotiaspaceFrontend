@@ -1,1 +1,7 @@
-
+.posts h6 {
+  margin: auto;
+  color: rgb(178, 175, 219);
+  width: max-content;
+  max-width: 100%;
+  padding: 5px;
+}
