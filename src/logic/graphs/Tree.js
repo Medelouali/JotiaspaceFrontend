@@ -13,9 +13,9 @@ const Node=class grahpNode{
 const Tree=class TreeClass{
     constructor(){
         this.root=null;
-        this.current=this.root;//helps us keep track of where we are
-        this.currentTail=this.current;//helps us to insert data
-        this.direction=true;//it directs us for insertion, true for left, false for right
+        this.current=null;//helps us keep track of where we are
+        this.currentTail=null;//helps us to insert data
+        this.direction=true;//it directs us for insertion, true for left, false for left
         this.nodes=0; 
     }
 
@@ -23,13 +23,13 @@ const Tree=class TreeClass{
     //get the current Node
     getCurrent(){
         const response={ root: null, children: [] };
-        let position=this.current;
+        const leftRight = this.direction ? "right": "left";
         if(this.current){
-            position=this.direction ? position.left: position.right;
+            let position=this.current[leftRight];
             response.root =  this.isRoot() ? null: this.current.data;
             while(position){
                 response.children.push(position.data);
-                position=this.direction ? position.left: position.right;
+                position = position[leftRight]
             };
             if(this.isRoot()) response.children.unshift(this.current.data);
         };
@@ -37,10 +37,9 @@ const Tree=class TreeClass{
     };
 
     getLength(){
-        let temp=this.current, len=0;
-
+        let temp = this.current, len=0;
         while(temp){
-            temp=(this.direction ? temp.left: temp.right);
+            temp=(this.direction ? temp.right: temp.left);
             len++;
         };
         return len;
@@ -51,16 +50,16 @@ const Tree=class TreeClass{
         if(this.current.left){
             this.current=this.current.left;
             this.currentTail=this.current;
-            this.direction=true;
+            this.direction=false;
         }
     }
 
-    //Move the current to right
+    //Move the current to left
     moveRight(){
         if(this.current.right){
             this.current=this.current.right;
             this.currentTail=this.current;
-            this.direction=false;
+            this.direction=true;
         }
     }
 
@@ -68,7 +67,8 @@ const Tree=class TreeClass{
     moveTo(index){
         let position=0;
         if(index<0 || index>=this.getLength()) return;
-        while(position++!==index) this.direction ? this.moveLeft(): this.moveRight();
+        while(position++!==index) this.direction ? this.moveRight(): this.moveLeft();
+        this.direction=!this.direction;
     }
 
     //Move the current up
@@ -78,13 +78,16 @@ const Tree=class TreeClass{
             if(this.current.parent.id!==this.current.family){
                 this.current=this.current.parent;
                 this.moveUp();
-            }else this.current=this.current.parent;
+            }else{
+                this.direction=!this.direction;
+                this.current=this.current.parent
+            };
         }
     }
 
     //inserting nodes to the graph
     insertNode(data, direction=this.direction){
-        const leftRight=direction ? "left": "right";
+        const leftRight=direction ? "right": "left";
         if(this.root===null)
             return this.currentTail=this.current=this.root=new Node(data, this.nodes++, 0);
         if(this.currentTail[leftRight]){
@@ -103,19 +106,5 @@ const Tree=class TreeClass{
         return this.root===this.current;
     }
 }
-
-// const comment=new Tree();
-// const data=[
-//     {name: "James", tweet: "Some stupid tweet", replies: 0},
-//     {name: "John Doe", tweet: "Some stupid tweet", replies: 0},
-//     {name: "Katy", tweet: "Some stupid tweet", replies: 0},
-//     {name: "Lucy", tweet: "Some stupid tweet", replies: 0}
-// ]
-
-// data.forEach(o=>{
-//     comment.insertNode(o);
-// console.log(comment);
-
-// });
 
 export default Tree;

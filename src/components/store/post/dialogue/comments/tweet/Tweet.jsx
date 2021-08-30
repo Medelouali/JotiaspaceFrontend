@@ -3,8 +3,12 @@ import "./tweet.css";
 
 export default function Tweet({ callback, picture, name, tweet, replies , hidden}) {
     if(hidden) return <></>;
+    const cb=()=>{
+        console.log("Called");
+        callback();
+    };
     return (
-        <div  onClick={callback} className="tweeter">
+        <div  onClick={cb} className="tweeter">
             <div className="tweeter-picture"><img src={picture} alt="" /></div>
             <div className="tweeter-name">{name}</div>
             <div className="tweeter-text">{tweet}</div>

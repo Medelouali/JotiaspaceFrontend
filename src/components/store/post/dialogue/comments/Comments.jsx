@@ -20,12 +20,11 @@ export default function Comments() {
         const com={
             name: user.username,
             tweet: input,
-            replies: current.getLength()
+            replies: 0
         };
         current.insertNode(com);
         setCurrent(current);
         setInput("");
-        // console.log(tree);
         console.log(current);
     };
 
@@ -35,8 +34,9 @@ export default function Comments() {
 
     const move=(index)=>{
         return ()=>{
-            current.moveTo(index);
+            current.moveTo(index + 1);
             setCurrent(current);
+            console.log("item ", index);
         };
     };
     const handleUp=()=>{
