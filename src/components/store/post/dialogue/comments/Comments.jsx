@@ -13,7 +13,10 @@ export default function Comments() {
     // const tree=new Tree();
     const [ input, setInput ]=useState("");
     const [ current, setCurrent ]=useState(new Tree());
+    const [ tree ]=useState(new Tree());
     const user=useSelector(state=>state.updateUser);
+
+    ;
 
     const handleComment=()=>{
         if(input==="") return;
@@ -22,8 +25,8 @@ export default function Comments() {
             tweet: input,
             replies: 0
         };
-        current.insertNode(com);
-        setCurrent(current);
+        tree.insertNode(com);
+        setCurrent(tree);
         setInput("");
         console.log(current);
     };
@@ -34,14 +37,17 @@ export default function Comments() {
 
     const move=(index)=>{
         return ()=>{
-            current.moveTo(index + 1);
-            setCurrent(current);
-            console.log("item ", index);
+            tree.moveTo(index);
+            setCurrent(tree);
+            setInput("Type Something");
+            setInput("");
         };
     };
     const handleUp=()=>{
-        current.moveUp();
-        setCurrent(current);
+        tree.moveUp();
+        setCurrent(tree);
+        setInput("Type Something");
+        setInput("");
     }
     return (
         <div className="comments">
@@ -62,7 +68,7 @@ export default function Comments() {
                 </ScrollToBottom>
             </div>
             <div className="tweet-input">
-                <input onChange={handleInput} value={ input } type="text" placeholder="comment..."/>
+                <input autoFocus onChange={handleInput} value={ input } type="text" placeholder="comment..."/>
                 <div onClick={handleComment} className="send-comment"><SendOutlinedIcon/></div>
             </div>
         </div>

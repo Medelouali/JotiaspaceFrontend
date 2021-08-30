@@ -45,30 +45,27 @@ const Tree=class TreeClass{
         return len;
     };
 
-    //Move the current to left
-    moveLeft(){
-        if(this.current.left){
-            this.current=this.current.left;
-            this.currentTail=this.current;
-            this.direction=false;
-        }
-    }
-
-    //Move the current to left
-    moveRight(){
-        if(this.current.right){
-            this.current=this.current.right;
-            this.currentTail=this.current;
-            this.direction=true;
-        }
+    //Move the current to the next node
+    moveStep(director=this.direction){
+        const dir = director ? "right": "left";
+        if(this.current)
+            if(this.current[dir]){
+                this.current=this.current[dir];
+                this.currentTail=this.current;
+            }
     }
 
     //Move to a specific position
     moveTo(index){
         let position=0;
         if(index<0 || index>=this.getLength()) return;
-        while(position++!==index) this.direction ? this.moveRight(): this.moveLeft();
+        console.log("moving");
+        while(position++!==index) {
+            this.moveStep();
+            console.log(`Moving to node N° ${position}`);
+        }
         this.direction=!this.direction;
+        this.setTail();
     }
 
     //Move the current up
@@ -83,27 +80,34 @@ const Tree=class TreeClass{
                 this.current=this.current.parent
             };
         }
+        this.setTail();
     }
 
     //inserting nodes to the graph
     insertNode(data, direction=this.direction){
         const leftRight=direction ? "right": "left";
         if(this.root===null)
-            return this.currentTail=this.current=this.root=new Node(data, this.nodes++, 0);
+            return this.currentTail=this.current=this.root=new Node(data, this.nodes, this.nodes);
         if(this.currentTail[leftRight]){
             this.currentTail=this.currentTail[leftRight];
             this.insertNode(data, direction);
         }else{
-            this.currentTail[leftRight]=new Node(data, this.nodes, this.current.id);
+            this.currentTail[leftRight]=new Node(data, ++this.nodes, this.current.id);
             this.currentTail[leftRight].parent=this.currentTail;
             this.currentTail=this.currentTail[leftRight];
-            this.nodes++;
         };
     }
 
     //checking if we are on root
     isRoot(){
         return this.root===this.current;
+    }
+
+    //reseting the tail
+    setTail(director=this.direction){
+        const dir = director ? "right": "left";
+        this.currentTail=this.current;
+        if(this.currentTail) while(this.currentTail[dir]) this.currentTail=this.currentTail[dir];
     }
 }
 
