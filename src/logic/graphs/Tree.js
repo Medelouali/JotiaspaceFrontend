@@ -71,6 +71,10 @@ const Tree=class TreeClass{
     //Move the current up
     moveUp(){
         if(!this.current) return;
+        if(this.current===this.root && !this.direction){
+            this.direction=!this.direction;
+            return;
+        }
         if(this.current.parent){
             if(this.current.parent.id!==this.current.family){
                 this.current=this.current.parent;
@@ -105,7 +109,7 @@ const Tree=class TreeClass{
 
     //checking if we are on root
     isRoot(){
-        return this.root===this.current;
+        return this.root===this.current && this.direction;
     }
 
     //reseting the tail
