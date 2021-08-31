@@ -57,16 +57,15 @@ const Tree=class TreeClass{
     }
 
     //Move to a specific position
-    moveTo(index){
+    moveTo(index, isBase=this.isRoot()){
+        const limit=isBase ? this.getLength(): this.getLength()-1;
         let position=0;
-        if(index<0 || index>=this.getLength()) return;
-        console.log("moving");
-        while(position++!==index) {
-            this.moveStep();
-            console.log(`Moving to node N° ${position}`);
-        }
+        if(!isBase) index++;
+        if(index<0 || index>=limit) return;
+        while(position++!==index) this.moveStep();
         this.direction=!this.direction;
         this.setTail();
+        return this;
     }
 
     //Move the current up
@@ -82,13 +81,16 @@ const Tree=class TreeClass{
             };
         }
         this.setTail();
+        return this;
     }
 
     //inserting nodes to the graph
     insertNode(data, direction=this.direction){
         const leftRight=direction ? "right": "left";
-        if(this.root===null)
-            return this.currentTail=this.current=this.root=new Node(data, this.nodes, this.nodes);
+        if(this.root===null){
+            this.currentTail=this.current=this.root=new Node(data, this.nodes, this.nodes);
+            return this;
+        }
         if(this.currentTail[leftRight]){
             this.currentTail=this.currentTail[leftRight];
             this.insertNode(data, direction);
@@ -97,6 +99,7 @@ const Tree=class TreeClass{
             this.currentTail[leftRight].parent=this.currentTail;
             this.currentTail=this.currentTail[leftRight];
         };
+        return this;
     }
 
     //checking if we are on root
@@ -110,6 +113,21 @@ const Tree=class TreeClass{
         this.currentTail=this.current;
         if(this.currentTail) while(this.currentTail[dir]) this.currentTail=this.currentTail[dir];
     }
+
+    increment(what, index){
+        let pos=0, temp=this.current;
+        if(!this.current) return;
+        if(index<0 || index>=this.getLength()) return;
+        while(pos++!==index) this.moveStep();
+        if(this.current) this.current.data[what]++;
+        this.current=temp;
+    }
+
+    // incrementParent(){
+    //     let temp=this.current;
+    //     if(!this.current) return;
+    //     if(this.isRoot())
+    // }
 }
 
 export default Tree;
