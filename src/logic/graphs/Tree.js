@@ -119,6 +119,7 @@ const Tree=class TreeClass{
         let pos=0, temp=this.current;
         if(!this.current) return;
         if(index<0 || index>=this.getLength()) return;
+        if(!this.isRoot())index++;
         while(pos++!==index) this.moveStep();
         if(this.current) this.current.data[what]++;
         this.current=temp;
