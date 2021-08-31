@@ -1,6 +1,8 @@
 .dialogue-comments {
-  height: 60vh;
+  /* height: 60vh; */
+  max-height: 60vh;
   width: 100%;
   background-color: black;
   color: white;
+  overflow-y: scroll;
 }

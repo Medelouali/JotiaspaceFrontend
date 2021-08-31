@@ -40,12 +40,16 @@ export default function Comments() {
             tree.moveTo(index);
             setCurrent(tree);
             setInput("Type Something");
+            setInput("Type Somethinr");
+            setInput("Type Something");
             setInput("");
         };
     };
     const handleUp=()=>{
         tree.moveUp();
         setCurrent(tree);
+        setInput("Type Something");
+        setInput("Type Somethinf");
         setInput("Type Something");
         setInput("");
     }
@@ -57,7 +61,7 @@ export default function Comments() {
             <div className="tweet">
                 { current && current.getCurrent().root  &&
                     <Tweet tweet={current.getCurrent().root.tweet} name={current.getCurrent().root.name} 
-                    replies={current.getCurrent().root.replies} hidden={current.isRoot()}/> }
+                    replies={current.getLength()-1} hidden={current.isRoot()}/> }
             </div>
             <div className="subtweets">
                 <div className="empty-div"></div>

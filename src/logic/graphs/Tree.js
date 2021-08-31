@@ -8,6 +8,7 @@ const Node=class grahpNode{
         this.id=id;
         this.family=family;
     }
+
 }
 
 const Tree=class TreeClass{

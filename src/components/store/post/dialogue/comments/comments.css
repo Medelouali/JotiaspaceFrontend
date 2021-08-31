@@ -3,10 +3,8 @@
   grid-template-rows: auto auto 1fr auto;
   grid-gap: 4px 0;
   height: 100%;
-  max-height: 100%;
   width: 100%;
   padding: 2px 1% 2px 1%;
-  overflow-y: scroll;
 }
 
 .tweet-input {
@@ -48,14 +46,14 @@
   display: grid;
   grid-template-columns: 10px 1fr;
   height: 100%;
-  overflow-y: scroll;
 }
 
 .tweet {
   width: 100%;
 }
-/* 
+
 .subsubtweets {
-  height: min-content !important;
+  max-height: 40vh;
   overflow-y: scroll;
-} */
+  height: 100%;
+}
