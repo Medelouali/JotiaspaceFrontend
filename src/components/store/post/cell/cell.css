@@ -33,3 +33,12 @@
 .clicked-cell .MuiSvgIcon-root {
   fill: blue;
 }
+
+.cell-view {
+  height: max-content;
+  align-self: flex-end;
+}
+.cell-view .MuiSvgIcon-root {
+  width: 0.8em;
+  height: auto;
+}

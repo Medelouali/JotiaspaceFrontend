@@ -1,0 +1,49 @@
+.reaction {
+  width: 100%;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 3px;
+  border-radius: 0 0 0 4px;
+}
+
+.reacter {
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: auto;
+  max-width: 100%;
+}
+
+.reacter .reacter-image {
+  width: 3em;
+  height: 3em;
+  border: 2px solid rgb(201, 201, 245);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.reacter-image img {
+  width: auto;
+  height: 100%;
+}
+
+.reacter p {
+  width: max-content;
+  color: rgb(168, 168, 230);
+}
+
+.reacter .reacter-logo {
+  width: 1.2em;
+  height: auto;
+}
+
+.reaction p {
+  margin: 3%;
+  border-radius: 0 0 10px 10px;
+  color: rgb(179, 180, 226);
+}

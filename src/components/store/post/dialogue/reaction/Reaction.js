@@ -3,6 +3,7 @@ import fluffy from "../../../svg/fluffy.jpg";
 import like from "../../../svg/react/like.svg";
 
 import "./reaction.css";
+import SubRea from "./subRea/SubRea";
 
 export default function Reaction({reacters}){
     return(
@@ -10,21 +11,10 @@ export default function Reaction({reacters}){
             <div className="reaction-list">
                 {reacters.map((reacter, index_1)=>(
                     reacter.re_words.map((word, index_2)=>(
-                        <div className="reaction" key={`${index_1}${word}#${index_2}`}>
-                            <div className="reacter">
-                                <div className="reacter-image">
-                                    <img src={reacter.re_image} alt="Reacter"/>
-                                </div>
-                                <h5>{reacter.re_name}</h5>
-                                <div className="reacter-logo">
-                                    {reacter.re_logo}
-                                </div>
-                            </div>
-                            <p>{word}</p>
-                        </div>
+                        <SubRea re_image={reacter.re_image} re_name={reacter.re_name} re_logo={reacter.re_logo} 
+                        word={word}  key={`${index_1}${word}#${index_2}`}/>
                     ))
                 ))}
-                <hr/>
             </div>
         </div>
     );

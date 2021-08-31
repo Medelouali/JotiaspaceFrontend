@@ -24,6 +24,8 @@
   outline: none;
   border: 1px solid black;
   font-size: 1em;
+  color: white;
+  background-color: rgb(66, 66, 70);
 }
 
 .tweet-input .send-comment {

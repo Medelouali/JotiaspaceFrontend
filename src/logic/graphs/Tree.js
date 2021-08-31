@@ -16,7 +16,7 @@ const Tree=class TreeClass{
         this.root=null;
         this.current=null;//helps us keep track of where we are
         this.currentTail=null;//helps us to insert data
-        this.direction=true;//it directs us for insertion, true for left, false for left
+        this.direction=true;//it directs us for insertion, true for right, false for left
         this.nodes=0; 
     }
 
@@ -60,8 +60,8 @@ const Tree=class TreeClass{
     moveTo(index, isBase=this.isRoot()){
         const limit=isBase ? this.getLength(): this.getLength()-1;
         let position=0;
-        if(!isBase) index++;
         if(index<0 || index>=limit) return;
+        if(!isBase) index++;
         while(position++!==index) this.moveStep();
         this.direction=!this.direction;
         this.setTail();
@@ -98,6 +98,7 @@ const Tree=class TreeClass{
             this.currentTail[leftRight]=new Node(data, ++this.nodes, this.current.id);
             this.currentTail[leftRight].parent=this.currentTail;
             this.currentTail=this.currentTail[leftRight];
+            // this.incrementParent();
         };
         return this;
     }
@@ -123,10 +124,21 @@ const Tree=class TreeClass{
         this.current=temp;
     }
 
-    // incrementParent(){
-    //     let temp=this.current;
-    //     if(!this.current) return;
-    //     if(this.isRoot())
+    incrementParent(){
+        let temp=this.current;
+        if(!this.root) return 0;
+        if(this.isRoot()){
+            this.current.data.replies++;
+            return;
+        };
+        this.moveUp();
+        this.current.data.replies++;
+        this.current=temp;
+    }
+
+    // getReplies(){
+    //     const replies=0;
+        
     // }
 }
 
