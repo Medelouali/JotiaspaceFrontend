@@ -73,6 +73,7 @@ const Tree=class TreeClass{
         if(!this.current) return;
         if(this.current===this.root && !this.direction){
             this.direction=!this.direction;
+            this.setTail();
             return;
         }
         if(this.current.parent){
