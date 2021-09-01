@@ -4,6 +4,12 @@
   padding: 4px;
 }
 
+.my-picture {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
 .my-picture .mee {
   width: 4em;
   height: 4em;
@@ -14,11 +20,21 @@
 }
 
 .mee img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .go-to {
   width: 100%;
   max-width: 100%;
+}
+
+.my-picture .my-name {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.my-picture .bio {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
 }

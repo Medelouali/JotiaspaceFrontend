@@ -23,7 +23,7 @@ function FriendData({out, content}){
     };
 
     useEffect(() => {
-        if(ref.current)ref.current.scrollIntoView({behavior: "smooth", block: "end"});
+        if(ref.current)ref.current.scrollIntoView({behavior: "smooth", block: "start"});
     }, [driver]);
     if(out && content){
         return (
@@ -44,7 +44,7 @@ function FriendData({out, content}){
                         </Button>
                     </div>
                 </div>
-                <div className="absolute" ref={ref}><Driver go={driver}/></div>
+                <div className="abs" ref={ref}><Driver go={driver}/></div>
             </div>
         );
     }else{

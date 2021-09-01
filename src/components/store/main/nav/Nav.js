@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { shorten } from "../../algorithms/algorithms";
-import profile_image from "../../svg/profile.svg";
 import Messanger from "../../messanger/Messanger";
 import Search from "../../../home/welcome/header/search/Search";
 
 import messanger from '../../../../redux/actions/messanger';
 
-import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+// import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
@@ -46,7 +45,9 @@ function Nav({fri, inv, not, mes, name, image}){
         <header  className="header">
             <nav>
                 <div className="nav-bar">
-                    <PersonOutlineOutlinedIcon className={"my-image"}/>
+                    <div className="profile-pict">
+                        <img src={image} alt="Profile" className="my-image" />
+                    </div>
                     <h4>{name}</h4>
                     <div className="search">
                         <Search placeHolder={"Search..."}/>
@@ -72,7 +73,7 @@ Nav.defaultProps={
     not: 0,
     mes: 0,
     name: "El Ouali",
-    image: profile_image
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2lybCUyMHNtaWxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
 }
 
 export default Nav;

@@ -38,12 +38,6 @@
   border: none;
 }
 
-.my-image {
-  width: 2em;
-  height: auto;
-  justify-self: center;
-}
-
 .store-logo {
   width: 1.5em;
   height: auto;
@@ -102,4 +96,19 @@
   .social {
     width: 90vw;
   }
+}
+
+.profile-pict .my-image {
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid rgb(139, 139, 228);
+  margin: auto;
+  margin-right: 3px;
+}
+
+.my-image {
+  width: 100%;
+  height: auto;
 }

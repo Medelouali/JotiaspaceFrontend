@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 4px;
+  max-height: 40vh;
+  overflow-y: scroll;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .photos img {
@@ -10,6 +14,6 @@
   height: auto;
   max-width: 100%;
   padding: 1px;
-  border: 1px solid rgb(185, 185, 235);
+  /* border: 1px solid rgb(185, 185, 235); */
   margin: 1px;
 }

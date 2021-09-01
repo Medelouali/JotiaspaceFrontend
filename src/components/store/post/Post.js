@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useSelector } from "react-redux";
 import { shorten } from "../algorithms/algorithms";
 import { motion } from "framer-motion";
 import "./post.css";
@@ -129,11 +130,12 @@ function Post({post}){
         setProfile(!profile);
     }
 
+    const profilePosts = useSelector(state => state.updateUser).posts;//jsut for etsting the ui
     return(
         <div className="post">
             <div className="card-header">
                 <div className="poster-image">
-                    <img className="" src="http://www.gstatic.com/tv/thumb/persons/589228/589228_v9_ba.jpg" alt=""/>
+                    <img className="" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2lybCUyMHNtaWxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
                 </div>
                 <h3>{post.posterName}</h3>
                 <div className="view-more">
@@ -164,7 +166,7 @@ function Post({post}){
                     initial={{y: "100vh"}}
                     animate={{y: 0}}
                     className="pro">
-                        <ProfilePage name={post.posterName} />
+                        <ProfilePage name={post.posterName} posts={profilePosts}/>
                     </motion.div>
                 }
             </div>
