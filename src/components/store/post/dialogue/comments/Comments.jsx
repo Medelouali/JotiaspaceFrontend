@@ -66,7 +66,7 @@ export default function Comments() {
             <div className="tweet">
                 { current && current.getCurrent().root  &&
                     <Tweet tweet={current.getCurrent().root.tweet} name={current.getCurrent().root.name} 
-                    replies={current.getLength()-1} hidden={current.isRoot()} rea={rea(0)}
+                    replies={current.getLength()-1} hidden={current.isRoot()} rea={rea(-1)}
                     likes={current.getCurrent().root.likes} dislikes={current.getCurrent().root.dislikes}
                     loves={current.getCurrent().root.loves} /> }
             </div>

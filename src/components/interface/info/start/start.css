@@ -7,15 +7,8 @@
 .posting-icon {
   width: 2em;
   height: auto;
-  animation: working 1s ease-in infinite;
   position: relative;
   bottom: 22px;
-}
-
-@keyframes working {
-  100% {
-    transform: rotate(-360deg);
-  }
 }
 
 .posting-icon {
@@ -38,7 +31,9 @@
   padding: 20px;
 }
 
-.phrase {
+.posting .phrase {
   margin: auto;
   color: blue;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
 }

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import CachedRoundedIcon from '@material-ui/icons/CachedRounded';
+import { CircularProgress } from '@material-ui/core';
 import "./start.css";
 
 function Start({start, phrase}) {
@@ -11,7 +11,7 @@ function Start({start, phrase}) {
         return (
             <div className="posting">
                 <div ref={divRef} className="posting-icon">
-                    <CachedRoundedIcon/>    
+                    <CircularProgress/>    
                 </div>
                 <div className="phrase">{phrase}</div>            
             </div>

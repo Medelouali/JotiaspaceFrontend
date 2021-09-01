@@ -89,7 +89,7 @@ const Tree=class TreeClass{
         return this;
     }
 
-    //inserting nodes to the graph
+    //inserting nodes to the graph to the end
     insertNode(data, direction=this.direction){
         const leftRight=direction ? "right": "left";
         if(this.root===null){
