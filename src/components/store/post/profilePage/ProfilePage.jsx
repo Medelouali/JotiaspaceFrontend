@@ -18,7 +18,7 @@ export default function ProfilePage({picture, name, bio, isFriend, isMe, friends
             }
             {
                 ( isMe || isFriend ) && 
-                    posts.map((post, index)=><Post post={post} key={`${post.posterName}%${index}`}/>)
+                    posts.map((post, index)=><Post post={post} key={`${post.posterName}%${index}`} base={false}/>)
 
             }
         </div>

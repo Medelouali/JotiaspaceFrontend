@@ -38,7 +38,7 @@ const urls=[
     "https://i.pinimg.com/236x/c0/db/9e/c0db9ed759e0be4d8f3aa6cee8baaca6.jpg",
     "https://i.pinimg.com/236x/eb/58/af/eb58af292e621886d551c1e8dc506a27.jpg"
 ];
-function Post({post}){
+function Post({post, base}){
     // console.log(post);
     const divRef=useRef(null);
     const [comments, setComments]=useState(0);
@@ -134,16 +134,19 @@ function Post({post}){
     return(
         <div className="post">
             <div className="card-header">
-                <div className="poster-image">
+                <div onClick={handleMore} className="poster-image">
                     <img className="" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2lybCUyMHNtaWxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt=""/>
                 </div>
-                <h3>{post.posterName}</h3>
-                <div className="view-more">
-                    { more ? 
-                        <div onClick={handleMore} className="less"><ExpandMoreIcon/></div> : 
-                        <div  onClick={handleMore} className="more"><MoreHorizIcon/></div>    
-                    }
-                </div>
+                <h3 onClick={handleMore}>{post.posterName}</h3>
+                {
+                    base && 
+                    <div className="view-more">
+                        { more ? 
+                            <div onClick={handleMore} className="less"><ExpandMoreIcon/></div> : 
+                            <div  onClick={handleMore} className="more"><MoreHorizIcon/></div>    
+                        }
+                    </div>
+                }
             </div>
 
             <div className="card-data">
@@ -218,7 +221,8 @@ Post.defaultProps={
         likes: 0,
         dislikes: 0,
         lools: 0
-    }
+    },
+    base: true
 }
 
 export default Post;
